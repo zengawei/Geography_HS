@@ -1,6 +1,6 @@
 ---
 import BaseLayout from '../../../layouts/BaseLayout.astro';
-import { getCollection } from 'astro:content';
+import { getCollection, render } from 'astro:content';
 
 export async function getStaticPaths() {
   const nceeQuestions = await getCollection('textbooks/ncee');
@@ -33,6 +33,14 @@ export async function getStaticPaths() {
 }
 
 const { paper } = Astro.props;
+
+// 渲染所有题目内容
+const questionContents = await Promise.all(
+  paper.questions.map(async (q) => {
+    const { Content } = await render(q);
+    return { question: q, Content };
+  })
+);
 ---
 
 <BaseLayout title={`${paper.paper} - 高考真题`}>
@@ -68,7 +76,7 @@ const { paper } = Astro.props;
 
   <!-- 题目列表 -->
   <div class="space-y-6">
-    {paper.questions.map((q, index) => (
+    {questionContents.map(({ question: q, Content }, index) => (
       <article id={`q${q.data.question_number}`} class="bg-white rounded-lg shadow-sm border border-gray-200 overflow-hidden scroll-mt-4">
         <!-- 题目头部 -->
         <div class="bg-gradient-to-r from-gray-50 to-white px-6 py-4 border-b border-gray-200">
@@ -107,7 +115,7 @@ const { paper } = Astro.props;
         <!-- 题目内容 -->
         <div class="px-6 py-5">
           <div class="prose prose-sm max-w-none text-gray-700 leading-relaxed">
-            <div set:html={q.body} />
+            <Content />
           </div>
 
           <!-- 知识点标签 -->
