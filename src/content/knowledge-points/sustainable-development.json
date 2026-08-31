@@ -4,11 +4,16 @@
   "name_en": "sustainable-development",
   "category": "regional",
   "exam_frequency": "high",
-  "description": "可持续发展是高中地理的重要知识点。",
+  "description": "可持续发展是指既满足当代人的需求，又不对后代人满足其需求的能力构成危害的发展。可持续发展包括生态持续发展（基础）、经济持续发展（条件）、社会持续发展（目的）。实现可持续发展需要转变发展模式，发展循环经济，建设资源节约型、环境友好型社会。",
   "key_concepts": [
-    "可持续发展"
+    "可持续发展内涵",
+    "可持续发展原则",
+    "可持续发展途径"
   ],
   "textbook_refs": [],
   "related_points": [],
-  "common_mistakes": []
+  "common_mistakes": [
+    "混淆可持续发展和环境保护",
+    "忽略经济持续发展的重要性"
+  ]
 }

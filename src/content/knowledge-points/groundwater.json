@@ -4,11 +4,16 @@
   "name_en": "groundwater",
   "category": "natural",
   "exam_frequency": "medium",
-  "description": "地下水是高中地理的重要知识点。",
+  "description": "地下水是储存在地下岩石空隙中的水。按埋藏条件分为潜水和承压水。潜水位于第一个稳定隔水层之上，有自由水面；承压水位于两个隔水层之间，承受一定压力。地下水补给来源主要是大气降水和地表水。过度开采地下水会导致地面沉降、海水入侵等问题。",
   "key_concepts": [
-    "地下水"
+    "地下水类型",
+    "地下水补给",
+    "地下水问题"
   ],
   "textbook_refs": [],
   "related_points": [],
-  "common_mistakes": []
+  "common_mistakes": [
+    "混淆潜水和承压水",
+    "忽略地下水与地表水的相互补给"
+  ]
 }

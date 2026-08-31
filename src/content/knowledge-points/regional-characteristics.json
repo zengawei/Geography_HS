@@ -4,11 +4,16 @@
   "name_en": "regional-characteristics",
   "category": "regional",
   "exam_frequency": "high",
-  "description": "区域特征是高中地理的重要知识点。",
+  "description": "区域特征是指区域内部相对一致性和区域间差异性的统一。区域特征包括自然地理特征（位置、气候、地形、水文、植被、土壤）和人文地理特征（人口、城市、农业、工业、交通）。分析区域特征要综合考虑各要素，把握区域的整体性和差异性。",
   "key_concepts": [
-    "区域特征"
+    "区域特征分析",
+    "区域整体性",
+    "区域差异性"
   ],
   "textbook_refs": [],
   "related_points": [],
-  "common_mistakes": []
+  "common_mistakes": [
+    "忽略区域内部差异性",
+    "片面强调单一要素"
+  ]
 }

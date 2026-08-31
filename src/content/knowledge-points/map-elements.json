@@ -4,11 +4,16 @@
   "name_en": "map-elements",
   "category": "tools",
   "exam_frequency": "high",
-  "description": "地图三要素是高中地理的重要知识点。",
+  "description": "地图三要素包括比例尺、方向、图例和注记。比例尺表示图上距离与实际距离的比值，分为数字式、线段式、文字式；方向判别有指向标、经纬网、一般定向法；图例是地图上表示各种地理事物的符号；注记是地图上的文字说明和数字标注。",
   "key_concepts": [
-    "地图三要素"
+    "比例尺",
+    "方向判别",
+    "图例和注记"
   ],
   "textbook_refs": [],
   "related_points": [],
-  "common_mistakes": []
+  "common_mistakes": [
+    "混淆比例尺大小",
+    "忽略方向判别的多种方法"
+  ]
 }

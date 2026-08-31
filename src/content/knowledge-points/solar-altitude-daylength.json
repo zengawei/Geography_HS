@@ -4,11 +4,16 @@
   "name_en": "solar-altitude-daylength",
   "category": "natural",
   "exam_frequency": "high",
-  "description": "正午太阳高度与昼夜长短是高中地理的重要知识点。",
+  "description": "正午太阳高度和昼夜长短是地球公转的重要地理意义。正午太阳高度从直射点向南北两侧递减；昼夜长短变化规律：太阳直射哪个半球，哪个半球昼长夜短，且纬度越高昼越长。这两个因素共同决定了地球表面的热量分布，形成四季和五带。",
   "key_concepts": [
-    "正午太阳高度与昼夜长短"
+    "正午太阳高度计算公式",
+    "昼夜长短变化规律",
+    "四季划分依据"
   ],
   "textbook_refs": [],
   "related_points": [],
-  "common_mistakes": []
+  "common_mistakes": [
+    "计算正午太阳高度时纬度差计算错误",
+    "混淆昼夜长短变化与正午太阳高度变化"
+  ]
 }

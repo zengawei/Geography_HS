@@ -4,11 +4,16 @@
   "name_en": "vegetation",
   "category": "natural",
   "exam_frequency": "medium",
-  "description": "植被是高中地理的重要知识点。",
+  "description": "植被是指覆盖地表的植物群落。植被类型受气候条件影响，从赤道到两极依次为热带雨林、亚热带常绿阔叶林、温带落叶阔叶林、亚寒带针叶林、苔原等。植被具有涵养水源、保持水土、调节气候、净化空气、保护生物多样性等生态功能。",
   "key_concepts": [
-    "植被"
+    "植被类型分布",
+    "植被的生态功能",
+    "植被与环境的关系"
   ],
   "textbook_refs": [],
   "related_points": [],
-  "common_mistakes": []
+  "common_mistakes": [
+    "混淆森林类型",
+    "忽略植被对环境的指示作用"
+  ]
 }

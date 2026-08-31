@@ -4,11 +4,16 @@
   "name_en": "transportation-layout",
   "category": "human",
   "exam_frequency": "high",
-  "description": "交通运输布局是高中地理的重要知识点。",
+  "description": "交通运输布局是指交通运输业的空间分布和地域组合。影响交通运输布局的因素包括经济因素（决定性因素）、社会因素、技术因素（保障性因素）、自然因素（限制性因素）。交通运输布局要遵循交通运输布局的一般原则，实现综合运输，发挥各种运输方式的优势。",
   "key_concepts": [
-    "交通运输布局"
+    "影响交通运输布局的因素",
+    "交通运输布局原则",
+    "各种运输方式的特点"
   ],
   "textbook_refs": [],
   "related_points": [],
-  "common_mistakes": []
+  "common_mistakes": [
+    "混淆交通运输线和点",
+    "忽略经济因素的决定性作用"
+  ]
 }

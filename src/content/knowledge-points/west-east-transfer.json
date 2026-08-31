@@ -4,11 +4,16 @@
   "name_en": "west-east-transfer",
   "category": "regional",
   "exam_frequency": "medium",
-  "description": "东中西部协调是高中地理的重要知识点。",
+  "description": "东中西部协调发展是指发挥东部沿海地区优势，加强中西部地区开发，实现区域协调发展的战略。东部地区经济发达、技术先进，但资源短缺；中西部地区资源丰富、市场广阔，但经济落后。东中西部协调发展要实现优势互补、互利共赢。",
   "key_concepts": [
-    "东中西部协调"
+    "东中西部差异",
+    "区域优势互补",
+    "协调发展策略"
   ],
   "textbook_refs": [],
   "related_points": [],
-  "common_mistakes": []
+  "common_mistakes": [
+    "忽略中西部地区的优势",
+    "片面强调东部带动作用"
+  ]
 }

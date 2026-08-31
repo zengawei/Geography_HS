@@ -4,11 +4,16 @@
   "name_en": "statistical-charts",
   "category": "tools",
   "exam_frequency": "medium",
-  "description": "统计图表是高中地理的重要知识点。",
+  "description": "统计图表是表示地理数据的图形和表格。常见统计图表包括柱状图、折线图、饼图、散点图、雷达图等。统计图表可以直观展示地理事物的数量特征、变化趋势、结构组成等。阅读统计图表要注意图名、坐标轴、图例、数据等要素，分析地理现象的规律和原因。",
   "key_concepts": [
-    "统计图表"
+    "统计图表类型",
+    "统计图表阅读",
+    "数据分析方法"
   ],
   "textbook_refs": [],
   "related_points": [],
-  "common_mistakes": []
+  "common_mistakes": [
+    "混淆不同图表的用途",
+    "忽略数据的地理意义"
+  ]
 }

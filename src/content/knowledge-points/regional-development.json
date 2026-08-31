@@ -4,11 +4,16 @@
   "name_en": "regional-development",
   "category": "regional",
   "exam_frequency": "high",
-  "description": "区域发展是高中地理的重要知识点。",
+  "description": "区域发展是指区域经济社会的进步过程。区域发展要遵循因地制宜、可持续发展的原则。不同发展阶段面临不同的问题，如初期阶段资源开发、成长阶段环境污染、转型阶段产业升级。区域发展要发挥区域优势，加强区域合作，实现协调发展。",
   "key_concepts": [
-    "区域发展"
+    "区域发展阶段",
+    "区域发展原则",
+    "区域发展策略"
   ],
   "textbook_refs": [],
   "related_points": [],
-  "common_mistakes": []
+  "common_mistakes": [
+    "忽略区域发展的阶段性",
+    "混淆区域发展和经济增长"
+  ]
 }

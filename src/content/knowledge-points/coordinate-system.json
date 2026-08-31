@@ -4,11 +4,16 @@
   "name_en": "coordinate-system",
   "category": "tools",
   "exam_frequency": "high",
-  "description": "经纬网是高中地理的重要知识点。",
+  "description": "经纬网是地球上经线和纬线相互交织构成的网络。经线指示南北方向，纬线指示东西方向；经度向东增大为东经，向西增大为西经；纬度向北增大为北纬，向南增大为南纬。经纬网可以确定地球上任何地点的位置，在航海、航空、军事等方面有重要应用。",
   "key_concepts": [
-    "经纬网"
+    "经纬线特征",
+    "经纬度判读",
+    "经纬网应用"
   ],
   "textbook_refs": [],
   "related_points": [],
-  "common_mistakes": []
+  "common_mistakes": [
+    "混淆经度和纬度",
+    "忽略经纬网的实际应用"
+  ]
 }

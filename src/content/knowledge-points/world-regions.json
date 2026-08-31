@@ -4,11 +4,16 @@
   "name_en": "world-regions",
   "category": "world_china",
   "exam_frequency": "medium",
-  "description": "世界主要区域是高中地理的重要知识点。",
+  "description": "世界主要区域包括亚洲、欧洲、非洲、北美洲、南美洲、大洋洲、南极洲。各区域在位置、地形、气候、河流、资源、经济等方面具有独特特征。区域地理学习要把握区域的地理位置、自然特征、人文特征，分析区域发展条件和方向。",
   "key_concepts": [
-    "世界主要区域"
+    "世界区域划分",
+    "各区域特征",
+    "区域比较分析"
   ],
   "textbook_refs": [],
   "related_points": [],
-  "common_mistakes": []
+  "common_mistakes": [
+    "混淆区域位置",
+    "忽略区域间的联系"
+  ]
 }

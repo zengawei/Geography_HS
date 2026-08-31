@@ -4,11 +4,16 @@
   "name_en": "commercial-layout",
   "category": "human",
   "exam_frequency": "medium",
-  "description": "商业布局是高中地理的重要知识点。",
+  "description": "商业布局是指商业网点的空间分布和组合。商业网点布局受市场最优原则（城市几何中心）和交通最优原则（市区环路或高速公路沿线）影响。商业中心等级越高，数量越少，服务范围越大，商品种类越多。商业布局要满足消费者需求，提高商业效益。",
   "key_concepts": [
-    "商业布局"
+    "商业网点布局原则",
+    "商业中心等级",
+    "影响商业布局的因素"
   ],
   "textbook_refs": [],
   "related_points": [],
-  "common_mistakes": []
+  "common_mistakes": [
+    "混淆商业中心和商业网点",
+    "忽略交通对商业布局的影响"
+  ]
 }

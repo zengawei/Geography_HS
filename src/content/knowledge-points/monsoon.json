@@ -4,11 +4,16 @@
   "name_en": "monsoon",
   "category": "natural",
   "exam_frequency": "high",
-  "description": "季风环流是高中地理的重要知识点。",
+  "description": "季风环流是由于海陆热力性质差异和气压带风带季节移动形成的大气环流。东亚季风最典型，冬季盛行西北风（寒冷干燥），夏季盛行东南风（温暖湿润）。南亚季风夏季西南风由气压带风带移动形成。季风气候雨热同期，有利于农业生产，但旱涝灾害频繁。",
   "key_concepts": [
-    "季风环流"
+    "季风成因",
+    "东亚季风与南亚季风",
+    "季风气候特征"
   ],
   "textbook_refs": [],
   "related_points": [],
-  "common_mistakes": []
+  "common_mistakes": [
+    "混淆东亚季风和南亚季风的成因",
+    "忽略气压带风带移动对季风的影响"
+  ]
 }

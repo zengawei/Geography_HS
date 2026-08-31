@@ -4,11 +4,16 @@
   "name_en": "resource-allocation",
   "category": "regional",
   "exam_frequency": "high",
-  "description": "资源跨区域调配是高中地理的重要知识点。",
+  "description": "资源跨区域调配是指将资源丰富地区的资源调往资源短缺地区。我国主要的资源调配工程包括南水北调、西气东输、西电东送、北煤南运等。资源调配对调出区和调入区都产生深远影响，要实现经济效益、社会效益、生态效益的统一。",
   "key_concepts": [
-    "资源跨区域调配"
+    "资源调配工程",
+    "资源调配原因",
+    "资源调配影响"
   ],
   "textbook_refs": [],
   "related_points": [],
-  "common_mistakes": []
+  "common_mistakes": [
+    "忽略资源调配的生态影响",
+    "片面强调经济效益"
+  ]
 }

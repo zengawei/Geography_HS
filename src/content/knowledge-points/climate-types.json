@@ -4,11 +4,16 @@
   "name_en": "climate-types",
   "category": "natural",
   "exam_frequency": "high",
-  "description": "气候类型是高中地理的重要知识点。",
+  "description": "世界主要气候类型包括热带（热带雨林、热带草原、热带季风、热带沙漠）、亚热带（亚热带季风、地中海气候）、温带（温带季风、温带大陆性、温带海洋性）、寒带气候等。气候类型的判断需要结合气温和降水特征，分析纬度位置、大气环流、海陆位置、地形、洋流等因素。",
   "key_concepts": [
-    "气候类型"
+    "气候类型判断方法",
+    "主要气候类型特征",
+    "气候成因分析"
   ],
   "textbook_refs": [],
   "related_points": [],
-  "common_mistakes": []
+  "common_mistakes": [
+    "混淆热带季风和热带草原气候",
+    "忽略地形和洋流对气候的影响"
+  ]
 }

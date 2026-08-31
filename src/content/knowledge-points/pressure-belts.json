@@ -4,11 +4,16 @@
   "name_en": "pressure-belts",
   "category": "natural",
   "exam_frequency": "high",
-  "description": "气压带风带是高中地理的重要知识点。",
+  "description": "全球气压带风带是大气环流的重要组成部分。全球有7个气压带（赤道低压带、副热带高压带、副极地低压带、极地高压带）和6个风带（信风带、西风带、极地东风带）。气压带风带随太阳直射点季节移动而南北移动，影响各地气候特征。",
   "key_concepts": [
-    "气压带风带"
+    "气压带风带分布",
+    "气压带风带成因",
+    "季节移动规律"
   ],
   "textbook_refs": [],
   "related_points": [],
-  "common_mistakes": []
+  "common_mistakes": [
+    "混淆气压带风带的位置",
+    "忽略气压带风带的季节移动"
+  ]
 }

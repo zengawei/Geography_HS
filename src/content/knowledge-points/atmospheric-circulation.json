@@ -4,11 +4,17 @@
   "name_en": "atmospheric-circulation",
   "category": "natural",
   "exam_frequency": "high",
-  "description": "大气环流是高中地理的重要知识点。",
+  "description": "大气环流是指全球性的有规律的大气运动。主要包括三圈环流（低纬、中纬、高纬环流）、气压带风带、季风环流。三圈环流形成了7个气压带和6个风带；气压带风带随太阳直射点移动而南北移动；季风环流由海陆热力性质差异和气压带风带季节移动形成。",
   "key_concepts": [
-    "大气环流"
+    "三圈环流",
+    "气压带风带",
+    "季风环流成因",
+    "气压带风带季节移动"
   ],
   "textbook_refs": [],
   "related_points": [],
-  "common_mistakes": []
+  "common_mistakes": [
+    "混淆热力环流与大气环流",
+    "忽略气压带风带的季节移动"
+  ]
 }

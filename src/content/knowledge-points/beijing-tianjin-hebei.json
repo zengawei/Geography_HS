@@ -4,11 +4,16 @@
   "name_en": "beijing-tianjin-hebei",
   "category": "regional",
   "exam_frequency": "high",
-  "description": "京津冀协同是高中地理的重要知识点。",
+  "description": "京津冀协同发展是指北京、天津、河北三地加强合作，疏解北京非首都功能，建设以首都为核心的世界级城市群的战略。京津冀协同发展要解决北京大城市病，实现区域优势互补。三地功能定位不同：北京全国政治文化中心，天津先进制造研发基地，河北产业转型升级试验区。",
   "key_concepts": [
-    "京津冀协同"
+    "京津冀协同发展原因",
+    "三地功能定位",
+    "协同发展内容"
   ],
   "textbook_refs": [],
   "related_points": [],
-  "common_mistakes": []
+  "common_mistakes": [
+    "混淆京津冀和长三角",
+    "忽略河北在协同发展中的地位"
+  ]
 }

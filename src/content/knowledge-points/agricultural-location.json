@@ -4,11 +4,16 @@
   "name_en": "agricultural-location",
   "category": "human",
   "exam_frequency": "high",
-  "description": "农业区位是高中地理的重要知识点。",
+  "description": "农业区位是指农业生产所选定的地理位置和农业与地理环境各因素的相互联系。影响农业区位的因素包括自然因素（气候、地形、土壤、水源）和社会经济因素（市场、交通、政策、劳动力、科技）。自然因素相对稳定，社会经济因素变化较快。农业区位选择要因地制宜、因时制宜。",
   "key_concepts": [
-    "农业区位"
+    "农业区位因素",
+    "农业区位选择",
+    "农业区位因素变化"
   ],
   "textbook_refs": [],
   "related_points": [],
-  "common_mistakes": []
+  "common_mistakes": [
+    "混淆农业区位和农业生产",
+    "忽略科技因素对农业区位的影响"
+  ]
 }

@@ -4,11 +4,16 @@
   "name_en": "world-countries",
   "category": "world_china",
   "exam_frequency": "medium",
-  "description": "世界主要国家是高中地理的重要知识点。",
+  "description": "世界主要国家包括美国、俄罗斯、中国、日本、印度、巴西、澳大利亚等。各国在位置、地形、气候、资源、经济、文化等方面具有独特特征。学习国家地理要把握国家的地理位置、自然特征、经济特征，分析国家发展条件和方向。",
   "key_concepts": [
-    "世界主要国家"
+    "主要国家位置",
+    "主要国家特征",
+    "国家比较分析"
   ],
   "textbook_refs": [],
   "related_points": [],
-  "common_mistakes": []
+  "common_mistakes": [
+    "混淆国家位置",
+    "忽略国家的区域差异"
+  ]
 }

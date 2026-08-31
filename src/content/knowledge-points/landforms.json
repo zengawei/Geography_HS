@@ -4,11 +4,16 @@
   "name_en": "landforms",
   "category": "natural",
   "exam_frequency": "high",
-  "description": "地貌是高中地理的重要知识点。",
+  "description": "地貌是内外力作用共同作用的结果。内力作用包括地壳运动、岩浆活动、变质作用，使地表变得高低不平；外力作用包括风化、侵蚀、搬运、堆积，使地表趋于平坦。主要地貌类型包括流水地貌、风力地貌、冰川地貌、海岸地貌、喀斯特地貌等。",
   "key_concepts": [
-    "地貌"
+    "内力作用与外力作用",
+    "主要地貌类型",
+    "地貌形成过程"
   ],
   "textbook_refs": [],
   "related_points": [],
-  "common_mistakes": []
+  "common_mistakes": [
+    "忽略内力作用的基础性",
+    "混淆不同外力作用形成的地貌"
+  ]
 }

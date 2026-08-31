@@ -4,11 +4,16 @@
   "name_en": "river-characteristics",
   "category": "natural",
   "exam_frequency": "high",
-  "description": "河流水文特征是高中地理的重要知识点。",
+  "description": "河流水文特征包括流量、水位、含沙量、结冰期、流速等要素。流量受降水量和流域面积影响；水位变化取决于补给类型；含沙量与植被覆盖率有关；结冰期由最冷月气温决定。河流水系特征包括河流长度、流域面积、支流数量、河道特征等。",
   "key_concepts": [
-    "河流水文特征"
+    "水文特征要素",
+    "水系特征要素",
+    "河流补给类型"
   ],
   "textbook_refs": [],
   "related_points": [],
-  "common_mistakes": []
+  "common_mistakes": [
+    "混淆水文特征和水系特征",
+    "忽略人类活动对河流水文的影响"
+  ]
 }

@@ -4,11 +4,16 @@
   "name_en": "gis-application",
   "category": "tools",
   "exam_frequency": "medium",
-  "description": "GIS应用是高中地理的重要知识点。",
+  "description": "地理信息系统（GIS）是专门处理地理空间数据的计算机系统。GIS具有数据采集、存储、管理、分析、表达等功能。GIS在城市管理、资源调查、环境监测、灾害预测、国土分析等方面有广泛应用。GIS可以帮助人们进行空间分析和决策支持。",
   "key_concepts": [
-    "GIS应用"
+    "GIS功能",
+    "GIS应用领域",
+    "GIS决策支持"
   ],
   "textbook_refs": [],
   "related_points": [],
-  "common_mistakes": []
+  "common_mistakes": [
+    "混淆GIS和GPS",
+    "忽略GIS的空间分析功能"
+  ]
 }

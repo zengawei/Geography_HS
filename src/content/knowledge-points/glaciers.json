@@ -4,11 +4,16 @@
   "name_en": "glaciers",
   "category": "natural",
   "exam_frequency": "low",
-  "description": "冰川是高中地理的重要知识点。",
+  "description": "冰川是极地和高山地区由积雪变质形成的天然冰体。冰川作用包括侵蚀、搬运和堆积。冰川侵蚀形成U型谷、角峰、冰斗等地貌；冰川堆积形成冰碛丘陵、冰碛湖等地貌。冰川是重要的淡水资源，冰川融化对海平面变化和气候有重要影响。",
   "key_concepts": [
-    "冰川"
+    "冰川类型",
+    "冰川地貌",
+    "冰川的环境效应"
   ],
   "textbook_refs": [],
   "related_points": [],
-  "common_mistakes": []
+  "common_mistakes": [
+    "混淆冰川侵蚀和堆积地貌",
+    "忽略冰川对全球变化的指示意义"
+  ]
 }

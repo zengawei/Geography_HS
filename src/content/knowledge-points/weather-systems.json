@@ -4,11 +4,16 @@
   "name_en": "weather-systems",
   "category": "natural",
   "exam_frequency": "high",
-  "description": "天气系统是高中地理的重要知识点。",
+  "description": "天气系统主要包括锋面系统（冷锋、暖锋、准静止锋）和气旋反气旋系统。冷锋过境时出现大风、降温、雨雪天气；暖锋过境时出现连续性降水；气旋控制下多阴雨天气；反气旋控制下多晴朗天气。台风是强烈发展的热带气旋，寒潮是强冷空气入侵形成的冷锋天气。",
   "key_concepts": [
-    "天气系统"
+    "冷锋与暖锋的区别",
+    "气旋与反气旋",
+    "台风和寒潮"
   ],
   "textbook_refs": [],
   "related_points": [],
-  "common_mistakes": []
+  "common_mistakes": [
+    "混淆冷锋和暖锋的降水位置",
+    "误认为气旋带来晴朗天气"
+  ]
 }

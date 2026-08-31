@@ -4,11 +4,16 @@
   "name_en": "population-structure",
   "category": "human",
   "exam_frequency": "medium",
-  "description": "人口结构是高中地理的重要知识点。",
+  "description": "人口结构包括年龄结构、性别结构、文化结构、职业结构等。年龄结构分为年轻型、成年型、老年型，反映人口增长趋势。性别结构用性别比表示。人口老龄化是指65岁以上人口占比超过7%。人口结构影响劳动力供给、社会负担、经济发展等。",
   "key_concepts": [
-    "人口结构"
+    "人口年龄结构",
+    "人口老龄化",
+    "人口结构的影响"
   ],
   "textbook_refs": [],
   "related_points": [],
-  "common_mistakes": []
+  "common_mistakes": [
+    "混淆人口老龄化和人口负增长",
+    "忽略人口结构对经济的影响"
+  ]
 }

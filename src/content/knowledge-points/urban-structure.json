@@ -4,11 +4,16 @@
   "name_en": "urban-structure",
   "category": "human",
   "exam_frequency": "high",
-  "description": "城镇空间结构是高中地理的重要知识点。",
+  "description": "城镇空间结构是指城市内部各种功能区的分布和组合。主要功能区包括商业区、住宅区、工业区。商业区位于市中心，交通便利，地租最高；住宅区是最广泛的土地利用方式；工业区向城市外缘移动，趋向于沿主要交通干线分布。功能区的形成受经济、社会、历史、行政等因素影响。",
   "key_concepts": [
-    "城镇空间结构"
+    "城市功能区",
+    "功能区布局规律",
+    "影响功能区布局的因素"
   ],
   "textbook_refs": [],
   "related_points": [],
-  "common_mistakes": []
+  "common_mistakes": [
+    "混淆城市等级和城市功能区",
+    "忽略历史因素对城市布局的影响"
+  ]
 }

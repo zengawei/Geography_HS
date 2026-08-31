@@ -4,11 +4,16 @@
   "name_en": "seasons",
   "category": "natural",
   "exam_frequency": "medium",
-  "description": "四季更替是高中地理的重要知识点。",
+  "description": "四季更替是地球公转产生的地理现象之一。天文四季以昼夜长短和正午太阳高度变化为依据；气候四季以气温变化为依据，通常将3-5月划为春季，6-8月为夏季，9-11月为秋季，12-次年2月为冬季。四季更替导致自然景观呈现季节性变化。",
   "key_concepts": [
-    "四季更替"
+    "四季划分依据",
+    "天文四季与气候四季",
+    "四季景观变化"
   ],
   "textbook_refs": [],
   "related_points": [],
-  "common_mistakes": []
+  "common_mistakes": [
+    "混淆天文四季和气候四季",
+    "忽略南北半球季节相反"
+  ]
 }

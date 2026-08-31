@@ -4,11 +4,16 @@
   "name_en": "world-geography",
   "category": "world_china",
   "exam_frequency": "medium",
-  "description": "世界地理概况是高中地理的重要知识点。",
+  "description": "世界地理概况包括世界的海陆分布、地形、气候、居民、国家等。地球表面七分海洋三分陆地；地形包括山地、平原、高原、盆地、丘陵；气候类型复杂多样；世界人口分布不均匀；世界上有200多个国家和地区，分为发达国家和发展中国家。",
   "key_concepts": [
-    "世界地理概况"
+    "世界海陆分布",
+    "世界地形气候",
+    "世界人口国家"
   ],
   "textbook_refs": [],
   "related_points": [],
-  "common_mistakes": []
+  "common_mistakes": [
+    "混淆大洲和大洋的位置",
+    "忽略世界地理的区域差异"
+  ]
 }

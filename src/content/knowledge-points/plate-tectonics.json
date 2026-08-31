@@ -4,11 +4,16 @@
   "name_en": "plate-tectonics",
   "category": "natural",
   "exam_frequency": "medium",
-  "description": "板块构造是高中地理的重要知识点。",
+  "description": "板块构造学说认为地球岩石圈由六大板块组成，板块处于不断运动之中。板块内部地壳相对稳定，板块交界处地壳活跃，多火山地震。板块碰撞挤压形成山脉、海沟、岛弧；板块张裂形成裂谷、海洋。板块运动解释了地震、火山、山脉形成等地质现象。",
   "key_concepts": [
-    "板块构造"
+    "六大板块",
+    "板块边界类型",
+    "板块运动的地质效应"
   ],
   "textbook_refs": [],
   "related_points": [],
-  "common_mistakes": []
+  "common_mistakes": [
+    "误认为板块就是大陆或大洋",
+    "混淆消亡边界和生长边界的地貌"
+  ]
 }

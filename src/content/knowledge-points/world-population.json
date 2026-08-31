@@ -4,11 +4,16 @@
   "name_en": "world-population",
   "category": "world_china",
   "exam_frequency": "medium",
-  "description": "世界人口是高中地理的重要知识点。",
+  "description": "世界人口问题包括人口增长过快和人口老龄化。人口增长过快带来资源短缺、环境恶化、就业困难等问题；人口老龄化带来劳动力短缺、社会负担加重等问题。解决人口问题要控制人口数量、提高人口素质，实现人口与经济、社会、资源、环境的协调发展。",
   "key_concepts": [
-    "世界人口"
+    "世界人口增长",
+    "世界人口问题",
+    "人口政策"
   ],
   "textbook_refs": [],
   "related_points": [],
-  "common_mistakes": []
+  "common_mistakes": [
+    "混淆人口增长和人口自然增长",
+    "忽略人口问题的区域性"
+  ]
 }

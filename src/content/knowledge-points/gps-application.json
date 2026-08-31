@@ -4,11 +4,16 @@
   "name_en": "gps-application",
   "category": "tools",
   "exam_frequency": "medium",
-  "description": "GPS/BDS应用是高中地理的重要知识点。",
+  "description": "全球定位系统（GPS）是利用卫星网络对地面目标进行定位和导航的技术。GPS具有全能性、全球性、全天候、连续性和实时性的特点。GPS在军事、交通、测绘、野外考察、应急救援等领域有广泛应用。中国的北斗卫星导航系统（BDS）已全球组网，提供高精度定位服务。",
   "key_concepts": [
-    "GPS/BDS应用"
+    "GPS原理",
+    "GPS特点",
+    "GPS应用领域"
   ],
   "textbook_refs": [],
   "related_points": [],
-  "common_mistakes": []
+  "common_mistakes": [
+    "混淆GPS和GIS",
+    "忽略北斗系统的自主性"
+  ]
 }

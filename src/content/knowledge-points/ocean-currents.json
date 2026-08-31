@@ -4,11 +4,16 @@
   "name_en": "ocean-currents",
   "category": "natural",
   "exam_frequency": "medium",
-  "description": "洋流是高中地理的重要知识点。",
+  "description": "洋流是海水常年大规模沿一定方向进行的流动。按性质分为暖流和寒流；按成因分为风海流、密度流、补偿流。世界洋流分布规律：中低纬度形成以副热带为中心的大洋环流（北顺南逆）；北半球中高纬度形成逆时针环流；南半球40°-60°形成西风漂流。洋流对气候、渔场、航海、污染有影响。",
   "key_concepts": [
-    "洋流"
+    "洋流分类",
+    "世界洋流分布规律",
+    "洋流的地理意义"
   ],
   "textbook_refs": [],
   "related_points": [],
-  "common_mistakes": []
+  "common_mistakes": [
+    "混淆暖流和寒流的流向",
+    "忽略洋流对渔场形成的影响"
+  ]
 }

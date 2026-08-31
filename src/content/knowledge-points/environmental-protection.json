@@ -4,11 +4,16 @@
   "name_en": "environmental-protection",
   "category": "regional",
   "exam_frequency": "high",
-  "description": "环境保护是高中地理的重要知识点。",
+  "description": "环境保护是指人类为解决现实的或潜在的环境问题，协调人类与环境的关系，保障经济社会的持续发展而采取的各种行动的总称。环境保护包括防治环境污染、保护生态环境、应对气候变化等。环境保护要坚持预防为主、综合治理、公众参与的原则。",
   "key_concepts": [
-    "环境保护"
+    "环境保护内容",
+    "环境保护原则",
+    "环境保护措施"
   ],
   "textbook_refs": [],
   "related_points": [],
-  "common_mistakes": []
+  "common_mistakes": [
+    "混淆环境保护和环境治理",
+    "忽略公众参与的重要性"
+  ]
 }

@@ -4,11 +4,16 @@
   "name_en": "rs-application",
   "category": "tools",
   "exam_frequency": "medium",
-  "description": "遥感应用是高中地理的重要知识点。",
+  "description": "遥感（RS）是指从远距离感知目标反射或辐射的电磁波信息，对目标进行探测和识别的技术。遥感具有探测范围大、获取资料快、受地面条件限制少等优势。遥感在资源调查、环境监测、自然灾害防御、农业、林业、气象等领域有广泛应用。",
   "key_concepts": [
-    "遥感应用"
+    "遥感原理",
+    "遥感优势",
+    "遥感应用领域"
   ],
   "textbook_refs": [],
   "related_points": [],
-  "common_mistakes": []
+  "common_mistakes": [
+    "混淆遥感和地理信息系统",
+    "忽略遥感的动态监测功能"
+  ]
 }

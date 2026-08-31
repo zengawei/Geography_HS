@@ -4,11 +4,16 @@
   "name_en": "lakes",
   "category": "natural",
   "exam_frequency": "medium",
-  "description": "湖泊是高中地理的重要知识点。",
+  "description": "湖泊是陆地表面洼地积水形成的水体。按湖水性质分为淡水湖和咸水湖；按成因分为构造湖、火山口湖、冰川湖、堰塞湖、牛轭湖等。湖泊具有调节径流、净化水质、维护生物多样性等功能。湖泊面积变化受气候变化和人类活动影响。",
   "key_concepts": [
-    "湖泊"
+    "湖泊分类",
+    "湖泊成因",
+    "湖泊生态功能"
   ],
   "textbook_refs": [],
   "related_points": [],
-  "common_mistakes": []
+  "common_mistakes": [
+    "混淆淡水湖和咸水湖的成因",
+    "忽略湖泊对河流的调节作用"
+  ]
 }

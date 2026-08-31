@@ -4,11 +4,16 @@
   "name_en": "resource-security",
   "category": "regional",
   "exam_frequency": "medium",
-  "description": "资源安全是高中地理的重要知识点。",
+  "description": "资源安全是指一个国家或地区可以持续、稳定、及时、足量和经济地获取所需自然资源的状态。资源安全包括水资源安全、能源安全、粮食安全、矿产资源安全等。维护资源安全要节约资源、开发新能源、加强资源储备、开展资源国际合作。",
   "key_concepts": [
-    "资源安全"
+    "资源安全内涵",
+    "资源安全问题",
+    "资源安全保障"
   ],
   "textbook_refs": [],
   "related_points": [],
-  "common_mistakes": []
+  "common_mistakes": [
+    "混淆资源安全和资源短缺",
+    "忽略资源安全的战略性"
+  ]
 }

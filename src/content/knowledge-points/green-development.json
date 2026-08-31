@@ -4,11 +4,16 @@
   "name_en": "green-development",
   "category": "regional",
   "exam_frequency": "high",
-  "description": "绿色发展是高中地理的重要知识点。",
+  "description": "绿色发展是以效率、和谐、持续为目标的经济增长和社会发展方式。绿色发展强调人与自然和谐共生，要求在生产生活中节约资源、保护环境。绿色发展理念包括绿水青山就是金山银山、良好生态环境是最普惠的民生福祉等。实现绿色发展要发展绿色产业、倡导绿色生活、完善绿色制度。",
   "key_concepts": [
-    "绿色发展"
+    "绿色发展理念",
+    "绿色发展方式",
+    "绿色发展制度"
   ],
   "textbook_refs": [],
   "related_points": [],
-  "common_mistakes": []
+  "common_mistakes": [
+    "混淆绿色发展和低碳发展",
+    "忽略绿色发展的系统性"
+  ]
 }

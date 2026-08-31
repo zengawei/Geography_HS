@@ -4,11 +4,16 @@
   "name_en": "regional-differentiation",
   "category": "regional",
   "exam_frequency": "high",
-  "description": "区域差异是高中地理的重要知识点。",
+  "description": "区域差异是指不同区域之间在自然、经济、社会等方面的差别。区域差异表现为东中西部差异、南北差异、城乡差异等。区域差异是客观存在的，但可以通过政策调控缩小差距。区域协调发展要发挥各地区优势，实现优势互补、共同发展。",
   "key_concepts": [
-    "区域差异"
+    "区域差异表现",
+    "区域差异原因",
+    "区域协调发展"
   ],
   "textbook_refs": [],
   "related_points": [],
-  "common_mistakes": []
+  "common_mistakes": [
+    "忽略区域差异的客观性",
+    "混淆区域差异和区域对立"
+  ]
 }

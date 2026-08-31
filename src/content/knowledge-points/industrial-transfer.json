@@ -4,11 +4,16 @@
   "name_en": "industrial-transfer",
   "category": "regional",
   "exam_frequency": "high",
-  "description": "产业转移是高中地理的重要知识点。",
+  "description": "产业转移是指企业将产品生产的部分或全部由原生产地转移到其他地区。产业转移主要从中国东部沿海向中西部地区转移，从发达国家向发展中国家转移。产业转移对转出区和转入区都产生影响，转出区实现产业升级，转入区加快工业化进程。",
   "key_concepts": [
-    "产业转移"
+    "产业转移原因",
+    "产业转移方向",
+    "产业转移影响"
   ],
   "textbook_refs": [],
   "related_points": [],
-  "common_mistakes": []
+  "common_mistakes": [
+    "混淆产业转移和产业扩散",
+    "忽略产业转移的环境影响"
+  ]
 }

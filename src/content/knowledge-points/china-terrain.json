@@ -4,11 +4,16 @@
   "name_en": "china-terrain",
   "category": "world_china",
   "exam_frequency": "high",
-  "description": "中国地形是高中地理的重要知识点。",
+  "description": "中国地形特征包括地势西高东低、呈三级阶梯分布；地形复杂多样、山区面积广大。主要地形区包括四大高原（青藏高原、内蒙古高原、黄土高原、云贵高原）、四大盆地（塔里木盆地、准噶尔盆地、柴达木盆地、四川盆地）、三大平原（东北平原、华北平原、长江中下游平原）。",
   "key_concepts": [
-    "中国地形"
+    "中国地势特征",
+    "中国地形特征",
+    "主要地形区"
   ],
   "textbook_refs": [],
   "related_points": [],
-  "common_mistakes": []
+  "common_mistakes": [
+    "混淆地势和地形",
+    "忽略地形对气候、河流的影响"
+  ]
 }

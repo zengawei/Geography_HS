@@ -4,11 +4,16 @@
   "name_en": "china-climate",
   "category": "world_china",
   "exam_frequency": "high",
-  "description": "中国气候是高中地理的重要知识点。",
+  "description": "中国气候特征包括气候复杂多样、季风气候显著。中国跨多个温度带和干湿地区，形成多种气候类型；东部季风区面积广大，雨热同期。主要气象灾害包括旱涝、台风、寒潮等。中国气候对农业生产、水资源分布、生态环境等有重要影响。",
   "key_concepts": [
-    "中国气候"
+    "中国气候特征",
+    "中国温度带",
+    "中国干湿地区"
   ],
   "textbook_refs": [],
   "related_points": [],
-  "common_mistakes": []
+  "common_mistakes": [
+    "混淆气候和天气",
+    "忽略季风气候的影响"
+  ]
 }

@@ -4,11 +4,16 @@
   "name_en": "urban-hierarchy",
   "category": "human",
   "exam_frequency": "medium",
-  "description": "城镇体系是高中地理的重要知识点。",
+  "description": "城镇体系是指在一定地域范围内，不同规模、不同职能的城镇相互联系形成的有机整体。城市等级越高，数量越少，服务范围越大，职能越多。中心地理论揭示了城市等级与服务范围的关系。合理的城镇体系有利于区域协调发展。",
   "key_concepts": [
-    "城镇体系"
+    "城市等级体系",
+    "中心地理论",
+    "城市服务范围"
   ],
   "textbook_refs": [],
   "related_points": [],
-  "common_mistakes": []
+  "common_mistakes": [
+    "混淆城市等级和城市数量",
+    "忽略城市间的相互联系"
+  ]
 }

@@ -4,11 +4,16 @@
   "name_en": "urbanization",
   "category": "human",
   "exam_frequency": "high",
-  "description": "城镇化是高中地理的重要知识点。",
+  "description": "城镇化是人口向城镇集聚、城镇规模扩大、乡村变为城镇的过程。城镇化水平用城镇人口占总人口比重衡量。城镇化带来积极影响（促进经济发展、改善产业结构、提高生产效率）和消极影响（环境问题、交通拥堵、住房紧张、就业困难）。发达国家城镇化水平高，发展中国家城镇化速度快。",
   "key_concepts": [
-    "城镇化"
+    "城镇化标志",
+    "城镇化的影响",
+    "发达国家与发展中国家城镇化差异"
   ],
   "textbook_refs": [],
   "related_points": [],
-  "common_mistakes": []
+  "common_mistakes": [
+    "混淆城镇化和城市发展",
+    "忽略城镇化过程中的问题"
+  ]
 }

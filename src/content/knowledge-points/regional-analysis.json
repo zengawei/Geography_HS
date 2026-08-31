@@ -4,11 +4,16 @@
   "name_en": "regional-analysis",
   "category": "regional",
   "exam_frequency": "high",
-  "description": "区域分析是高中地理的重要知识点。",
+  "description": "区域分析是对区域自然、经济、社会条件进行综合评价的方法。区域分析包括区域自然条件分析、区域经济条件分析、区域社会条件分析。区域分析要运用综合思维，把握区域的优势和劣势，为区域发展提供科学依据。",
   "key_concepts": [
-    "区域分析"
+    "区域分析方法",
+    "区域优势分析",
+    "区域问题诊断"
   ],
   "textbook_refs": [],
   "related_points": [],
-  "common_mistakes": []
+  "common_mistakes": [
+    "忽略区域分析的系统性",
+    "片面强调区域优势"
+  ]
 }

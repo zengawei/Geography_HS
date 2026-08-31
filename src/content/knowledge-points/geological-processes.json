@@ -4,11 +4,16 @@
   "name_en": "geological-processes",
   "category": "natural",
   "exam_frequency": "medium",
-  "description": "地质作用是高中地理的重要知识点。",
+  "description": "地质作用按能量来源分为内力作用和外力作用。内力作用能量来自地球内部，表现为地壳运动、岩浆活动、变质作用；外力作用能量来自太阳能，表现为风化、侵蚀、搬运、堆积。地质构造包括褶皱（背斜、向斜）和断层（地垒、地堑），是研究地质地貌的基础。",
   "key_concepts": [
-    "地质作用"
+    "内力作用与外力作用",
+    "地质构造类型",
+    "地质地貌分析"
   ],
   "textbook_refs": [],
   "related_points": [],
-  "common_mistakes": []
+  "common_mistakes": [
+    "混淆地质构造和地貌",
+    "误认为背斜一定是山岭"
+  ]
 }

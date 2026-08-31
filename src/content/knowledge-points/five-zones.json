@@ -4,11 +4,16 @@
   "name_en": "five-zones",
   "category": "natural",
   "exam_frequency": "medium",
-  "description": "五带划分是高中地理的重要知识点。",
+  "description": "五带是根据太阳辐射总量从低纬向高纬递减的规律，将地球表面划分为热带、南北温带、南北寒带。划分界线为南北回归线（23°26'）和南北极圈（66°34'）。热带有太阳直射现象，寒带有极昼极夜现象，温带既无直射也无极昼极夜，但四季分明。",
   "key_concepts": [
-    "五带划分"
+    "五带划分界线",
+    "各带天文特征",
+    "五带与气候的关系"
   ],
   "textbook_refs": [],
   "related_points": [],
-  "common_mistakes": []
+  "common_mistakes": [
+    "混淆回归线和极圈的度数",
+    "误认为温带有直射现象"
+  ]
 }

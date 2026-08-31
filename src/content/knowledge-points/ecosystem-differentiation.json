@@ -4,11 +4,16 @@
   "name_en": "ecosystem-differentiation",
   "category": "natural",
   "exam_frequency": "high",
-  "description": "自然环境差异性是高中地理的重要知识点。",
+  "description": "自然环境差异性表现为地域分异规律，包括纬度地带性（由赤道到两极的分异）、经度地带性（从沿海到内陆的分异）、垂直地带性（山地的垂直分异）、非地带性（地方性分异）。地域分异规律是自然地理环境的基本特征，对农业生产布局有重要指导意义。",
   "key_concepts": [
-    "自然环境差异性"
+    "地域分异规律",
+    "垂直地带性",
+    "非地带性现象"
   ],
   "textbook_refs": [],
   "related_points": [],
-  "common_mistakes": []
+  "common_mistakes": [
+    "混淆地带性分异规律",
+    "忽略非地带性因素的影响"
+  ]
 }

@@ -4,11 +4,16 @@
   "name_en": "china-rivers",
   "category": "world_china",
   "exam_frequency": "high",
-  "description": "中国河流是高中地理的重要知识点。",
+  "description": "中国河流众多，分为外流河和内流河。外流河主要分布在东部季风区，内流河主要分布在西北内陆。主要河流包括长江、黄河、珠江、黑龙江等。长江是中国第一大河，水能资源丰富，航运价值高；黄河含沙量大，下游形成地上河。河流对中国经济发展有重要作用。",
   "key_concepts": [
-    "中国河流"
+    "中国河流分布",
+    "主要河流特征",
+    "河流开发治理"
   ],
   "textbook_refs": [],
   "related_points": [],
-  "common_mistakes": []
+  "common_mistakes": [
+    "混淆外流河和内流河",
+    "忽略河流的综合开发"
+  ]
 }

@@ -4,11 +4,16 @@
   "name_en": "industrial-location",
   "category": "human",
   "exam_frequency": "high",
-  "description": "工业区位是高中地理的重要知识点。",
+  "description": "工业区位是指工业生产所选定的地理位置和工业与地理环境各因素的相互联系。影响工业区位的因素包括自然因素（土地、水源、原料）和社会经济因素（市场、交通、劳动力、政策、科技、环境）。不同导向型工业的主导区位因素不同，如原料导向型、市场导向型、动力导向型、劳动力导向型、技术导向型。",
   "key_concepts": [
-    "工业区位"
+    "工业区位因素",
+    "工业导向类型",
+    "工业区位因素变化"
   ],
   "textbook_refs": [],
   "related_points": [],
-  "common_mistakes": []
+  "common_mistakes": [
+    "混淆不同导向型工业",
+    "忽略环境因素对工业区位的影响"
+  ]
 }

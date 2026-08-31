@@ -4,11 +4,16 @@
   "name_en": "remote-sensing",
   "category": "tools",
   "exam_frequency": "medium",
-  "description": "遥感技术是高中地理的重要知识点。",
+  "description": "遥感技术是通过传感器接收目标物的电磁波信息，经过处理分析，识别目标物性质的技术。遥感技术包括航空遥感和航天遥感。遥感图像可以反映地物的形状、大小、色调、阴影、纹理等特征。遥感技术是地理信息技术的重要组成部分，为地理研究提供重要的数据源。",
   "key_concepts": [
-    "遥感技术"
+    "遥感技术类型",
+    "遥感图像特征",
+    "遥感数据处理"
   ],
   "textbook_refs": [],
   "related_points": [],
-  "common_mistakes": []
+  "common_mistakes": [
+    "混淆不同遥感平台",
+    "忽略遥感图像的解译方法"
+  ]
 }

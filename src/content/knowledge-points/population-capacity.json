@@ -4,11 +4,16 @@
   "name_en": "population-capacity",
   "category": "human",
   "exam_frequency": "medium",
-  "description": "人口容量是高中地理的重要知识点。",
+  "description": "人口容量是指环境所能容纳的最大人口数。包括环境承载力（环境能持续供养的人口数量）和人口合理容量（保证合理健康的生活水平，且能促进可持续发展的人口数量）。影响人口容量的因素包括资源、科技水平、地区开放程度、消费水平等。",
   "key_concepts": [
-    "人口容量"
+    "环境承载力",
+    "人口合理容量",
+    "影响人口容量的因素"
   ],
   "textbook_refs": [],
   "related_points": [],
-  "common_mistakes": []
+  "common_mistakes": [
+    "混淆环境承载力和人口合理容量",
+    "忽略科技水平对人口容量的影响"
+  ]
 }

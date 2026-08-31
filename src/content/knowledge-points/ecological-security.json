@@ -4,11 +4,16 @@
   "name_en": "ecological-security",
   "category": "regional",
   "exam_frequency": "medium",
-  "description": "生态安全是高中地理的重要知识点。",
+  "description": "生态安全是指一个国家或地区的生态环境处于不受威胁、能够持续发展的状态。生态安全包括资源安全、环境安全、生物安全等。维护生态安全要保护生态系统、防治生态退化、应对生态风险。我国生态安全面临水土流失、荒漠化、生物多样性减少等挑战。",
   "key_concepts": [
-    "生态安全"
+    "生态安全内涵",
+    "生态安全问题",
+    "生态安全保障"
   ],
   "textbook_refs": [],
   "related_points": [],
-  "common_mistakes": []
+  "common_mistakes": [
+    "混淆生态安全和环境安全",
+    "忽略生态安全的综合性"
+  ]
 }

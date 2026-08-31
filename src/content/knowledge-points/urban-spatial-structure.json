@@ -4,11 +4,16 @@
   "name_en": "urban-spatial-structure",
   "category": "human",
   "exam_frequency": "high",
-  "description": "城市空间结构是高中地理的重要知识点。",
+  "description": "城市空间结构是指城市各要素在空间上的分布和组合形式。主要模式有同心圆模式、扇形模式、多核心模式。城市空间结构受地租水平、交通条件、历史文化、政策规划等因素影响。合理的城市空间结构有利于提高城市运行效率和居民生活质量。",
   "key_concepts": [
-    "城市空间结构"
+    "城市空间结构模式",
+    "影响城市空间结构的因素",
+    "城市空间结构的优化"
   ],
   "textbook_refs": [],
   "related_points": [],
-  "common_mistakes": []
+  "common_mistakes": [
+    "混淆城市空间结构和城市功能区",
+    "忽略政策规划对城市空间的影响"
+  ]
 }

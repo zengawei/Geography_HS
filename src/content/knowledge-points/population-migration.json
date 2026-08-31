@@ -4,11 +4,16 @@
   "name_en": "population-migration",
   "category": "human",
   "exam_frequency": "high",
-  "description": "人口迁移是高中地理的重要知识点。",
+  "description": "人口迁移是人口空间移动的现象，包括国际迁移和国内迁移。影响人口迁移的因素包括自然生态环境因素、经济因素、政治因素、社会文化因素。其中经济因素是主要的、经常起作用的因素。人口迁移对迁出地和迁入地都产生深远影响。",
   "key_concepts": [
-    "人口迁移"
+    "人口迁移类型",
+    "影响人口迁移的因素",
+    "人口迁移的影响"
   ],
   "textbook_refs": [],
   "related_points": [],
-  "common_mistakes": []
+  "common_mistakes": [
+    "混淆人口迁移和人口流动",
+    "忽略经济因素的主导作用"
+  ]
 }

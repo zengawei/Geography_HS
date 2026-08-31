@@ -4,11 +4,16 @@
   "name_en": "natural-hazards",
   "category": "natural",
   "exam_frequency": "high",
-  "description": "自然灾害是高中地理的重要知识点。",
+  "description": "自然灾害是指给人类生存带来危害或损害人类生活环境的自然现象。主要自然灾害包括气象灾害（台风、寒潮、干旱、洪涝）、地质灾害（地震、滑坡、泥石流）、海洋灾害（风暴潮、海啸）、生物灾害（病虫害）等。自然灾害具有突发性、周期性、群发性等特点。",
   "key_concepts": [
-    "自然灾害"
+    "自然灾害类型",
+    "自然灾害特点",
+    "防灾减灾措施"
   ],
   "textbook_refs": [],
   "related_points": [],
-  "common_mistakes": []
+  "common_mistakes": [
+    "混淆自然灾害和人为灾害",
+    "忽略自然灾害的关联性"
+  ]
 }

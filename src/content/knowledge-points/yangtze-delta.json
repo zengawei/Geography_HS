@@ -4,11 +4,16 @@
   "name_en": "yangtze-delta",
   "category": "regional",
   "exam_frequency": "high",
-  "description": "长三角一体化是高中地理的重要知识点。",
+  "description": "长三角一体化是指上海、江苏、浙江、安徽三省一市加强合作，建设世界级城市群的战略。长三角是中国经济发展最活跃、开放程度最高、创新能力最强的区域之一。长三角一体化要实现基础设施互联互通、产业协同发展、生态环境共保联治、公共服务便利共享。",
   "key_concepts": [
-    "长三角一体化"
+    "长三角区域范围",
+    "长三角一体化内容",
+    "长三角发展优势"
   ],
   "textbook_refs": [],
   "related_points": [],
-  "common_mistakes": []
+  "common_mistakes": [
+    "忽略安徽在长三角中的地位",
+    "混淆长三角和长江经济带"
+  ]
 }

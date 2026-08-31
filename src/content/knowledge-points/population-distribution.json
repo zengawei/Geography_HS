@@ -4,11 +4,16 @@
   "name_en": "population-distribution",
   "category": "human",
   "exam_frequency": "medium",
-  "description": "人口分布是高中地理的重要知识点。",
+  "description": "人口分布是指人口在一定地区范围内的空间分布状况。世界人口分布不均匀，主要集中在北半球中低纬度沿海平原地区。影响人口分布的因素包括自然因素（气候、地形、水源、土壤）和社会经济因素（经济发展水平、交通条件、政策、历史等）。",
   "key_concepts": [
-    "人口分布"
+    "人口分布规律",
+    "影响人口分布的因素",
+    "人口密度"
   ],
   "textbook_refs": [],
   "related_points": [],
-  "common_mistakes": []
+  "common_mistakes": [
+    "忽略社会经济因素的主导作用",
+    "混淆人口分布和人口迁移"
+  ]
 }
