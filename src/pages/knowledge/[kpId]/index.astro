@@ -65,14 +65,44 @@ const frequencyColors = {
     <p class="text-gray-700 leading-relaxed">{kp.data.description}</p>
   </div>
 
-  {kp.data.key_concepts.length > 0 && (
+  {kp.data.key_concepts && kp.data.key_concepts.length > 0 && (
     <div class="bg-white rounded-lg border border-gray-200 p-6 mb-6">
-      <h2 class="text-lg font-semibold mb-3">🔑 核心概念</h2>
-      <ul class="list-disc list-inside space-y-2 text-gray-700">
-        {kp.data.key_concepts.map(concept => (
-          <li>{concept}</li>
+      <h2 class="text-lg font-semibold mb-4">🔑 核心概念</h2>
+      <div class="space-y-6">
+        {kp.data.key_concepts.map((concept: any) => (
+          <div class="border-l-4 border-green-500 pl-4">
+            <h3 class="text-base font-semibold text-gray-800 mb-2">{concept.title}</h3>
+            
+            {concept.definition && (
+              <div class="mb-2">
+                <span class="text-sm font-medium text-gray-600">定义：</span>
+                <p class="text-sm text-gray-700 inline">{concept.definition}</p>
+              </div>
+            )}
+            
+            {concept.explanation && (
+              <div class="mb-2">
+                <span class="text-sm font-medium text-gray-600">详解：</span>
+                <p class="text-sm text-gray-700 leading-relaxed">{concept.explanation}</p>
+              </div>
+            )}
+            
+            {concept.example && (
+              <div class="mb-2 bg-blue-50 rounded p-3">
+                <span class="text-sm font-medium text-blue-700">📝 举例：</span>
+                <p class="text-sm text-blue-900 mt-1">{concept.example}</p>
+              </div>
+            )}
+            
+            {concept.formula && (
+              <div class="bg-yellow-50 rounded p-3">
+                <span class="text-sm font-medium text-yellow-700">📐 公式：</span>
+                <p class="text-sm text-yellow-900 font-mono mt-1">{concept.formula}</p>
+              </div>
+            )}
+          </div>
         ))}
-      </ul>
+      </div>
     </div>
   )}
 

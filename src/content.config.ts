@@ -42,7 +42,16 @@ const knowledgePointSchema = z.object({
   category: z.enum(['natural', 'human', 'regional', 'world_china', 'tools']),
   exam_frequency: z.enum(['high', 'medium', 'low']),
   description: z.string().min(1),
-  key_concepts: z.array(z.string()),
+  key_concepts: z.array(z.union([
+    z.string(),
+    z.object({
+      title: z.string(),
+      definition: z.string().optional(),
+      explanation: z.string().optional(),
+      example: z.string().optional(),
+      formula: z.string().optional(),
+    })
+  ])),
   textbook_refs: z.array(z.object({
     textbook: textbookEnum,
     chapter: z.number().int(),
