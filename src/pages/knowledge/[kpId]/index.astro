@@ -99,7 +99,7 @@ const frequencyColors = {
       <div class="space-y-3">
         {relatedQuestions.slice(0, 10).map(q => (
           <a
-            href={`/Geography_HS/ncee/${q.data.paper_code}/`}
+            href={`/Geography_HS/ncee/${q.data.paper_code}/${String(q.data.question_number).padStart(2, '0')}/`}
             class="block p-4 border border-gray-200 rounded hover:border-green-400 hover:shadow-sm transition"
           >
             <div class="flex items-center justify-between">

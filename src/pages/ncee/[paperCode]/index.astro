@@ -4,7 +4,7 @@ import { getCollection } from 'astro:content';
 
 export async function getStaticPaths() {
   const nceeQuestions = await getCollection('textbooks/ncee');
-  
+
   // 按paper_code分组
   const papers = {};
   for (const q of nceeQuestions) {
@@ -20,12 +20,12 @@ export async function getStaticPaths() {
     }
     papers[code].questions.push(q);
   }
-  
+
   // 对每个试卷的题目按题号排序
   for (const code of Object.keys(papers)) {
     papers[code].questions.sort((a, b) => a.data.question_number - b.data.question_number);
   }
-  
+
   return Object.values(papers).map(paper => ({
     params: { paperCode: paper.paperCode },
     props: { paper }
@@ -42,39 +42,120 @@ const { paper } = Astro.props;
     <span class="text-gray-800">{paper.paper}</span>
   </nav>
 
-  <h1 class="text-3xl font-bold mb-2">{paper.paper}</h1>
-  <p class="text-gray-600 mb-6">{paper.year}年 · {paper.questions.length} 道题目</p>
+  <div class="bg-gradient-to-r from-green-50 to-blue-50 rounded-lg p-6 mb-6 border border-gray-200">
+    <h1 class="text-3xl font-bold text-gray-800 mb-2">{paper.paper}</h1>
+    <div class="flex items-center gap-4 text-sm text-gray-600">
+      <span>{paper.year}年</span>
+      <span>·</span>
+      <span>{paper.questions.length} 道题目</span>
+    </div>
+  </div>
 
-  <div class="space-y-4">
+  <!-- 题目导航 -->
+  <div class="bg-white rounded-lg border border-gray-200 p-4 mb-6">
+    <h3 class="text-sm font-semibold text-gray-700 mb-3">快速导航</h3>
+    <div class="flex flex-wrap gap-2">
+      {paper.questions.map(q => (
+        <a 
+          href={`#q${q.data.question_number}`}
+          class="px-3 py-1 rounded text-sm bg-gray-100 text-gray-700 hover:bg-green-100 hover:text-green-700 transition-colors"
+        >
+          第{q.data.question_number}题
+        </a>
+      ))}
+    </div>
+  </div>
+
+  <!-- 题目列表 -->
+  <div class="space-y-6">
     {paper.questions.map((q, index) => (
-      <article class="bg-white rounded-lg border border-gray-200 p-6">
-        <div class="flex items-start justify-between mb-3">
-          <h2 class="text-lg font-semibold">
-            <span class="text-green-600 mr-2">第{q.data.question_number}题</span>
-            <span class={`text-xs px-2 py-1 rounded ${
-              q.data.difficulty === 'basic' ? 'bg-green-100 text-green-700' :
-              q.data.difficulty === 'medium' ? 'bg-amber-100 text-amber-700' :
-              'bg-red-100 text-red-700'
-            }`}>
-              {q.data.difficulty === 'basic' ? '基础' : q.data.difficulty === 'medium' ? '中等' : '困难'}
-            </span>
-          </h2>
-          <span class="text-sm text-gray-500">{q.data.score}分</span>
+      <article id={`q${q.data.question_number}`} class="bg-white rounded-lg shadow-sm border border-gray-200 overflow-hidden scroll-mt-4">
+        <!-- 题目头部 -->
+        <div class="bg-gradient-to-r from-gray-50 to-white px-6 py-4 border-b border-gray-200">
+          <div class="flex items-center justify-between flex-wrap gap-3">
+            <div class="flex items-center gap-3">
+              <span class="flex items-center justify-center w-10 h-10 rounded-full bg-green-100 text-green-700 font-bold text-lg">
+                {q.data.question_number}
+              </span>
+              <div>
+                <h2 class="text-lg font-semibold text-gray-800">
+                  第 {q.data.question_number} 题
+                </h2>
+                <p class="text-xs text-gray-500 mt-0.5">
+                  {q.data.question_type === 'choice' ? '选择题' : 
+                   q.data.question_type === 'comprehensive' ? '综合题' : 
+                   q.data.question_type === 'fill_blank' ? '填空题' : '选做题'}
+                </p>
+              </div>
+            </div>
+            <div class="flex items-center gap-2">
+              <span class={`px-3 py-1 rounded-full text-xs font-medium ${
+                q.data.difficulty === 'basic' ? 'bg-green-100 text-green-700' :
+                q.data.difficulty === 'medium' ? 'bg-amber-100 text-amber-700' :
+                'bg-red-100 text-red-700'
+              }`}>
+                {q.data.difficulty === 'basic' ? '基础' : 
+                 q.data.difficulty === 'medium' ? '中等' : '困难'}
+              </span>
+              <span class="px-3 py-1 rounded-full text-xs font-medium bg-blue-100 text-blue-700">
+                {q.data.score}分
+              </span>
+            </div>
+          </div>
         </div>
-        
-        <div class="prose prose-sm max-w-none mb-4" set:html={q.body} />
-        
-        <div class="mt-4 pt-4 border-t border-gray-100">
-          <div class="text-sm text-gray-500">
-            知识点：
-            {q.data.knowledge_points.map(kp => (
-              <a href={`/Geography_HS/knowledge/${kp}/`} class="text-green-600 hover:underline mr-2">
-                {kp}
-              </a>
-            ))}
+
+        <!-- 题目内容 -->
+        <div class="px-6 py-5">
+          <div class="prose prose-sm max-w-none text-gray-700 leading-relaxed">
+            <div set:html={q.body} />
+          </div>
+
+          <!-- 知识点标签 -->
+          {q.data.knowledge_points.length > 0 && (
+            <div class="mt-5 pt-5 border-t border-gray-100">
+              <div class="flex items-start gap-2 flex-wrap">
+                <span class="text-xs text-gray-500 mt-1">知识点：</span>
+                <div class="flex flex-wrap gap-1.5">
+                  {q.data.knowledge_points.map(kpId => (
+                    <a 
+                      href={`/Geography_HS/knowledge/${kpId}/`}
+                      class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs bg-gray-100 text-gray-600 hover:bg-green-100 hover:text-green-700 transition-colors"
+                    >
+                      {kpId}
+                    </a>
+                  ))}
+                </div>
+              </div>
+            </div>
+          )}
+
+          <!-- 查看详情链接 -->
+          <div class="mt-4 pt-4 border-t border-gray-100">
+            <a 
+              href={`/Geography_HS/ncee/${q.data.paper_code}/${String(q.data.question_number).padStart(2, '0')}/`}
+              class="inline-flex items-center text-sm text-green-600 hover:text-green-700 font-medium"
+            >
+              查看题目详情
+              <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+              </svg>
+            </a>
           </div>
         </div>
       </article>
     ))}
+  </div>
+
+  <!-- 返回顶部 -->
+  <div class="mt-8 text-center">
+    <a 
+      href="#"
+      class="inline-flex items-center px-4 py-2 bg-white border border-gray-300 rounded-lg text-gray-700 hover:bg-gray-50 transition-colors"
+    >
+      <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18"></path>
+      </svg>
+      返回顶部
+    </a>
   </div>
 </BaseLayout>
