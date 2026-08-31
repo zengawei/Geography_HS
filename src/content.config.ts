@@ -49,7 +49,7 @@ const knowledgePointSchema = z.object({
       definition: z.string().optional(),
       explanation: z.string().optional(),
       example: z.string().optional(),
-      formula: z.string().optional(),
+      formula: z.string().nullable().optional(),
     })
   ])),
   textbook_refs: z.array(z.object({
