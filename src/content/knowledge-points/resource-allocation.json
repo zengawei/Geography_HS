@@ -1,0 +1,14 @@
+{
+  "id": "resource-allocation",
+  "name": "资源跨区域调配",
+  "name_en": "resource-allocation",
+  "category": "regional",
+  "exam_frequency": "high",
+  "description": "资源跨区域调配是高中地理的重要知识点。",
+  "key_concepts": [
+    "资源跨区域调配"
+  ],
+  "textbook_refs": [],
+  "related_points": [],
+  "common_mistakes": []
+}

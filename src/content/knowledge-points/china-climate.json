@@ -1,0 +1,14 @@
+{
+  "id": "china-climate",
+  "name": "中国气候",
+  "name_en": "china-climate",
+  "category": "world_china",
+  "exam_frequency": "high",
+  "description": "中国气候是高中地理的重要知识点。",
+  "key_concepts": [
+    "中国气候"
+  ],
+  "textbook_refs": [],
+  "related_points": [],
+  "common_mistakes": []
+}

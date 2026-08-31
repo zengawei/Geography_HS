@@ -1,0 +1,14 @@
+{
+  "id": "earth-position",
+  "name": "地球在宇宙中的位置",
+  "name_en": "earth-position",
+  "category": "natural",
+  "exam_frequency": "medium",
+  "description": "地球在宇宙中的位置是高中地理的重要知识点。",
+  "key_concepts": [
+    "地球在宇宙中的位置"
+  ],
+  "textbook_refs": [],
+  "related_points": [],
+  "common_mistakes": []
+}

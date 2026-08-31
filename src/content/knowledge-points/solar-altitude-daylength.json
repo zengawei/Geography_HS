@@ -1,0 +1,14 @@
+{
+  "id": "solar-altitude-daylength",
+  "name": "正午太阳高度与昼夜长短",
+  "name_en": "solar-altitude-daylength",
+  "category": "natural",
+  "exam_frequency": "high",
+  "description": "正午太阳高度与昼夜长短是高中地理的重要知识点。",
+  "key_concepts": [
+    "正午太阳高度与昼夜长短"
+  ],
+  "textbook_refs": [],
+  "related_points": [],
+  "common_mistakes": []
+}

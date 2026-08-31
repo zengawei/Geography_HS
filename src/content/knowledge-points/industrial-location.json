@@ -1,0 +1,14 @@
+{
+  "id": "industrial-location",
+  "name": "工业区位",
+  "name_en": "industrial-location",
+  "category": "human",
+  "exam_frequency": "high",
+  "description": "工业区位是高中地理的重要知识点。",
+  "key_concepts": [
+    "工业区位"
+  ],
+  "textbook_refs": [],
+  "related_points": [],
+  "common_mistakes": []
+}

@@ -1,0 +1,14 @@
+{
+  "id": "population-migration",
+  "name": "人口迁移",
+  "name_en": "population-migration",
+  "category": "human",
+  "exam_frequency": "high",
+  "description": "人口迁移是高中地理的重要知识点。",
+  "key_concepts": [
+    "人口迁移"
+  ],
+  "textbook_refs": [],
+  "related_points": [],
+  "common_mistakes": []
+}

@@ -1,0 +1,14 @@
+{
+  "id": "water-cycle",
+  "name": "水循环",
+  "name_en": "water-cycle",
+  "category": "natural",
+  "exam_frequency": "high",
+  "description": "水循环是高中地理的重要知识点。",
+  "key_concepts": [
+    "水循环"
+  ],
+  "textbook_refs": [],
+  "related_points": [],
+  "common_mistakes": []
+}

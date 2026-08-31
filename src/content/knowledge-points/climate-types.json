@@ -1,0 +1,14 @@
+{
+  "id": "climate-types",
+  "name": "气候类型",
+  "name_en": "climate-types",
+  "category": "natural",
+  "exam_frequency": "high",
+  "description": "气候类型是高中地理的重要知识点。",
+  "key_concepts": [
+    "气候类型"
+  ],
+  "textbook_refs": [],
+  "related_points": [],
+  "common_mistakes": []
+}

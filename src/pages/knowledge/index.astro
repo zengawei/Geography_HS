@@ -2,7 +2,7 @@
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import { getCollection } from 'astro:content';
 
-const knowledgePoints = await getCollection('textbooks/knowledge');
+const knowledgePoints = await getCollection('knowledge-points');
 
 // 按category分组
 const categories = {

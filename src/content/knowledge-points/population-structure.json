@@ -1,0 +1,14 @@
+{
+  "id": "population-structure",
+  "name": "人口结构",
+  "name_en": "population-structure",
+  "category": "human",
+  "exam_frequency": "medium",
+  "description": "人口结构是高中地理的重要知识点。",
+  "key_concepts": [
+    "人口结构"
+  ],
+  "textbook_refs": [],
+  "related_points": [],
+  "common_mistakes": []
+}

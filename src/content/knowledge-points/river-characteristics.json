@@ -1,0 +1,14 @@
+{
+  "id": "river-characteristics",
+  "name": "河流水文特征",
+  "name_en": "river-characteristics",
+  "category": "natural",
+  "exam_frequency": "high",
+  "description": "河流水文特征是高中地理的重要知识点。",
+  "key_concepts": [
+    "河流水文特征"
+  ],
+  "textbook_refs": [],
+  "related_points": [],
+  "common_mistakes": []
+}

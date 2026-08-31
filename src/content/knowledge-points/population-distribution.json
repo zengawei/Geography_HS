@@ -1,0 +1,14 @@
+{
+  "id": "population-distribution",
+  "name": "人口分布",
+  "name_en": "population-distribution",
+  "category": "human",
+  "exam_frequency": "medium",
+  "description": "人口分布是高中地理的重要知识点。",
+  "key_concepts": [
+    "人口分布"
+  ],
+  "textbook_refs": [],
+  "related_points": [],
+  "common_mistakes": []
+}

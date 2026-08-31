@@ -1,0 +1,14 @@
+{
+  "id": "industrial-transfer",
+  "name": "产业转移",
+  "name_en": "industrial-transfer",
+  "category": "regional",
+  "exam_frequency": "high",
+  "description": "产业转移是高中地理的重要知识点。",
+  "key_concepts": [
+    "产业转移"
+  ],
+  "textbook_refs": [],
+  "related_points": [],
+  "common_mistakes": []
+}

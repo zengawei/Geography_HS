@@ -1,0 +1,14 @@
+{
+  "id": "plate-tectonics",
+  "name": "板块构造",
+  "name_en": "plate-tectonics",
+  "category": "natural",
+  "exam_frequency": "medium",
+  "description": "板块构造是高中地理的重要知识点。",
+  "key_concepts": [
+    "板块构造"
+  ],
+  "textbook_refs": [],
+  "related_points": [],
+  "common_mistakes": []
+}

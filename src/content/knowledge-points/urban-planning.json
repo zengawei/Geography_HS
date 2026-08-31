@@ -1,0 +1,14 @@
+{
+  "id": "urban-planning",
+  "name": "城市规划",
+  "name_en": "urban-planning",
+  "category": "human",
+  "exam_frequency": "medium",
+  "description": "城市规划是高中地理的重要知识点。",
+  "key_concepts": [
+    "城市规划"
+  ],
+  "textbook_refs": [],
+  "related_points": [],
+  "common_mistakes": []
+}

@@ -1,0 +1,14 @@
+{
+  "id": "pressure-belts",
+  "name": "气压带风带",
+  "name_en": "pressure-belts",
+  "category": "natural",
+  "exam_frequency": "high",
+  "description": "气压带风带是高中地理的重要知识点。",
+  "key_concepts": [
+    "气压带风带"
+  ],
+  "textbook_refs": [],
+  "related_points": [],
+  "common_mistakes": []
+}

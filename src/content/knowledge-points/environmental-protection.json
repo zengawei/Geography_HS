@@ -1,0 +1,14 @@
+{
+  "id": "environmental-protection",
+  "name": "环境保护",
+  "name_en": "environmental-protection",
+  "category": "regional",
+  "exam_frequency": "high",
+  "description": "环境保护是高中地理的重要知识点。",
+  "key_concepts": [
+    "环境保护"
+  ],
+  "textbook_refs": [],
+  "related_points": [],
+  "common_mistakes": []
+}

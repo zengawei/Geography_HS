@@ -1,0 +1,14 @@
+{
+  "id": "rs-application",
+  "name": "遥感应用",
+  "name_en": "rs-application",
+  "category": "tools",
+  "exam_frequency": "medium",
+  "description": "遥感应用是高中地理的重要知识点。",
+  "key_concepts": [
+    "遥感应用"
+  ],
+  "textbook_refs": [],
+  "related_points": [],
+  "common_mistakes": []
+}

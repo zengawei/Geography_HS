@@ -1,0 +1,14 @@
+{
+  "id": "remote-sensing",
+  "name": "遥感技术",
+  "name_en": "remote-sensing",
+  "category": "tools",
+  "exam_frequency": "medium",
+  "description": "遥感技术是高中地理的重要知识点。",
+  "key_concepts": [
+    "遥感技术"
+  ],
+  "textbook_refs": [],
+  "related_points": [],
+  "common_mistakes": []
+}

@@ -1,0 +1,14 @@
+{
+  "id": "service-industry",
+  "name": "服务业",
+  "name_en": "service-industry",
+  "category": "human",
+  "exam_frequency": "medium",
+  "description": "服务业是高中地理的重要知识点。",
+  "key_concepts": [
+    "服务业"
+  ],
+  "textbook_refs": [],
+  "related_points": [],
+  "common_mistakes": []
+}

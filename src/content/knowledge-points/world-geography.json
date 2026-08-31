@@ -1,0 +1,14 @@
+{
+  "id": "world-geography",
+  "name": "世界地理概况",
+  "name_en": "world-geography",
+  "category": "world_china",
+  "exam_frequency": "medium",
+  "description": "世界地理概况是高中地理的重要知识点。",
+  "key_concepts": [
+    "世界地理概况"
+  ],
+  "textbook_refs": [],
+  "related_points": [],
+  "common_mistakes": []
+}

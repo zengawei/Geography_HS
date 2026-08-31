@@ -1,0 +1,14 @@
+{
+  "id": "urbanization",
+  "name": "城镇化",
+  "name_en": "urbanization",
+  "category": "human",
+  "exam_frequency": "high",
+  "description": "城镇化是高中地理的重要知识点。",
+  "key_concepts": [
+    "城镇化"
+  ],
+  "textbook_refs": [],
+  "related_points": [],
+  "common_mistakes": []
+}

@@ -1,0 +1,14 @@
+{
+  "id": "world-population",
+  "name": "世界人口",
+  "name_en": "world-population",
+  "category": "world_china",
+  "exam_frequency": "medium",
+  "description": "世界人口是高中地理的重要知识点。",
+  "key_concepts": [
+    "世界人口"
+  ],
+  "textbook_refs": [],
+  "related_points": [],
+  "common_mistakes": []
+}

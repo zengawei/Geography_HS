@@ -1,0 +1,14 @@
+{
+  "id": "commercial-layout",
+  "name": "商业布局",
+  "name_en": "commercial-layout",
+  "category": "human",
+  "exam_frequency": "medium",
+  "description": "商业布局是高中地理的重要知识点。",
+  "key_concepts": [
+    "商业布局"
+  ],
+  "textbook_refs": [],
+  "related_points": [],
+  "common_mistakes": []
+}

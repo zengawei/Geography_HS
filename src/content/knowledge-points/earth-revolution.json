@@ -1,0 +1,14 @@
+{
+  "id": "earth-revolution",
+  "name": "地球公转",
+  "name_en": "earth-revolution",
+  "category": "natural",
+  "exam_frequency": "high",
+  "description": "地球公转是高中地理的重要知识点。",
+  "key_concepts": [
+    "地球公转"
+  ],
+  "textbook_refs": [],
+  "related_points": [],
+  "common_mistakes": []
+}

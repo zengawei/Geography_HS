@@ -1,0 +1,14 @@
+{
+  "id": "weather-systems",
+  "name": "天气系统",
+  "name_en": "weather-systems",
+  "category": "natural",
+  "exam_frequency": "high",
+  "description": "天气系统是高中地理的重要知识点。",
+  "key_concepts": [
+    "天气系统"
+  ],
+  "textbook_refs": [],
+  "related_points": [],
+  "common_mistakes": []
+}

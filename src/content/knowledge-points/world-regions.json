@@ -1,0 +1,14 @@
+{
+  "id": "world-regions",
+  "name": "世界主要区域",
+  "name_en": "world-regions",
+  "category": "world_china",
+  "exam_frequency": "medium",
+  "description": "世界主要区域是高中地理的重要知识点。",
+  "key_concepts": [
+    "世界主要区域"
+  ],
+  "textbook_refs": [],
+  "related_points": [],
+  "common_mistakes": []
+}

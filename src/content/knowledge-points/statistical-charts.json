@@ -1,0 +1,14 @@
+{
+  "id": "statistical-charts",
+  "name": "统计图表",
+  "name_en": "statistical-charts",
+  "category": "tools",
+  "exam_frequency": "medium",
+  "description": "统计图表是高中地理的重要知识点。",
+  "key_concepts": [
+    "统计图表"
+  ],
+  "textbook_refs": [],
+  "related_points": [],
+  "common_mistakes": []
+}

@@ -1,0 +1,14 @@
+{
+  "id": "glaciers",
+  "name": "冰川",
+  "name_en": "glaciers",
+  "category": "natural",
+  "exam_frequency": "low",
+  "description": "冰川是高中地理的重要知识点。",
+  "key_concepts": [
+    "冰川"
+  ],
+  "textbook_refs": [],
+  "related_points": [],
+  "common_mistakes": []
+}

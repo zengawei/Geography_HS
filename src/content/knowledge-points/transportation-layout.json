@@ -1,0 +1,14 @@
+{
+  "id": "transportation-layout",
+  "name": "交通运输布局",
+  "name_en": "transportation-layout",
+  "category": "human",
+  "exam_frequency": "high",
+  "description": "交通运输布局是高中地理的重要知识点。",
+  "key_concepts": [
+    "交通运输布局"
+  ],
+  "textbook_refs": [],
+  "related_points": [],
+  "common_mistakes": []
+}

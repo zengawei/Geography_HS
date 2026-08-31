@@ -1,0 +1,14 @@
+{
+  "id": "china-terrain",
+  "name": "中国地形",
+  "name_en": "china-terrain",
+  "category": "world_china",
+  "exam_frequency": "high",
+  "description": "中国地形是高中地理的重要知识点。",
+  "key_concepts": [
+    "中国地形"
+  ],
+  "textbook_refs": [],
+  "related_points": [],
+  "common_mistakes": []
+}

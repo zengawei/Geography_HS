@@ -1,0 +1,14 @@
+{
+  "id": "coordinate-system",
+  "name": "经纬网",
+  "name_en": "coordinate-system",
+  "category": "tools",
+  "exam_frequency": "high",
+  "description": "经纬网是高中地理的重要知识点。",
+  "key_concepts": [
+    "经纬网"
+  ],
+  "textbook_refs": [],
+  "related_points": [],
+  "common_mistakes": []
+}
