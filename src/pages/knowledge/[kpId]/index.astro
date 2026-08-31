@@ -69,12 +69,9 @@ const frequencyColors = {
     <div class="bg-white rounded-lg border border-gray-200 p-6 mb-6">
       <h2 class="text-lg font-semibold mb-4">🔑 核心概念</h2>
       <div class="space-y-6">
-        {kp.data.key_concepts.map((concept: any, idx: number) => {
-          // 调试信息
-          console.log(`Concept ${idx}:`, concept);
-          return (
+        {kp.data.key_concepts.map((concept: any) => (
           <div class="border-l-4 border-green-500 pl-4">
-            <h3 class="text-base font-semibold text-gray-800 mb-2">{concept.title || 'NO TITLE'}</h3>
+            <h3 class="text-base font-semibold text-gray-800 mb-2">{concept.title}</h3>
             
             {concept.definition && (
               <div class="mb-2">
@@ -104,8 +101,7 @@ const frequencyColors = {
               </div>
             )}
           </div>
-          );
-        })}
+        ))}
       </div>
     </div>
   )}
