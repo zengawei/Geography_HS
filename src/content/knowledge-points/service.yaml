@@ -1,0 +1,16 @@
+id: "service"
+name: "服务业区位选择"
+category: "human"
+exam_frequency: "medium"
+description: "服务业的区位选择因素，生产性服务业与生活性服务业的布局差异。"
+key_concepts:
+  - "市场因素（人口规模与消费能力）"
+  - "交通通达度"
+  - "集聚效应"
+  - "生产性vs生活性服务业"
+textbook_refs:
+  - textbook: "required-2"
+    chapter: 6
+related_points:
+  - "urban-spatial-structure"
+  - "urban-hierarchy"

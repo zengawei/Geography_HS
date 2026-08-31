@@ -1,0 +1,20 @@
+id: "urbanization"
+name: "城镇化"
+category: "human"
+exam_frequency: "high"
+description: "城镇化的标志、进程（S形曲线）、问题与对策，中国城镇化特征。"
+key_concepts:
+  - "城镇化标志"
+  - "城镇化进程（初期、中期、后期）"
+  - "城镇化问题"
+  - "逆城镇化"
+textbook_refs:
+  - textbook: "required-2"
+    chapter: 2
+related_points:
+  - "urban-spatial-structure"
+  - "urban-hierarchy"
+  - "population-migration"
+common_mistakes:
+  - "混淆城镇化水平与城镇化速度"
+  - "发达国家逆城镇化≠城市衰落"

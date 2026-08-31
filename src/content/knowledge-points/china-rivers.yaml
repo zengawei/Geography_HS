@@ -1,0 +1,17 @@
+id: "china-rivers"
+name: "中国河流"
+category: "world_china"
+exam_frequency: "high"
+description: "长江、黄河的概况、开发治理，中国主要河流的水文特征。"
+key_concepts:
+  - "长江水系与开发"
+  - "黄河水系与治理"
+  - "内外流河"
+  - "河流与区域发展"
+textbook_refs:
+  []
+related_points:
+  - "china-terrain"
+  - "china-climate"
+  - "river-lake-hydrology"
+  - "resource-allocation"

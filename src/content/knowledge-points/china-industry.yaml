@@ -1,0 +1,16 @@
+id: "china-industry"
+name: "中国工业"
+category: "world_china"
+exam_frequency: "medium"
+description: "中国工业基地的分布与变化，高新技术产业发展。"
+key_concepts:
+  - "四大工业基地"
+  - "工业布局变化"
+  - "高新技术产业"
+  - "产业升级"
+textbook_refs:
+  []
+related_points:
+  - "industry-location"
+  - "industry-regions"
+  - "industrial-transfer"

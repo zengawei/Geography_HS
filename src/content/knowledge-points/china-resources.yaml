@@ -1,0 +1,16 @@
+id: "china-resources"
+name: "中国自然资源"
+category: "world_china"
+exam_frequency: "medium"
+description: "中国主要自然资源的分布特征与利用问题。"
+key_concepts:
+  - "水资源时空分布"
+  - "土地资源"
+  - "矿产资源"
+  - "资源利用问题"
+textbook_refs:
+  []
+related_points:
+  - "resource-security"
+  - "resource-allocation"
+  - "water-cycle"

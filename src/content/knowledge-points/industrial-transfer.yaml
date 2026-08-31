@@ -1,0 +1,20 @@
+id: "industrial-transfer"
+name: "产业转移"
+category: "regional"
+exam_frequency: "high"
+description: "产业转移的规律、影响因素，对转出区和转入区的影响。"
+key_concepts:
+  - "产业转移规律（劳动密集型→资本→技术）"
+  - "影响因素"
+  - "对转出区影响"
+  - "对转入区影响"
+textbook_refs:
+  - textbook: "selective-2"
+    chapter: 4
+related_points:
+  - "industry-location"
+  - "industry-regions"
+  - "regional-coordination"
+common_mistakes:
+  - "产业转移不等于产业消失"
+  - "转入区不一定只有好处"

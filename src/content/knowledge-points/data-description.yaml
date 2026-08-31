@@ -1,0 +1,19 @@
+id: "data-description"
+name: "地理数据描述与趋势分析"
+category: "tools"
+exam_frequency: "high"
+description: "地理数据的描述方法（总量、变化趋势、差异比较），数据分析的基本思路。"
+key_concepts:
+  - "数据描述模板"
+  - "变化趋势描述"
+  - "极值与差异"
+  - "相关性分析"
+textbook_refs:
+  []
+related_points:
+  - "statistical-charts"
+  - "spatial-analysis"
+  - "cause-effect"
+common_mistakes:
+  - "描述数据时缺少具体数值支撑"
+  - "混淆相关关系与因果关系"

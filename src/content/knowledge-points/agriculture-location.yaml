@@ -1,0 +1,18 @@
+id: "agriculture-location"
+name: "农业区位因素与变化"
+category: "human"
+exam_frequency: "high"
+description: "农业区位因素（自然+社会经济）分析，农业区位因素的变化。"
+key_concepts:
+  - "自然因素（气候、地形、土壤、水源）"
+  - "社会经济因素（市场、交通、政策、科技）"
+  - "区位因素变化"
+textbook_refs:
+  - textbook: "required-2"
+    chapter: 3
+related_points:
+  - "agriculture-regions"
+  - "china-agriculture"
+common_mistakes:
+  - "自然因素≠不变，社会经济因素≠唯一变化"
+  - "温室大棚改变的是热量条件"

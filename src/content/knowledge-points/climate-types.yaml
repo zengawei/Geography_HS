@@ -1,0 +1,22 @@
+id: "climate-types"
+name: "世界主要气候类型"
+category: "natural"
+exam_frequency: "high"
+description: "世界主要气候类型的成因、分布规律和特征（气温曲线与降水量柱状图判读）。"
+key_concepts:
+  - "热带4种气候"
+  - "亚热带2种"
+  - "温带3种"
+  - "寒带气候"
+  - "气候类型判读方法"
+textbook_refs:
+  - textbook: "required-1"
+    chapter: 2
+related_points:
+  - "atmospheric-circulation"
+  - "pressure-monsoon"
+  - "weather-systems"
+  - "world-overview"
+common_mistakes:
+  - "地中海气候与亚热带季风气候的降水季节分配混淆"
+  - "热带草原与热带季风气候的降水量区分"

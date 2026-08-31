@@ -1,0 +1,22 @@
+id: "atmosphere-heating"
+name: "大气受热过程"
+category: "natural"
+exam_frequency: "high"
+description: "大气的受热过程（太阳暖大地、大地暖大气、大气还大地），逆温现象及其应用。"
+key_concepts:
+  - "太阳辐射、地面辐射、大气逆辐射"
+  - "温室效应"
+  - "逆温层"
+  - "气温垂直分布"
+textbook_refs:
+  - textbook: "required-1"
+    chapter: 2
+  - textbook: "selective-1"
+    chapter: 2
+related_points:
+  - "solar-radiation-activity"
+  - "atmospheric-circulation"
+  - "climate-types"
+common_mistakes:
+  - "混淆大气逆辐射与地面辐射"
+  - "误认为阴天昼夜温差大"

@@ -1,0 +1,16 @@
+id: "population-migration"
+name: "人口迁移"
+category: "human"
+exam_frequency: "medium"
+description: "人口迁移的类型、影响因素（推拉理论），中国人口迁移的特征。"
+key_concepts:
+  - "推拉理论"
+  - "经济因素（主要因素）"
+  - "中国民工潮"
+  - "人口迁移的影响"
+textbook_refs:
+  - textbook: "required-2"
+    chapter: 1
+related_points:
+  - "population-distribution"
+  - "urbanization"

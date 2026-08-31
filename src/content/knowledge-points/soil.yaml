@@ -1,0 +1,17 @@
+id: "soil"
+name: "土壤形成与类型"
+category: "natural"
+exam_frequency: "medium"
+description: "土壤的组成、形成因素（成土母质、气候、生物、地形、时间）、主要土壤类型。"
+key_concepts:
+  - "土壤剖面"
+  - "五大成土因素"
+  - "黑土、红壤、紫色土"
+  - "土壤与人类活动"
+textbook_refs:
+  - textbook: "required-1"
+    chapter: 5
+related_points:
+  - "vegetation"
+  - "natural-integrity"
+  - "food-security"

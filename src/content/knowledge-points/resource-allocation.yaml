@@ -1,0 +1,18 @@
+id: "resource-allocation"
+name: "资源跨区域调配"
+category: "regional"
+exam_frequency: "high"
+description: "资源跨区域调配的原因、主要工程（南水北调、西气东输、西电东送）及其影响。"
+key_concepts:
+  - "调配原因（供需矛盾）"
+  - "南水北调"
+  - "西气东输"
+  - "西电东送"
+  - "对调入区和调出区影响"
+textbook_refs:
+  - textbook: "selective-2"
+    chapter: 4
+related_points:
+  - "resource-security"
+  - "water-cycle"
+  - "energy-security"

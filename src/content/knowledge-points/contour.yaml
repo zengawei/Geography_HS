@@ -1,0 +1,20 @@
+id: "contour"
+name: "等高线判读"
+category: "tools"
+exam_frequency: "high"
+description: "等高线地形图的判读方法，地形部位识别，坡度判断，地形剖面图绘制。"
+key_concepts:
+  - "等高线特征"
+  - "地形部位（山顶、鞍部、山谷、山脊、陡崖）"
+  - "坡度判断"
+  - "通视问题"
+textbook_refs:
+  - textbook: "required-1"
+    chapter: 4
+related_points:
+  - "map-elements"
+  - "geomorphic-profile"
+  - "coordinate-grid"
+common_mistakes:
+  - "山谷等高线向高处凸出，山脊向低处凸出"
+  - "陡崖相对高度计算"

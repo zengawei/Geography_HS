@@ -1,0 +1,16 @@
+id: "urban-hierarchy"
+name: "城市等级体系"
+category: "human"
+exam_frequency: "medium"
+description: "城市等级划分、不同等级城市的服务功能差异，城市等级体系的应用。"
+key_concepts:
+  - "城市等级与服务范围"
+  - "城市数目与服务等级关系"
+  - "长三角城市体系案例"
+textbook_refs:
+  - textbook: "required-2"
+    chapter: 2
+related_points:
+  - "urbanization"
+  - "urban-spatial-structure"
+  - "service"

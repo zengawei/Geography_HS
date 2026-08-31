@@ -1,0 +1,15 @@
+id: "ethnicity-religion"
+name: "民族与宗教地理"
+category: "human"
+exam_frequency: "low"
+description: "世界主要民族和宗教的分布特征。"
+key_concepts:
+  - "世界主要宗教分布"
+  - "民族分布"
+  - "宗教对文化景观影响"
+textbook_refs:
+  - textbook: "required-2"
+    chapter: 1
+related_points:
+  - "cultural-geography"
+  - "world-regions"

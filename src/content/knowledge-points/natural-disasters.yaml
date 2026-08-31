@@ -1,0 +1,16 @@
+id: "natural-disasters"
+name: "自然灾害"
+category: "natural"
+exam_frequency: "medium"
+description: "主要自然灾害类型（气象灾害、地质灾害、生物灾害）的成因、分布及防御措施。"
+key_concepts:
+  - "气象灾害（台风、暴雨、干旱、寒潮）"
+  - "地质灾害（地震、滑坡、泥石流）"
+  - "防灾减灾"
+textbook_refs:
+  - textbook: "required-1"
+    chapter: 5
+related_points:
+  - "plate-tectonics"
+  - "weather-systems"
+  - "climate-change"

@@ -1,0 +1,20 @@
+id: "earth-revolution"
+name: "地球公转"
+category: "natural"
+exam_frequency: "high"
+description: "地球公转的轨道、方向、周期、黄赤交角，及其地理意义。"
+key_concepts:
+  - "公转轨道与速度变化"
+  - "黄赤交角"
+  - "回归线与极圈"
+  - "四季与五带"
+textbook_refs:
+  - textbook: "selective-1"
+    chapter: 1
+related_points:
+  - "earth-rotation"
+  - "solar-altitude-daylength"
+  - "time-and-date"
+common_mistakes:
+  - "混淆近日点与冬至日"
+  - "误认为黄赤交角不变"

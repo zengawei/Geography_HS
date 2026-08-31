@@ -1,0 +1,15 @@
+id: "karst-coastal-landform"
+name: "喀斯特地貌与海岸地貌"
+category: "natural"
+exam_frequency: "medium"
+description: "喀斯特地貌的类型（地表与地下）、形成条件；海岸地貌的类型与分布。"
+key_concepts:
+  - "喀斯特地貌（溶洞、峰林、天坑）"
+  - "海岸侵蚀地貌（海蚀崖、海蚀柱）"
+  - "海岸堆积地貌（沙滩）"
+textbook_refs:
+  - textbook: "required-1"
+    chapter: 4
+related_points:
+  - "exogenic-landform"
+  - "plate-tectonics"

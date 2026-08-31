@@ -1,0 +1,19 @@
+id: "geo-it"
+name: "地理信息技术"
+category: "tools"
+exam_frequency: "medium"
+description: "遥感（RS）、全球导航卫星系统（GNSS/北斗）、地理信息系统（GIS）的概念与应用。"
+key_concepts:
+  - "RS（获取信息）"
+  - "GNSS/北斗（定位导航）"
+  - "GIS（分析处理）"
+  - "3S技术综合应用"
+textbook_refs:
+  - textbook: "selective-1"
+    chapter: 5
+related_points:
+  - "spatial-analysis"
+  - "data-description"
+common_mistakes:
+  - 'RS是"看"，GIS是"分析"，GNSS是"定位"'
+  - "不能混淆三者的功能"

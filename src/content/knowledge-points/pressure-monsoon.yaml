@@ -1,0 +1,20 @@
+id: "pressure-monsoon"
+name: "气压中心与季风"
+category: "natural"
+exam_frequency: "high"
+description: "海陆分布对气压带的影响，北半球冬夏季气压中心，东亚季风与南亚季风的成因与特征。"
+key_concepts:
+  - "海陆热力性质差异"
+  - "亚洲高压与夏威夷高压"
+  - "东亚季风"
+  - "南亚季风（气压带风带移动）"
+textbook_refs:
+  - textbook: "selective-1"
+    chapter: 2
+related_points:
+  - "atmospheric-circulation"
+  - "climate-types"
+  - "weather-systems"
+common_mistakes:
+  - "南亚季风夏季成因是气压带风带北移，非海陆热力差异"
+  - "混淆季风风向"

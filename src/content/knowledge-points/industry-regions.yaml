@@ -1,0 +1,17 @@
+id: "industry-regions"
+name: "主要工业地域类型"
+category: "human"
+exam_frequency: "high"
+description: "世界主要工业地域类型（传统工业区、新兴工业区）的特征与案例。"
+key_concepts:
+  - "德国鲁尔区"
+  - "意大利新兴工业"
+  - "美国硅谷"
+  - "中国辽中南"
+textbook_refs:
+  - textbook: "required-2"
+    chapter: 4
+related_points:
+  - "industry-location"
+  - "china-industry"
+  - "industrial-transfer"

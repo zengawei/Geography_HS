@@ -1,0 +1,15 @@
+id: "china-transportation"
+name: "中国交通运输"
+category: "world_china"
+exam_frequency: "medium"
+description: "中国主要铁路干线、公路、水运和航空运输网络。"
+key_concepts:
+  - "铁路干线（五纵三横）"
+  - "交通枢纽"
+  - "交通运输网密度"
+  - "高铁影响"
+textbook_refs:
+  []
+related_points:
+  - "transportation"
+  - "china-regions"

@@ -1,0 +1,20 @@
+id: "exogenic-landform"
+name: "外力作用与常见地貌"
+category: "natural"
+exam_frequency: "high"
+description: "风化、侵蚀、搬运、堆积作用及其形成的常见地貌类型。"
+key_concepts:
+  - "风化作用"
+  - "流水侵蚀与堆积地貌"
+  - "风力侵蚀与堆积地貌"
+  - "冰川地貌"
+textbook_refs:
+  - textbook: "required-1"
+    chapter: 4
+related_points:
+  - "plate-tectonics"
+  - "karst-coastal-landform"
+  - "geomorphic-profile"
+common_mistakes:
+  - "混淆流水侵蚀与风力侵蚀地貌"
+  - "冲积扇与三角洲的位置差异"

@@ -1,0 +1,18 @@
+id: "industry-location"
+name: "工业区位因素与变化"
+category: "human"
+exam_frequency: "high"
+description: "工业区位因素分析，工业区位因素的变化趋势。"
+key_concepts:
+  - "原料、燃料、劳动力、市场、交通"
+  - "区位因素变化（科技、信息、环保）"
+  - "工业导向类型"
+textbook_refs:
+  - textbook: "required-2"
+    chapter: 4
+related_points:
+  - "industry-regions"
+  - "china-industry"
+common_mistakes:
+  - "混淆原料导向型与市场导向型"
+  - "忽略环保因素对工业布局的影响"

@@ -1,0 +1,18 @@
+id: "regional-coordination"
+name: "区域协调发展战略"
+category: "regional"
+exam_frequency: "high"
+description: "国家重大区域发展战略（京津冀协同、长三角一体化、粤港澳大湾区、西部大开发等）。"
+key_concepts:
+  - "京津冀协同发展"
+  - "长江经济带"
+  - "粤港澳大湾区"
+  - "西部大开发"
+  - "东北振兴"
+textbook_refs:
+  - textbook: "selective-2"
+    chapter: 3
+related_points:
+  - "urban-radiation"
+  - "industrial-transfer"
+  - "china-regions"

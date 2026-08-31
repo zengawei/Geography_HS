@@ -1,0 +1,20 @@
+id: "solar-altitude-daylength"
+name: "正午太阳高度与昼夜长短"
+category: "natural"
+exam_frequency: "high"
+description: "正午太阳高度角的计算与分布规律，昼夜长短的时空变化规律。"
+key_concepts:
+  - "正午太阳高度角公式"
+  - "正午太阳高度纬度分布"
+  - "昼夜长短变化"
+  - "极昼极夜"
+textbook_refs:
+  - textbook: "selective-1"
+    chapter: 1
+related_points:
+  - "earth-revolution"
+  - "time-and-date"
+  - "atmosphere-heating"
+common_mistakes:
+  - "正午太阳高度计算时纬度差判断错误"
+  - "混淆昼长与日照时数"

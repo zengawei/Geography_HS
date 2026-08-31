@@ -1,0 +1,17 @@
+id: "agriculture-regions"
+name: "主要农业地域类型"
+category: "human"
+exam_frequency: "high"
+description: "世界主要农业地域类型（水稻种植业、商品谷物农业、混合农业、大牧场放牧业等）的特征与分布。"
+key_concepts:
+  - "季风水田农业"
+  - "商品谷物农业"
+  - "混合农业"
+  - "大牧场放牧业"
+  - "乳畜业"
+textbook_refs:
+  - textbook: "required-2"
+    chapter: 3
+related_points:
+  - "agriculture-location"
+  - "china-agriculture"

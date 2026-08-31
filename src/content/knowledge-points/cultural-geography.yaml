@@ -1,0 +1,15 @@
+id: "cultural-geography"
+name: "文化景观与地域差异"
+category: "human"
+exam_frequency: "low"
+description: "文化景观的概念、特征，世界文化地域差异。"
+key_concepts:
+  - "文化景观"
+  - "文化扩散"
+  - "地域文化差异"
+textbook_refs:
+  - textbook: "required-2"
+    chapter: 1
+related_points:
+  - "ethnicity-religion"
+  - "world-regions"

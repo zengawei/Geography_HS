@@ -1,0 +1,48 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="首页">
+  <div class="text-center py-12">
+    <h1 class="text-4xl font-bold mb-4">🌍 高中地理知识库</h1>
+    <p class="text-lg text-gray-600 mb-8">覆盖人教版 2019 全册教材 + 2012-2026 高考地理真题</p>
+  </div>
+
+  <div class="grid md:grid-cols-2 gap-8 max-w-3xl mx-auto">
+    <a href="/Geography_HS/knowledge/" class="block p-6 bg-white rounded-lg border border-gray-200 hover:border-green-400 hover:shadow-md transition">
+      <h2 class="text-xl font-semibold mb-2">📖 知识点</h2>
+      <p class="text-gray-600">74 个核心知识点，按自然地理、人文地理、区域发展等分类</p>
+    </a>
+
+    <a href="/Geography_HS/ncee/" class="block p-6 bg-white rounded-lg border border-gray-200 hover:border-green-400 hover:shadow-md transition">
+      <h2 class="text-xl font-semibold mb-2">📋 高考真题</h2>
+      <p class="text-gray-600">2012-2026 年全国卷 + 主要省份高考地理真题</p>
+    </a>
+  </div>
+
+  <div class="mt-16 text-center">
+    <h2 class="text-2xl font-semibold mb-6">知识体系概览</h2>
+    <div class="grid grid-cols-2 md:grid-cols-5 gap-4 max-w-4xl mx-auto text-sm">
+      <div class="p-4 bg-green-50 rounded-lg">
+        <div class="text-2xl font-bold text-green-700">26</div>
+        <div class="text-gray-600">自然地理</div>
+      </div>
+      <div class="p-4 bg-blue-50 rounded-lg">
+        <div class="text-2xl font-bold text-blue-700">14</div>
+        <div class="text-gray-600">人文地理</div>
+      </div>
+      <div class="p-4 bg-amber-50 rounded-lg">
+        <div class="text-2xl font-bold text-amber-700">14</div>
+        <div class="text-gray-600">区域发展</div>
+      </div>
+      <div class="p-4 bg-purple-50 rounded-lg">
+        <div class="text-2xl font-bold text-purple-700">12</div>
+        <div class="text-gray-600">世界与中国</div>
+      </div>
+      <div class="p-4 bg-rose-50 rounded-lg">
+        <div class="text-2xl font-bold text-rose-700">8</div>
+        <div class="text-gray-600">工具方法</div>
+      </div>
+    </div>
+  </div>
+</BaseLayout>

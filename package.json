@@ -1,0 +1,39 @@
+{
+  "name": "geography-hs",
+  "version": "1.0.0",
+  "description": "高中地理知识库 — 覆盖人教版 2019 全册 + 2012-2026 高考地理真题",
+  "type": "module",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "check": "astro check",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "prebuild": "npm run build:scripts",
+    "build:scripts": "npx tsx scripts/build-knowledge-graph.ts && npx tsx scripts/build-ncee-index.ts",
+    "validate": "npx tsx scripts/validate-content.ts"
+  },
+  "keywords": [
+    "geography",
+    "education",
+    "gaokao"
+  ],
+  "author": "zengawei",
+  "license": "MIT",
+  "dependencies": {
+    "@astrojs/tailwind": "^6.0.2",
+    "astro": "^5.18.2",
+    "gray-matter": "^4.0.3",
+    "marked": "^18.0.10",
+    "yaml": "^2.9.0"
+  },
+  "devDependencies": {
+    "@testing-library/dom": "^10.4.1",
+    "@testing-library/jest-dom": "^7.0.1",
+    "@types/node": "^26.4.0",
+    "jsdom": "^30.0.1",
+    "typescript": "^7.0.2",
+    "vitest": "^4.1.10"
+  }
+}

@@ -1,0 +1,16 @@
+id: "world-overview"
+name: "世界地理概况"
+category: "world_china"
+exam_frequency: "high"
+description: "世界海陆分布、气候分布、自然资源分布的总体特征。"
+key_concepts:
+  - "七大洲四大洋"
+  - "世界气候分布"
+  - "世界自然资源"
+  - "世界人口与城市"
+textbook_refs:
+  []
+related_points:
+  - "world-regions"
+  - "world-countries"
+  - "climate-types"

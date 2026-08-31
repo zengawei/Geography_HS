@@ -1,0 +1,16 @@
+id: "region-characteristics"
+name: "区域特征与区域比较"
+category: "regional"
+exam_frequency: "high"
+description: "区域的概念、特征（整体性、差异性、开放性），区域比较方法。"
+key_concepts:
+  - "区域的概念与特征"
+  - "区域比较方法"
+  - "区域发展条件评价"
+textbook_refs:
+  - textbook: "selective-2"
+    chapter: 1
+related_points:
+  - "regional-coordination"
+  - "world-regions"
+  - "china-regions"

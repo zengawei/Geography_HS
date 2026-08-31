@@ -1,0 +1,16 @@
+id: "urban-radiation"
+name: "城市辐射功能与城市群"
+category: "regional"
+exam_frequency: "high"
+description: "城市的辐射功能，城市群的形成与发展。"
+key_concepts:
+  - "城市辐射功能"
+  - "城市腹地"
+  - "城市群（长三角、珠三角、京津冀）"
+textbook_refs:
+  - textbook: "selective-2"
+    chapter: 3
+related_points:
+  - "urban-hierarchy"
+  - "regional-coordination"
+  - "urbanization"

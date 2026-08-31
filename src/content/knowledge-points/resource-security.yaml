@@ -1,0 +1,17 @@
+id: "resource-security"
+name: "自然资源安全"
+category: "regional"
+exam_frequency: "high"
+description: "自然资源安全的内涵，主要资源安全问题及对策。"
+key_concepts:
+  - "资源安全概念"
+  - "供需矛盾"
+  - "资源安全战略"
+  - "节约与替代"
+textbook_refs:
+  - textbook: "selective-3"
+    chapter: 1
+related_points:
+  - "food-security"
+  - "energy-security"
+  - "population-capacity"

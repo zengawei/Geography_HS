@@ -1,0 +1,19 @@
+id: "earth-rotation"
+name: "地球自转"
+category: "natural"
+exam_frequency: "high"
+description: "地球自转的方向、周期、速度（角速度和线速度），及其地理意义。"
+key_concepts:
+  - "自转方向与周期"
+  - "角速度与线速度"
+  - "自转的地理意义"
+textbook_refs:
+  - textbook: "selective-1"
+    chapter: 1
+related_points:
+  - "earth-revolution"
+  - "time-and-date"
+  - "solar-altitude-daylength"
+common_mistakes:
+  - "混淆角速度和线速度的分布规律"
+  - "忽略赤道处线速度最大"

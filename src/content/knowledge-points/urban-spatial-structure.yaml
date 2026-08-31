@@ -1,0 +1,21 @@
+id: "urban-spatial-structure"
+name: "城市空间结构与功能分区"
+category: "human"
+exam_frequency: "high"
+description: "城市内部空间结构，主要功能区（商业区、住宅区、工业区）的分布与特征。"
+key_concepts:
+  - "功能分区"
+  - "CBD特征"
+  - "住宅区分化"
+  - "工业区布局原则"
+  - "地租理论"
+textbook_refs:
+  - textbook: "required-2"
+    chapter: 2
+related_points:
+  - "urbanization"
+  - "urban-hierarchy"
+  - "service"
+common_mistakes:
+  - "商业区不一定在城市几何中心"
+  - "工业区向市区外缘移动的原因"
