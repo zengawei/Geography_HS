@@ -1,0 +1,80 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import { getCollection } from 'astro:content';
+
+export async function getStaticPaths() {
+  const nceeQuestions = await getCollection('textbooks/ncee');
+  
+  // 按paper_code分组
+  const papers = {};
+  for (const q of nceeQuestions) {
+    const code = q.data.paper_code;
+    if (!papers[code]) {
+      papers[code] = {
+        paperCode: code,
+        paper: q.data.paper,
+        year: q.data.year,
+        region: q.data.region,
+        questions: []
+      };
+    }
+    papers[code].questions.push(q);
+  }
+  
+  // 对每个试卷的题目按题号排序
+  for (const code of Object.keys(papers)) {
+    papers[code].questions.sort((a, b) => a.data.question_number - b.data.question_number);
+  }
+  
+  return Object.values(papers).map(paper => ({
+    params: { paperCode: paper.paperCode },
+    props: { paper }
+  }));
+}
+
+const { paper } = Astro.props;
+---
+
+<BaseLayout title={`${paper.paper} - 高考真题`}>
+  <nav class="text-sm text-gray-500 mb-4">
+    <a href="/Geography_HS/ncee/" class="hover:text-green-600">高考真题</a>
+    <span class="mx-2">›</span>
+    <span class="text-gray-800">{paper.paper}</span>
+  </nav>
+
+  <h1 class="text-3xl font-bold mb-2">{paper.paper}</h1>
+  <p class="text-gray-600 mb-6">{paper.year}年 · {paper.questions.length} 道题目</p>
+
+  <div class="space-y-4">
+    {paper.questions.map((q, index) => (
+      <article class="bg-white rounded-lg border border-gray-200 p-6">
+        <div class="flex items-start justify-between mb-3">
+          <h2 class="text-lg font-semibold">
+            <span class="text-green-600 mr-2">第{q.data.question_number}题</span>
+            <span class={`text-xs px-2 py-1 rounded ${
+              q.data.difficulty === 'basic' ? 'bg-green-100 text-green-700' :
+              q.data.difficulty === 'medium' ? 'bg-amber-100 text-amber-700' :
+              'bg-red-100 text-red-700'
+            }`}>
+              {q.data.difficulty === 'basic' ? '基础' : q.data.difficulty === 'medium' ? '中等' : '困难'}
+            </span>
+          </h2>
+          <span class="text-sm text-gray-500">{q.data.score}分</span>
+        </div>
+        
+        <div class="prose prose-sm max-w-none mb-4" set:html={q.body} />
+        
+        <div class="mt-4 pt-4 border-t border-gray-100">
+          <div class="text-sm text-gray-500">
+            知识点：
+            {q.data.knowledge_points.map(kp => (
+              <a href={`/Geography_HS/knowledge/${kp}/`} class="text-green-600 hover:underline mr-2">
+                {kp}
+              </a>
+            ))}
+          </div>
+        </div>
+      </article>
+    ))}
+  </div>
+</BaseLayout>

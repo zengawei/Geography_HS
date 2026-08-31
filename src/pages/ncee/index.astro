@@ -1,13 +1,79 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getCollection } from 'astro:content';
+
+const nceeQuestions = await getCollection('textbooks/ncee');
+
+// 按年份和试卷分组
+const groupedByYear = {};
+for (const q of nceeQuestions) {
+  const year = q.data.year;
+  const paper = q.data.paper;
+  const paperCode = q.data.paper_code;
+  
+  if (!groupedByYear[year]) {
+    groupedByYear[year] = {};
+  }
+  if (!groupedByYear[year][paperCode]) {
+    groupedByYear[year][paperCode] = {
+      paper,
+      paperCode,
+      count: 0,
+      region: q.data.region
+    };
+  }
+  groupedByYear[year][paperCode].count++;
+}
+
+const years = Object.keys(groupedByYear).sort((a, b) => b - a);
+const totalQuestions = nceeQuestions.length;
+const totalPapers = Object.values(groupedByYear).reduce((sum, papers) => sum + Object.keys(papers).length, 0);
 ---
 
 <BaseLayout title="高考真题">
   <h1 class="text-3xl font-bold mb-6">📋 高考地理真题</h1>
-  <p class="text-gray-600 mb-8">2012-2026 年全国卷 + 主要省份高考地理真题</p>
+  
+  <div class="grid grid-cols-3 gap-4 mb-8">
+    <div class="bg-green-50 rounded-lg p-4 text-center">
+      <div class="text-3xl font-bold text-green-700">{totalQuestions}</div>
+      <div class="text-gray-600">道题目</div>
+    </div>
+    <div class="bg-blue-50 rounded-lg p-4 text-center">
+      <div class="text-3xl font-bold text-blue-700">{totalPapers}</div>
+      <div class="text-gray-600">套试卷</div>
+    </div>
+    <div class="bg-amber-50 rounded-lg p-4 text-center">
+      <div class="text-3xl font-bold text-amber-700">{years.length}</div>
+      <div class="text-gray-600">个年份</div>
+    </div>
+  </div>
 
-  <div class="bg-white rounded-lg border border-gray-200 p-6 text-center">
-    <p class="text-gray-500">真题数据将在后续阶段录入。</p>
-    <p class="text-sm text-gray-400 mt-2">Phase 2-5 将分批录入 2012-2026 年高考地理真题。</p>
+  <div class="space-y-8">
+    {years.map(year => (
+      <section class="bg-white rounded-lg border border-gray-200 p-6">
+        <h2 class="text-2xl font-semibold mb-4 flex items-center">
+          <span class="bg-green-100 text-green-800 px-3 py-1 rounded mr-3">{year}年</span>
+          <span class="text-gray-500 text-lg">共 {Object.values(groupedByYear[year]).reduce((sum, p) => sum + p.count, 0)} 题</span>
+        </h2>
+        
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-3">
+          {Object.values(groupedByYear[year]).map(paper => (
+            <a 
+              href={`/Geography_HS/ncee/${paper.paperCode}/`}
+              class="block p-4 border border-gray-200 rounded hover:border-green-400 hover:shadow-sm transition"
+            >
+              <div class="font-medium text-gray-800">{paper.paper}</div>
+              <div class="text-sm text-gray-500 mt-1">{paper.count} 道题目</div>
+            </a>
+          ))}
+        </div>
+      </section>
+    ))}
+  </div>
+
+  <div class="mt-8 p-4 bg-yellow-50 border border-yellow-200 rounded-lg">
+    <p class="text-sm text-yellow-800">
+      ⚠️ 所有题目基于训练数据回忆，需对照官方试卷校对。如有错误，欢迎指正。
+    </p>
   </div>
 </BaseLayout>

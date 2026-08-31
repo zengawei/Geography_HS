@@ -1,0 +1,77 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import { getCollection } from 'astro:content';
+
+export async function getStaticPaths() {
+  const knowledgePoints = await getCollection('textbooks/knowledge');
+  
+  return knowledgePoints.map(kp => ({
+    params: { kpId: kp.id },
+    props: { kp }
+  }));
+}
+
+const { kp } = Astro.props;
+
+// 查找相关真题
+const nceeQuestions = await getCollection('textbooks/ncee');
+const relatedQuestions = nceeQuestions.filter(q => 
+  q.data.knowledge_points.includes(kp.id)
+);
+---
+
+<BaseLayout title={`${kp.data.name} - 知识点`}>
+  <nav class="text-sm text-gray-500 mb-4">
+    <a href="/Geography_HS/knowledge/" class="hover:text-green-600">知识点</a>
+    <span class="mx-2">›</span>
+    <span class="text-gray-800">{kp.data.name}</span>
+  </nav>
+
+  <h1 class="text-3xl font-bold mb-2">{kp.data.name}</h1>
+  <p class="text-gray-500 mb-6">{kp.data.name_en}</p>
+
+  <div class="bg-white rounded-lg border border-gray-200 p-6 mb-6">
+    <h2 class="text-lg font-semibold mb-3">核心概念</h2>
+    <div class="prose prose-sm max-w-none" set:html={kp.body} />
+  </div>
+
+  <div class="bg-white rounded-lg border border-gray-200 p-6">
+    <h2 class="text-lg font-semibold mb-4">
+      相关真题
+      <span class="text-sm font-normal text-gray-500 ml-2">({relatedQuestions.length} 道)</span>
+    </h2>
+    
+    {relatedQuestions.length === 0 ? (
+      <p class="text-gray-500">暂无相关真题</p>
+    ) : (
+      <div class="space-y-3">
+        {relatedQuestions.slice(0, 10).map(q => (
+          <a 
+            href={`/Geography_HS/ncee/${q.data.paper_code}/`}
+            class="block p-4 border border-gray-200 rounded hover:border-green-400 hover:shadow-sm transition"
+          >
+            <div class="flex items-center justify-between">
+              <div>
+                <span class="font-medium text-gray-800">{q.data.paper}</span>
+                <span class="text-gray-500 ml-2">第{q.data.question_number}题</span>
+              </div>
+              <span class={`text-xs px-2 py-1 rounded ${
+                q.data.difficulty === 'basic' ? 'bg-green-100 text-green-700' :
+                q.data.difficulty === 'medium' ? 'bg-amber-100 text-amber-700' :
+                'bg-red-100 text-red-700'
+              }`}>
+                {q.data.difficulty === 'basic' ? '基础' : q.data.difficulty === 'medium' ? '中等' : '困难'}
+              </span>
+            </div>
+            <div class="text-sm text-gray-500 mt-1">{q.data.year}年 · {q.data.score}分</div>
+          </a>
+        ))}
+        {relatedQuestions.length > 10 && (
+          <p class="text-sm text-gray-500 text-center mt-4">
+            还有 {relatedQuestions.length - 10} 道相关真题...
+          </p>
+        )}
+      </div>
+    )}
+  </div>
+</BaseLayout>
