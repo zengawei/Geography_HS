@@ -10,7 +10,7 @@ describe('Smoke tests', () => {
     expect(existsSync(join(ROOT, 'astro.config.mjs'))).toBe(true);
     expect(existsSync(join(ROOT, 'tsconfig.json'))).toBe(true);
     expect(existsSync(join(ROOT, 'vitest.config.ts'))).toBe(true);
-    expect(existsSync(join(ROOT, 'src/content/config.ts'))).toBe(true);
+    expect(existsSync(join(ROOT, 'src/content.config.ts'))).toBe(true);
   });
 
   test('knowledge points directory has files', () => {
