@@ -29,6 +29,22 @@ npm run dev
 - TypeScript — 构建脚本
 - GitHub Pages — 部署
 
+## 在线访问
+
+部署后访问：https://zengawei.github.io/Geography_HS/
+
+## 部署
+
+本项目使用 GitHub Actions 自动部署到 GitHub Pages。
+
+推送到 `main` 分支后会自动触发构建和部署。
+
+手动部署：
+```bash
+npm run build
+# 将 dist/ 目录部署到静态托管服务
+```
+
 ## 许可
 
 代码部分 MIT 许可。内容仅供学习教育用途。
