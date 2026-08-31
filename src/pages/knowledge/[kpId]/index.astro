@@ -4,7 +4,7 @@ import { getCollection } from 'astro:content';
 
 export async function getStaticPaths() {
   const knowledgePoints = await getCollection('knowledge-points');
-  
+
   return knowledgePoints.map(kp => ({
     params: { kpId: kp.id },
     props: { kp }
@@ -15,9 +15,31 @@ const { kp } = Astro.props;
 
 // 查找相关真题
 const nceeQuestions = await getCollection('textbooks/ncee');
-const relatedQuestions = nceeQuestions.filter(q => 
+const relatedQuestions = nceeQuestions.filter(q =>
   q.data.knowledge_points.includes(kp.id)
 );
+
+// 分类映射
+const categoryNames = {
+  natural: '自然地理',
+  human: '人文地理',
+  regional: '区域发展',
+  world_china: '世界与中国',
+  tools: '工具方法'
+};
+
+// 考频映射
+const frequencyNames = {
+  high: '高频',
+  medium: '中频',
+  low: '低频'
+};
+
+const frequencyColors = {
+  high: 'bg-red-100 text-red-700',
+  medium: 'bg-amber-100 text-amber-700',
+  low: 'bg-green-100 text-green-700'
+};
 ---
 
 <BaseLayout title={`${kp.data.name} - 知识点`}>
@@ -28,25 +50,55 @@ const relatedQuestions = nceeQuestions.filter(q =>
   </nav>
 
   <h1 class="text-3xl font-bold mb-2">{kp.data.name}</h1>
-  <p class="text-gray-500 mb-6">{kp.data.name_en}</p>
+  
+  <div class="flex gap-2 mb-6">
+    <span class="text-xs px-2 py-1 rounded bg-blue-100 text-blue-700">
+      {categoryNames[kp.data.category]}
+    </span>
+    <span class={`text-xs px-2 py-1 rounded ${frequencyColors[kp.data.exam_frequency]}`}>
+      {frequencyNames[kp.data.exam_frequency]}考点
+    </span>
+  </div>
 
   <div class="bg-white rounded-lg border border-gray-200 p-6 mb-6">
-    <h2 class="text-lg font-semibold mb-3">核心概念</h2>
-    <div class="prose prose-sm max-w-none" set:html={kp.body} />
+    <h2 class="text-lg font-semibold mb-3">📖 知识点阐述</h2>
+    <p class="text-gray-700 leading-relaxed">{kp.data.description}</p>
   </div>
+
+  {kp.data.key_concepts.length > 0 && (
+    <div class="bg-white rounded-lg border border-gray-200 p-6 mb-6">
+      <h2 class="text-lg font-semibold mb-3">🔑 核心概念</h2>
+      <ul class="list-disc list-inside space-y-2 text-gray-700">
+        {kp.data.key_concepts.map(concept => (
+          <li>{concept}</li>
+        ))}
+      </ul>
+    </div>
+  )}
+
+  {kp.data.common_mistakes && kp.data.common_mistakes.length > 0 && (
+    <div class="bg-yellow-50 rounded-lg border border-yellow-200 p-6 mb-6">
+      <h2 class="text-lg font-semibold mb-3 text-yellow-800">⚠️ 易错点</h2>
+      <ul class="list-disc list-inside space-y-2 text-yellow-900">
+        {kp.data.common_mistakes.map(mistake => (
+          <li>{mistake}</li>
+        ))}
+      </ul>
+    </div>
+  )}
 
   <div class="bg-white rounded-lg border border-gray-200 p-6">
     <h2 class="text-lg font-semibold mb-4">
-      相关真题
+      📝 相关真题
       <span class="text-sm font-normal text-gray-500 ml-2">({relatedQuestions.length} 道)</span>
     </h2>
-    
+
     {relatedQuestions.length === 0 ? (
       <p class="text-gray-500">暂无相关真题</p>
     ) : (
       <div class="space-y-3">
         {relatedQuestions.slice(0, 10).map(q => (
-          <a 
+          <a
             href={`/Geography_HS/ncee/${q.data.paper_code}/`}
             class="block p-4 border border-gray-200 rounded hover:border-green-400 hover:shadow-sm transition"
           >
