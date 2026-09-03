@@ -1,19 +1,39 @@
 {
   "id": "world-countries",
   "name": "世界主要国家",
-  "name_en": "world-countries",
   "category": "world_china",
   "exam_frequency": "medium",
-  "description": "世界主要国家包括美国、俄罗斯、中国、日本、印度、巴西、澳大利亚等。各国在位置、地形、气候、资源、经济、文化等方面具有独特特征。学习国家地理要把握国家的地理位置、自然特征、经济特征，分析国家发展条件和方向。",
+  "description": "**世界主要国家**：世界主要国家的地理特征。",
   "key_concepts": [
-    "主要国家位置",
-    "主要国家特征",
-    "国家比较分析"
+    {
+      "title": "日本",
+      "definition": "日本地理特征",
+      "explanation": "**特征**：\n1. 岛国，多火山地震\n2. 资源贫乏，市场狭小\n3. 经济发达，加工贸易为主\n4. 工业集中在太平洋沿岸",
+      "example": "日本工业集中在太平洋沿岸和濑户内海。",
+      "formula": null
+    },
+    {
+      "title": "俄罗斯",
+      "definition": "俄罗斯地理特征",
+      "explanation": "**特征**：\n1. 面积最大\n2. 资源丰富\n3. 重工业发达\n4. 交通以铁路为主",
+      "example": "俄罗斯工业区靠近原料产地。",
+      "formula": null
+    },
+    {
+      "title": "美国",
+      "definition": "美国地理特征",
+      "explanation": "**特征**：\n1. 三大地形区\n2. 农业机械化、专业化\n3. 工业高度发达\n4. 高新技术产业领先",
+      "example": "美国硅谷是高新技术产业中心。",
+      "formula": null
+    }
   ],
   "textbook_refs": [],
-  "related_points": [],
+  "related_points": [
+    "world-regions",
+    "world-population"
+  ],
   "common_mistakes": [
-    "混淆国家位置",
-    "忽略国家的区域差异"
+    "❌ 日本资源丰富。\n✅ 日本资源贫乏，依赖进口。",
+    "❌ 俄罗斯轻工业发达。\n✅ 俄罗斯重工业发达，轻工业相对落后。"
   ]
 }

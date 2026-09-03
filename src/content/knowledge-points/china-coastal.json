@@ -1,19 +1,39 @@
 {
   "id": "china-coastal",
-  "name": "中国沿海地区",
-  "name_en": "china-coastal",
+  "name": "中国沿海",
   "category": "world_china",
   "exam_frequency": "medium",
-  "description": "中国沿海地区包括辽宁、河北、天津、山东、江苏、上海、浙江、福建、广东、广西、海南等省区。沿海地区经济发达，对外开放程度高，是中国经济发展的重要引擎。沿海地区要发挥优势，发展海洋经济，建设海洋强国，同时注意保护海洋生态环境。",
+  "description": "**中国沿海**：沿海地区经济发达，四大工业基地分布在此。",
   "key_concepts": [
-    "沿海地区范围",
-    "沿海地区优势",
-    "海洋经济发展"
+    {
+      "title": "沿海地区优势",
+      "definition": "沿海地区发展优势",
+      "explanation": "**优势**：\n1. 交通便利\n2. 对外开放早\n3. 科技水平高\n4. 经济基础好",
+      "example": "长三角、珠三角经济发达。",
+      "formula": null
+    },
+    {
+      "title": "沿海经济带",
+      "definition": "沿海经济带",
+      "explanation": "**经济带**：\n1. 环渤海经济圈\n2. 长三角经济圈\n3. 珠三角经济圈",
+      "example": "珠三角是改革开放前沿。",
+      "formula": null
+    },
+    {
+      "title": "海洋资源",
+      "definition": "海洋资源开发",
+      "explanation": "**资源**：\n1. 渔业资源\n2. 矿产资源\n3. 能源资源\n4. 空间资源",
+      "example": "舟山渔场是最大渔场。",
+      "formula": null
+    }
   ],
   "textbook_refs": [],
-  "related_points": [],
+  "related_points": [
+    "china-industry",
+    "china-transportation"
+  ],
   "common_mistakes": [
-    "忽略沿海地区的内部差异",
-    "混淆沿海发展和内陆发展"
+    "❌ 沿海地区只有经济优势。\n✅ 也有环境压力、资源约束等问题。",
+    "❌ 海洋资源取之不尽。\n✅ 要合理开发，保护海洋环境。"
   ]
 }

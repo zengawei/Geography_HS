@@ -1,19 +1,39 @@
 {
   "id": "lakes",
   "name": "湖泊",
-  "name_en": "lakes",
   "category": "natural",
-  "exam_frequency": "medium",
-  "description": "湖泊是陆地表面洼地积水形成的水体。按湖水性质分为淡水湖和咸水湖；按成因分为构造湖、火山口湖、冰川湖、堰塞湖、牛轭湖等。湖泊具有调节径流、净化水质、维护生物多样性等功能。湖泊面积变化受气候变化和人类活动影响。",
+  "exam_frequency": "low",
+  "description": "**湖泊**：陆地上的洼地积水形成的水域。按成因分为构造湖、火山口湖、冰川湖、堰塞湖等。",
   "key_concepts": [
-    "湖泊分类",
-    "湖泊成因",
-    "湖泊生态功能"
+    {
+      "title": "湖泊成因分类",
+      "definition": "按成因分类",
+      "explanation": "**类型**：\n1. 构造湖：地壳运动形成（贝加尔湖、洞庭湖）\n2. 火山口湖：火山口积水（长白山天池）\n3. 冰川湖：冰川作用（五大湖）\n4. 堰塞湖：滑坡、火山堵塞（镜泊湖）",
+      "example": "贝加尔湖是世界上最深的构造湖。",
+      "formula": null
+    },
+    {
+      "title": "湖泊的水文特征",
+      "definition": "湖泊的水情要素",
+      "explanation": "**特征**：\n1. 面积、深度\n2. 水量、水位\n3. 盐度（淡水湖、咸水湖）\n4. 补给和排泄",
+      "example": "青海湖是咸水湖，洞庭湖是淡水湖。",
+      "formula": null
+    },
+    {
+      "title": "湖泊的生态功能",
+      "definition": "湖泊的生态环境作用",
+      "explanation": "**功能**：\n1. 调节气候\n2. 调蓄洪水\n3. 净化水质\n4. 维护生物多样性",
+      "example": "洞庭湖调蓄长江洪水。",
+      "formula": null
+    }
   ],
   "textbook_refs": [],
-  "related_points": [],
+  "related_points": [
+    "water-cycle",
+    "river-characteristics"
+  ],
   "common_mistakes": [
-    "混淆淡水湖和咸水湖的成因",
-    "忽略湖泊对河流的调节作用"
+    "❌ 湖泊都是淡水湖。\n✅ 湖泊分淡水湖和咸水湖，内流区的湖泊多为咸水湖。",
+    "❌ 湖泊面积不会变化。\n✅ 湖泊面积受气候、人类活动影响会变化。"
   ]
 }

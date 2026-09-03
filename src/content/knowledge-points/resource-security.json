@@ -1,19 +1,39 @@
 {
   "id": "resource-security",
   "name": "资源安全",
-  "name_en": "resource-security",
   "category": "regional",
   "exam_frequency": "medium",
-  "description": "资源安全是指一个国家或地区可以持续、稳定、及时、足量和经济地获取所需自然资源的状态。资源安全包括水资源安全、能源安全、粮食安全、矿产资源安全等。维护资源安全要节约资源、开发新能源、加强资源储备、开展资源国际合作。",
+  "description": "**资源安全**：保障资源稳定供应，满足经济社会发展需求。",
   "key_concepts": [
-    "资源安全内涵",
-    "资源安全问题",
-    "资源安全保障"
+    {
+      "title": "资源安全问题",
+      "definition": "资源短缺、供应不稳定",
+      "explanation": "**问题**：\n1. 水资源短缺\n2. 能源供应紧张\n3. 耕地减少\n4. 矿产枯竭",
+      "example": "华北地下水超采。",
+      "formula": null
+    },
+    {
+      "title": "资源安全原因",
+      "definition": "供需矛盾",
+      "explanation": "**原因**：\n1. 资源分布不均\n2. 需求增长快\n3. 利用效率低\n4. 环境污染",
+      "example": "我国石油对外依存度高。",
+      "formula": null
+    },
+    {
+      "title": "保障措施",
+      "definition": "保障资源安全",
+      "explanation": "**措施**：\n1. 开源（开发新能源、进口）\n2. 节流（节约利用、提高效率）\n3. 储备（战略储备）\n4. 合作（国际合作）",
+      "example": "发展可再生能源保障能源安全。",
+      "formula": null
+    }
   ],
   "textbook_refs": [],
-  "related_points": [],
+  "related_points": [
+    "resource-allocation",
+    "ecological-security"
+  ],
   "common_mistakes": [
-    "混淆资源安全和资源短缺",
-    "忽略资源安全的战略性"
+    "❌ 资源安全只是供应问题。\n✅ 还包括质量、价格、运输等多方面。",
+    "❌ 资源安全靠进口就能解决。\n✅ 要开源节流并重。"
   ]
 }

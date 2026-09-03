@@ -1,19 +1,39 @@
 {
   "id": "regional-analysis",
   "name": "区域分析",
-  "name_en": "regional-analysis",
   "category": "regional",
   "exam_frequency": "high",
-  "description": "区域分析是对区域自然、经济、社会条件进行综合评价的方法。区域分析包括区域自然条件分析、区域经济条件分析、区域社会条件分析。区域分析要运用综合思维，把握区域的优势和劣势，为区域发展提供科学依据。",
+  "description": "**区域分析**：对特定区域的自然、人文地理特征进行综合分析的方法。",
   "key_concepts": [
-    "区域分析方法",
-    "区域优势分析",
-    "区域问题诊断"
+    {
+      "title": "区域特征分析",
+      "definition": "自然和人文特征",
+      "explanation": "**自然特征**：位置、气候、地形、水文、植被、土壤\n**人文特征**：人口、城市、农业、工业、交通",
+      "example": "分析长三角区域特征。",
+      "formula": null
+    },
+    {
+      "title": "区域比较",
+      "definition": "不同区域对比",
+      "explanation": "**方法**：找出差异，分析原因\n**内容**：自然条件、经济发展、问题对策",
+      "example": "对比长三角和珠三角发展条件。",
+      "formula": null
+    },
+    {
+      "title": "区域可持续发展",
+      "definition": "区域发展问题与对策",
+      "explanation": "**问题**：资源短缺、环境污染、生态破坏\n**对策**：调整产业结构、发展循环经济、加强区域合作",
+      "example": "黄土高原水土流失治理。",
+      "formula": null
+    }
   ],
   "textbook_refs": [],
-  "related_points": [],
+  "related_points": [
+    "regional-characteristics",
+    "regional-development"
+  ],
   "common_mistakes": [
-    "忽略区域分析的系统性",
-    "片面强调区域优势"
+    "❌ 区域分析只看自然条件。\n✅ 要综合分析自然和人文特征。",
+    "❌ 区域发展只追求经济增长。\n✅ 要实现经济、社会、生态可持续发展。"
   ]
 }

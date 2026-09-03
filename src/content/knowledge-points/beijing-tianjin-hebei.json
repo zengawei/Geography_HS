@@ -1,19 +1,39 @@
 {
   "id": "beijing-tianjin-hebei",
-  "name": "京津冀协同",
-  "name_en": "beijing-tianjin-hebei",
+  "name": "京津冀协同发展",
   "category": "regional",
   "exam_frequency": "high",
-  "description": "京津冀协同发展是指北京、天津、河北三地加强合作，疏解北京非首都功能，建设以首都为核心的世界级城市群的战略。京津冀协同发展要解决北京大城市病，实现区域优势互补。三地功能定位不同：北京全国政治文化中心，天津先进制造研发基地，河北产业转型升级试验区。",
+  "description": "**京津冀协同发展**：北京、天津、河北区域协调发展战略。",
   "key_concepts": [
-    "京津冀协同发展原因",
-    "三地功能定位",
-    "协同发展内容"
+    {
+      "title": "协同发展背景",
+      "definition": "区域发展问题",
+      "explanation": "**问题**：\n1. 北京大城市病\n2. 区域发展不平衡\n3. 环境污染严重",
+      "example": "北京交通拥堵、房价高、雾霾严重。",
+      "formula": null
+    },
+    {
+      "title": "协同发展目标",
+      "definition": "功能定位",
+      "explanation": "**定位**：\n- 北京：全国政治、文化、国际交往、科技创新中心\n- 天津：全国先进制造研发基地\n- 河北：全国现代商贸物流基地",
+      "example": "雄安新区疏解北京非首都功能。",
+      "formula": null
+    },
+    {
+      "title": "协同发展措施",
+      "definition": "具体举措",
+      "explanation": "**措施**：\n1. 疏解北京非首都功能\n2. 交通一体化\n3. 产业转移协作\n4. 生态环境联防联控",
+      "example": "雄安新区建设、京津冀交通一体化。",
+      "formula": null
+    }
   ],
   "textbook_refs": [],
-  "related_points": [],
+  "related_points": [
+    "regional-development",
+    "industrial-transfer"
+  ],
   "common_mistakes": [
-    "混淆京津冀和长三角",
-    "忽略河北在协同发展中的地位"
+    "❌ 协同发展就是北京产业转移到河北。\n✅ 是功能定位、产业协作、生态共治。",
+    "❌ 协同发展可以立即解决所有问题。\n✅ 需要长期过程。"
   ]
 }

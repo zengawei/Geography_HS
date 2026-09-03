@@ -1,30 +1,39 @@
 {
   "id": "gis-application",
-  "name": "GIS应用",
-  "name_en": "gis-application",
+  "name": "地理信息系统",
   "category": "tools",
   "exam_frequency": "medium",
-  "description": "地理信息系统（GIS）是专门处理地理空间数据的计算机系统。GIS具有数据采集、存储、管理、分析、表达等功能。GIS在城市管理、资源调查、环境监测、灾害预测、国土分析等方面有广泛应用。GIS可以帮助人们进行空间分析和决策支持。",
+  "description": "**地理信息系统（GIS）**：对地理数据进行输入、管理、分析、输出的计算机系统。",
   "key_concepts": [
     {
       "title": "GIS功能",
-      "definition": "GIS具有数据采集、存储、管理、分析、表达等功能",
-      "explanation": "数据采集：通过GPS、RS等手段获取地理数据。数据存储：将数据以数字形式存储在计算机中。数据管理：对数据进行组织、维护、更新。数据分析：进行空间分析、缓冲区分析、叠加分析等。数据表达：以地图、图表、报告等形式输出结果。",
-      "example": "城市交通规划：利用GIS分析交通流量，规划最优路线。灾害评估：利用GIS分析灾害范围，评估损失。",
+      "definition": "GIS的主要功能",
+      "explanation": "**功能**：\n1. 数据输入\n2. 数据存储\n3. 数据分析\n4. 信息输出",
+      "example": "GIS分析城市交通流量。",
       "formula": null
     },
     {
-      "title": "GIS应用领域",
-      "definition": "GIS在城市管理、资源调查、环境监测、灾害预测等领域有广泛应用",
-      "explanation": "城市管理：城市规划、交通管理、基础设施管理。资源调查：土地资源、水资源、矿产资源调查。环境监测：大气污染、水污染、生态变化监测。灾害预测：洪水、地震、滑坡等灾害预测和评估。其他领域：农业、林业、水利、军事、公安等。",
-      "example": "利用GIS进行城市土地利用规划，优化城市空间布局。利用GIS监测森林火灾，及时预警。",
+      "title": "GIS应用",
+      "definition": "GIS的应用领域",
+      "explanation": "**应用**：\n1. 城市规划\n2. 交通管理\n3. 灾害评估\n4. 环境管理",
+      "example": "GIS规划城市公交线路。",
+      "formula": null
+    },
+    {
+      "title": "GIS与RS、GPS",
+      "definition": "3S技术的关系",
+      "explanation": "**关系**：\n- RS：获取信息\n- GPS：定位导航\n- GIS：分析处理",
+      "example": "RS获取影像，GPS定位，GIS分析。",
       "formula": null
     }
   ],
   "textbook_refs": [],
-  "related_points": [],
+  "related_points": [
+    "remote-sensing",
+    "gps-application"
+  ],
   "common_mistakes": [
-    "混淆GIS和GPS",
-    "忽略GIS的空间分析功能"
+    "❌ GIS就是电子地图。\n✅ GIS可以分析处理数据，电子地图只是显示。",
+    "❌ GIS只能分析空间数据。\n✅ 也可以分析属性数据。"
   ]
 }

@@ -1,19 +1,39 @@
 {
   "id": "population-structure",
   "name": "人口结构",
-  "name_en": "population-structure",
   "category": "human",
   "exam_frequency": "medium",
-  "description": "人口结构包括年龄结构、性别结构、文化结构、职业结构等。年龄结构分为年轻型、成年型、老年型，反映人口增长趋势。性别结构用性别比表示。人口老龄化是指65岁以上人口占比超过7%。人口结构影响劳动力供给、社会负担、经济发展等。",
+  "description": "**人口结构**：人口内部的构成状况，包括年龄结构、性别结构、文化结构等。",
   "key_concepts": [
-    "人口年龄结构",
-    "人口老龄化",
-    "人口结构的影响"
+    {
+      "title": "人口年龄结构",
+      "definition": "各年龄组人口比重",
+      "explanation": "**类型**：\n- 年轻型：少年儿童比重大，增长快\n- 成年型：各年龄组较均匀\n- 老年型：老年人口比重大（>7%为老龄化）\n\n**人口金字塔**：扩张型、稳定型、收缩型",
+      "example": "中国65岁以上人口占比超过14%，进入老龄社会。",
+      "formula": null
+    },
+    {
+      "title": "人口性别结构",
+      "definition": "男女比例",
+      "explanation": "**性别比**：每100名女性对应的男性数\n\n**正常范围**：103-107\n\n**失衡影响**：婚姻挤压、社会问题",
+      "example": "我国性别比长期偏高，导致\"剩男\"问题。",
+      "formula": null
+    },
+    {
+      "title": "人口问题与对策",
+      "definition": "不同国家的人口问题",
+      "explanation": "**发展中国家**：增长过快→计划生育\n\n**发达国家**：老龄化→鼓励生育、延迟退休\n\n**中国**：老龄化加速→三孩政策",
+      "example": "日本老龄化严重，劳动力不足。",
+      "formula": null
+    }
   ],
   "textbook_refs": [],
-  "related_points": [],
+  "related_points": [
+    "population-distribution",
+    "population-migration"
+  ],
   "common_mistakes": [
-    "混淆人口老龄化和人口负增长",
-    "忽略人口结构对经济的影响"
+    "❌ 人口老龄化就是老年人口数量多。\n✅ 老龄化是老年人口比重超过7%，是相对概念。",
+    "❌ 鼓励生育能立即解决老龄化。\n✅ 效果需要20年左右才能显现。"
   ]
 }

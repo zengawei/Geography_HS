@@ -1,30 +1,39 @@
 {
   "id": "gps-application",
-  "name": "GPS/BDS应用",
-  "name_en": "gps-application",
+  "name": "全球定位系统",
   "category": "tools",
   "exam_frequency": "medium",
-  "description": "全球定位系统（GPS）是利用卫星网络对地面目标进行定位和导航的技术。GPS具有全能性、全球性、全天候、连续性和实时性的特点。GPS在军事、交通、测绘、野外考察、应急救援等领域有广泛应用。中国的北斗卫星导航系统（BDS）已全球组网，提供高精度定位服务。",
+  "description": "**全球定位系统（GPS）**：利用卫星进行定位、导航的系统。",
   "key_concepts": [
     {
-      "title": "GPS原理",
-      "definition": "GPS是利用卫星网络对地面目标进行定位和导航的技术",
-      "explanation": "GPS系统组成：空间部分（24颗工作卫星）、地面控制部分（主控站、监控站、注入站）、用户设备部分（GPS接收机）。定位原理：接收机接收至少4颗卫星信号，通过计算信号传播时间确定距离，利用空间交会原理确定位置。GPS具有全能性、全球性、全天候、连续性和实时性的特点。",
-      "example": "汽车导航系统利用GPS确定车辆位置，规划最优路线。野外考察利用GPS确定考察点位置。",
+      "title": "GPS组成",
+      "definition": "GPS的组成部分",
+      "explanation": "**组成**：\n1. 空间部分：卫星星座\n2. 地面控制部分：监控站\n3. 用户设备部分：接收机",
+      "example": "GPS接收机接收卫星信号。",
       "formula": null
     },
     {
-      "title": "GPS应用领域",
-      "definition": "GPS在军事、交通、测绘、野外考察、应急救援等领域有广泛应用",
-      "explanation": "军事：导弹制导、部队定位。交通：车辆导航、船舶导航、飞机导航。测绘：大地测量、工程测量。野外考察：确定考察点位置、路线导航。应急救援：搜救定位、灾害监测。其他领域：农业（精准农业）、渔业（渔船导航）、旅游（户外导航）。",
-      "example": "北斗卫星导航系统（BDS）是中国自主研发的全球卫星导航系统，已广泛应用于交通运输、农业、渔业等领域。",
+      "title": "GPS功能",
+      "definition": "定位和导航",
+      "explanation": "**功能**：\n1. 定位：确定三维坐标\n2. 导航：引导行进方向\n3. 测速：测量运动速度\n4. 授时：提供精确时间",
+      "example": "汽车导航系统。",
+      "formula": null
+    },
+    {
+      "title": "GPS应用",
+      "definition": "GPS的应用领域",
+      "explanation": "**应用**：\n1. 交通导航\n2. 测量测绘\n3. 应急救援\n4. 精准农业",
+      "example": "飞机精准播种。",
       "formula": null
     }
   ],
   "textbook_refs": [],
-  "related_points": [],
+  "related_points": [
+    "gis-application",
+    "remote-sensing"
+  ],
   "common_mistakes": [
-    "混淆GPS和GIS",
-    "忽略北斗系统的自主性"
+    "❌ GPS只能定位。\n✅ 还能导航、测速、授时。",
+    "❌ GPS只能用于军事。\n✅ 民用领域广泛应用。"
   ]
 }

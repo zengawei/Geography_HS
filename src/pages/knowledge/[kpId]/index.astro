@@ -1,6 +1,7 @@
 ---
 import BaseLayout from '../../../layouts/BaseLayout.astro';
 import { getCollection } from 'astro:content';
+import { marked } from 'marked';
 
 export async function getStaticPaths() {
   const knowledgePoints = await getCollection('knowledge-points');
@@ -40,6 +41,12 @@ const frequencyColors = {
   medium: 'bg-amber-100 text-amber-700',
   low: 'bg-green-100 text-green-700'
 };
+
+// Markdown 渲染配置
+marked.setOptions({
+  breaks: true,
+  gfm: true,
+});
 ---
 
 <BaseLayout title={`${kp.data.name} - 知识点`}>
@@ -62,7 +69,7 @@ const frequencyColors = {
 
   <div class="bg-white rounded-lg border border-gray-200 p-6 mb-6">
     <h2 class="text-lg font-semibold mb-3">📖 知识点阐述</h2>
-    <p class="text-gray-700 leading-relaxed">{kp.data.description}</p>
+    <div class="prose prose-sm max-w-none text-gray-700 markdown-content" set:html={marked.parse(kp.data.description)} />
   </div>
 
   {kp.data.key_concepts && kp.data.key_concepts.length > 0 && (
@@ -72,28 +79,28 @@ const frequencyColors = {
         {kp.data.key_concepts.map((concept: any) => (
           <div class="border-l-4 border-green-500 pl-4">
             <h3 class="text-base font-semibold text-gray-800 mb-2">{concept.title}</h3>
-            
+
             {concept.definition && (
               <div class="mb-2">
                 <span class="text-sm font-medium text-gray-600">定义：</span>
-                <p class="text-sm text-gray-700 inline">{concept.definition}</p>
+                <div class="text-sm text-gray-700 markdown-content inline" set:html={marked.parse(concept.definition)} />
               </div>
             )}
-            
+
             {concept.explanation && (
               <div class="mb-2">
                 <span class="text-sm font-medium text-gray-600">详解：</span>
-                <p class="text-sm text-gray-700 leading-relaxed">{concept.explanation}</p>
+                <div class="text-sm text-gray-700 leading-relaxed markdown-content" set:html={marked.parse(concept.explanation)} />
               </div>
             )}
-            
+
             {concept.example && (
               <div class="mb-2 bg-blue-50 rounded p-3">
                 <span class="text-sm font-medium text-blue-700">📝 举例：</span>
-                <p class="text-sm text-blue-900 mt-1">{concept.example}</p>
+                <div class="text-sm text-blue-900 mt-1 markdown-content" set:html={marked.parse(concept.example)} />
               </div>
             )}
-            
+
             {concept.formula && (
               <div class="bg-yellow-50 rounded p-3">
                 <span class="text-sm font-medium text-yellow-700">📐 公式：</span>
@@ -109,11 +116,11 @@ const frequencyColors = {
   {kp.data.common_mistakes && kp.data.common_mistakes.length > 0 && (
     <div class="bg-yellow-50 rounded-lg border border-yellow-200 p-6 mb-6">
       <h2 class="text-lg font-semibold mb-3 text-yellow-800">⚠️ 易错点</h2>
-      <ul class="list-disc list-inside space-y-2 text-yellow-900">
+      <div class="space-y-3 text-yellow-900">
         {kp.data.common_mistakes.map(mistake => (
-          <li>{mistake}</li>
+          <div class="text-sm markdown-content" set:html={marked.parse(mistake)} />
         ))}
-      </ul>
+      </div>
     </div>
   )}
 
@@ -157,3 +164,60 @@ const frequencyColors = {
     )}
   </div>
 </BaseLayout>
+
+<style>
+  .markdown-content :global(table) {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1rem 0;
+    font-size: 0.875rem;
+  }
+  .markdown-content :global(th) {
+    background-color: #f0fdf4;
+    border: 1px solid #d1d5db;
+    padding: 0.5rem 0.75rem;
+    text-align: left;
+    font-weight: 600;
+    color: #1f2937;
+  }
+  .markdown-content :global(td) {
+    border: 1px solid #d1d5db;
+    padding: 0.5rem 0.75rem;
+    color: #374151;
+  }
+  .markdown-content :global(tr:nth-child(even)) {
+    background-color: #f9fafb;
+  }
+  .markdown-content :global(ul),
+  .markdown-content :global(ol) {
+    padding-left: 1.5rem;
+    margin: 0.5rem 0;
+  }
+  .markdown-content :global(li) {
+    margin: 0.25rem 0;
+  }
+  .markdown-content :global(strong) {
+    color: #dc2626;
+    font-weight: 600;
+  }
+  .markdown-content :global(blockquote) {
+    border-left: 4px solid #10b981;
+    padding-left: 1rem;
+    margin: 0.75rem 0;
+    color: #4b5563;
+    background-color: #f0fdf4;
+    padding: 0.75rem 1rem;
+    border-radius: 0.25rem;
+  }
+  .markdown-content :global(p) {
+    margin: 0.5rem 0;
+  }
+  .markdown-content :global(h1),
+  .markdown-content :global(h2),
+  .markdown-content :global(h3),
+  .markdown-content :global(h4) {
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+  }
+</style>

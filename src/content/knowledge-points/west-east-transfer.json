@@ -1,19 +1,39 @@
 {
   "id": "west-east-transfer",
-  "name": "东中西部协调",
-  "name_en": "west-east-transfer",
+  "name": "西气东输/西电东送",
   "category": "regional",
-  "exam_frequency": "medium",
-  "description": "东中西部协调发展是指发挥东部沿海地区优势，加强中西部地区开发，实现区域协调发展的战略。东部地区经济发达、技术先进，但资源短缺；中西部地区资源丰富、市场广阔，但经济落后。东中西部协调发展要实现优势互补、互利共赢。",
+  "exam_frequency": "high",
+  "description": "**西气东输/西电东送**：将西部能源输送到东部，解决能源分布与需求不匹配问题。",
   "key_concepts": [
-    "东中西部差异",
-    "区域优势互补",
-    "协调发展策略"
+    {
+      "title": "西气东输",
+      "definition": "天然气输送工程",
+      "explanation": "**线路**：新疆→上海\n**意义**：\n- 对西部：资源优势变经济优势\n- 对东部：缓解能源紧张，改善环境",
+      "example": "西气东输一线、二线。",
+      "formula": null
+    },
+    {
+      "title": "西电东送",
+      "definition": "电力输送工程",
+      "explanation": "**线路**：\n1. 北线：山西、内蒙古→京津冀\n2. 中线：三峡→长三角\n3. 南线：云南、贵州→珠三角\n\n**意义**：优化能源配置",
+      "example": "三峡电力输送到长三角。",
+      "formula": null
+    },
+    {
+      "title": "工程影响",
+      "definition": "对区域发展的影响",
+      "explanation": "**对西部**：\n- 有利：经济发展、就业增加\n- 不利：生态压力\n\n**对东部**：\n- 有利：缓解能源紧张、改善环境\n- 不利：成本增加",
+      "example": "西气东输促进新疆经济发展，改善上海大气质量。",
+      "formula": null
+    }
   ],
   "textbook_refs": [],
-  "related_points": [],
+  "related_points": [
+    "resource-allocation",
+    "regional-development"
+  ],
   "common_mistakes": [
-    "忽略中西部地区的优势",
-    "片面强调东部带动作用"
+    "❌ 西气东输只对东部有利。\n✅ 对西部和东部都有利有弊。",
+    "❌ 能源调配可以解决所有问题。\n✅ 还要节约能源、开发新能源。"
   ]
 }

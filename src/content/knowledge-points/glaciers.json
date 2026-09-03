@@ -1,19 +1,39 @@
 {
   "id": "glaciers",
   "name": "冰川",
-  "name_en": "glaciers",
   "category": "natural",
   "exam_frequency": "low",
-  "description": "冰川是极地和高山地区由积雪变质形成的天然冰体。冰川作用包括侵蚀、搬运和堆积。冰川侵蚀形成U型谷、角峰、冰斗等地貌；冰川堆积形成冰碛丘陵、冰碛湖等地貌。冰川是重要的淡水资源，冰川融化对海平面变化和气候有重要影响。",
+  "description": "**冰川**：高纬度和高海拔地区，积雪经过压实、重新结晶形成的冰体。",
   "key_concepts": [
-    "冰川类型",
-    "冰川地貌",
-    "冰川的环境效应"
+    {
+      "title": "冰川类型",
+      "definition": "大陆冰川和山岳冰川",
+      "explanation": "**大陆冰川**：面积大，如南极洲、格陵兰岛\n\n**山岳冰川**：分布在高山地区，如青藏高原",
+      "example": "青藏高原是世界中低纬度冰川最发育的地区。",
+      "formula": null
+    },
+    {
+      "title": "冰川作用",
+      "definition": "冰川对地表的改造作用",
+      "explanation": "**侵蚀作用**：U形谷、角峰、冰斗、峡湾\n\n**堆积作用**：冰碛地貌",
+      "example": "挪威峡湾是冰川侵蚀形成。",
+      "formula": null
+    },
+    {
+      "title": "冰川与气候变化",
+      "definition": "冰川是气候变化的指示器",
+      "explanation": "**指示作用**：\n- 冰川退缩→气候变暖\n- 冰川前进→气候变冷\n\n**影响**：海平面变化、水资源",
+      "example": "全球变暖导致冰川退缩，海平面上升。",
+      "formula": null
+    }
   ],
   "textbook_refs": [],
-  "related_points": [],
+  "related_points": [
+    "landforms",
+    "water-cycle"
+  ],
   "common_mistakes": [
-    "混淆冰川侵蚀和堆积地貌",
-    "忽略冰川对全球变化的指示意义"
+    "❌ 冰川只分布在极地。\n✅ 冰川分布在高纬度和高海拔地区。",
+    "❌ 冰川融化只会导致海平面上升。\n✅ 还影响水资源、生态系统、气候等。"
   ]
 }

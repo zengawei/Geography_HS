@@ -1,19 +1,39 @@
 {
   "id": "remote-sensing",
   "name": "遥感技术",
-  "name_en": "remote-sensing",
   "category": "tools",
   "exam_frequency": "medium",
-  "description": "遥感技术是通过传感器接收目标物的电磁波信息，经过处理分析，识别目标物性质的技术。遥感技术包括航空遥感和航天遥感。遥感图像可以反映地物的形状、大小、色调、阴影、纹理等特征。遥感技术是地理信息技术的重要组成部分，为地理研究提供重要的数据源。",
+  "description": "**遥感技术（RS）**：利用传感器远距离获取地物信息的技术。",
   "key_concepts": [
-    "遥感技术类型",
-    "遥感图像特征",
-    "遥感数据处理"
+    {
+      "title": "遥感原理",
+      "definition": "遥感的工作原理",
+      "explanation": "**原理**：地物反射或辐射电磁波→传感器接收→处理分析→获取信息",
+      "example": "卫星遥感获取地表影像。",
+      "formula": null
+    },
+    {
+      "title": "遥感特点",
+      "definition": "遥感的优势",
+      "explanation": "**特点**：\n1. 探测范围大\n2. 获取速度快\n3. 受地面条件限制小",
+      "example": "一次卫星影像覆盖大范围区域。",
+      "formula": null
+    },
+    {
+      "title": "遥感应用",
+      "definition": "遥感的应用领域",
+      "explanation": "**应用**：\n1. 资源调查\n2. 环境监测\n3. 灾害评估\n4. 城市规划",
+      "example": "遥感监测森林火灾范围。",
+      "formula": null
+    }
   ],
   "textbook_refs": [],
-  "related_points": [],
+  "related_points": [
+    "rs-application",
+    "gis-application"
+  ],
   "common_mistakes": [
-    "混淆不同遥感平台",
-    "忽略遥感图像的解译方法"
+    "❌ 遥感就是拍照。\n✅ 遥感获取的是电磁波信息，需要处理分析。",
+    "❌ 遥感可以获取所有信息。\n✅ 遥感主要获取地表信息，地下信息有限。"
   ]
 }

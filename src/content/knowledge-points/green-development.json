@@ -1,19 +1,39 @@
 {
   "id": "green-development",
   "name": "绿色发展",
-  "name_en": "green-development",
   "category": "regional",
-  "exam_frequency": "high",
-  "description": "绿色发展是以效率、和谐、持续为目标的经济增长和社会发展方式。绿色发展强调人与自然和谐共生，要求在生产生活中节约资源、保护环境。绿色发展理念包括绿水青山就是金山银山、良好生态环境是最普惠的民生福祉等。实现绿色发展要发展绿色产业、倡导绿色生活、完善绿色制度。",
+  "exam_frequency": "medium",
+  "description": "**绿色发展**：经济发展与环境保护协调统一的发展模式。",
   "key_concepts": [
-    "绿色发展理念",
-    "绿色发展方式",
-    "绿色发展制度"
+    {
+      "title": "绿色发展理念",
+      "definition": "绿水青山就是金山银山",
+      "explanation": "**核心**：经济发展与环境保护协调\n**目标**：可持续发展",
+      "example": "浙江安吉绿色发展。",
+      "formula": null
+    },
+    {
+      "title": "绿色发展方式",
+      "definition": "循环经济、低碳经济",
+      "explanation": "**方式**：\n1. 循环经济（减量化、再利用、资源化）\n2. 低碳经济（节能减排）\n3. 绿色产业",
+      "example": "垃圾分类、资源循环利用。",
+      "formula": null
+    },
+    {
+      "title": "绿色发展措施",
+      "definition": "实现绿色发展",
+      "explanation": "**措施**：\n1. 调整产业结构\n2. 发展清洁能源\n3. 推广绿色技术\n4. 倡导绿色生活",
+      "example": "新能源汽车推广。",
+      "formula": null
+    }
   ],
   "textbook_refs": [],
-  "related_points": [],
+  "related_points": [
+    "environmental-protection",
+    "sustainable-development"
+  ],
   "common_mistakes": [
-    "混淆绿色发展和低碳发展",
-    "忽略绿色发展的系统性"
+    "❌ 绿色发展会阻碍经济增长。\n✅ 绿色发展促进经济高质量发展。",
+    "❌ 绿色发展只是环保。n✅ 是经济、社会、环境协调发展。"
   ]
 }

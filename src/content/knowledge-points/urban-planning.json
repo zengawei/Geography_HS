@@ -1,19 +1,39 @@
 {
   "id": "urban-planning",
   "name": "城市规划",
-  "name_en": "urban-planning",
   "category": "human",
   "exam_frequency": "medium",
-  "description": "城市规划是为了实现城市经济和社会发展目标，确定城市性质、规模和发展方向，合理利用城市土地，协调城市空间布局的综合性工作。城市规划包括总体规划和详细规划。城市规划需要考虑经济发展、环境保护、社会公平等多方面因素，实现城市可持续发展。",
+  "description": "**城市规划**：对城市未来发展的综合部署，指导城市建设管理。",
   "key_concepts": [
-    "城市规划内容",
-    "城市规划原则",
-    "城市可持续发展"
+    {
+      "title": "城市规划的目的",
+      "definition": "促进城市健康发展",
+      "explanation": "**目的**：\n1. 合理利用土地\n2. 协调各功能区关系\n3. 改善人居环境\n4. 促进可持续发展",
+      "example": "雄安新区规划体现新发展理念。",
+      "formula": null
+    },
+    {
+      "title": "城市规划的原则",
+      "definition": "规划原则",
+      "explanation": "**原则**：\n1. 以人为本\n2. 生态优先\n3. 集约发展\n4. 传承文化",
+      "example": "海绵城市建设体现生态优先。",
+      "formula": null
+    },
+    {
+      "title": "城市规划的内容",
+      "definition": "规划内容",
+      "explanation": "**内容**：\n1. 功能分区\n2. 交通布局\n3. 绿地系统\n4. 基础设施",
+      "example": "城市总体规划、详细规划。",
+      "formula": null
+    }
   ],
   "textbook_refs": [],
-  "related_points": [],
+  "related_points": [
+    "urban-structure",
+    "urbanization"
+  ],
   "common_mistakes": [
-    "忽略城市规划的综合性",
-    "混淆城市规划和城市建设"
+    "❌ 城市规划只是政府的事。\n✅ 需要公众参与。",
+    "❌ 规划一成不变。\n✅ 需要动态调整。"
   ]
 }

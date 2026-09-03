@@ -1,19 +1,39 @@
 {
   "id": "urban-spatial-structure",
-  "name": "城市空间结构",
-  "name_en": "urban-spatial-structure",
+  "name": "城市空间结构模型",
   "category": "human",
-  "exam_frequency": "high",
-  "description": "城市空间结构是指城市各要素在空间上的分布和组合形式。主要模式有同心圆模式、扇形模式、多核心模式。城市空间结构受地租水平、交通条件、历史文化、政策规划等因素影响。合理的城市空间结构有利于提高城市运行效率和居民生活质量。",
+  "exam_frequency": "medium",
+  "description": "**城市空间结构模型**：同心圆模型、扇形模型、多核心模型。",
   "key_concepts": [
-    "城市空间结构模式",
-    "影响城市空间结构的因素",
-    "城市空间结构的优化"
+    {
+      "title": "同心圆模型",
+      "definition": "伯吉斯提出",
+      "explanation": "城市以CBD为中心，向外依次为过渡区、工人住宅区、中产住宅区、通勤区。\n\n**适用**：平原城市",
+      "example": "芝加哥早期符合同心圆模型。",
+      "formula": null
+    },
+    {
+      "title": "扇形模型",
+      "definition": "霍伊特提出",
+      "explanation": "功能区沿交通线呈扇形向外扩展。\n\n**适用**：有主要交通干线辐射的城市",
+      "example": "波士顿沿交通线发展。",
+      "formula": null
+    },
+    {
+      "title": "多核心模型",
+      "definition": "哈里斯和乌尔曼提出",
+      "explanation": "城市有多个核心，各核心周围形成相应功能区。\n\n**适用**：大城市、特大城市",
+      "example": "北京有多个商业中心（王府井、西单、望京）。",
+      "formula": null
+    }
   ],
   "textbook_refs": [],
-  "related_points": [],
+  "related_points": [
+    "urban-structure",
+    "urban-hierarchy"
+  ],
   "common_mistakes": [
-    "混淆城市空间结构和城市功能区",
-    "忽略政策规划对城市空间的影响"
+    "❌ 所有城市都符合同心圆模型。\n✅ 三种模型各有适用条件，实际城市往往是多种模型组合。",
+    "❌ 城市空间结构不会改变。\n✅ 随交通、经济、政策变化而调整。"
   ]
 }

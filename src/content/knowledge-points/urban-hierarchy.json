@@ -1,19 +1,39 @@
 {
   "id": "urban-hierarchy",
-  "name": "城镇体系",
-  "name_en": "urban-hierarchy",
+  "name": "城市等级体系",
   "category": "human",
   "exam_frequency": "medium",
-  "description": "城镇体系是指在一定地域范围内，不同规模、不同职能的城镇相互联系形成的有机整体。城市等级越高，数量越少，服务范围越大，职能越多。中心地理论揭示了城市等级与服务范围的关系。合理的城镇体系有利于区域协调发展。",
+  "description": "**城市等级体系**：按人口规模划分城市等级，不同等级城市服务范围和职能不同。",
   "key_concepts": [
-    "城市等级体系",
-    "中心地理论",
-    "城市服务范围"
+    {
+      "title": "城市等级划分",
+      "definition": "中国标准",
+      "explanation": "**等级**：\n- 超大城市：>1000万\n- 特大城市：500-1000万\n- 大城市：100-500万\n- 中等城市：50-100万\n- 小城市：<50万",
+      "example": "北京、上海是超大城市。",
+      "formula": null
+    },
+    {
+      "title": "等级与服务功能",
+      "definition": "等级越高，服务功能越强",
+      "explanation": "**规律**：\n- 等级高：数量少、服务范围大、职能多\n- 等级低：数量多、服务范围小、职能少\n\n**嵌套关系**：高等级包含低等级服务范围",
+      "example": "省会服务范围大于地级市。",
+      "formula": null
+    },
+    {
+      "title": "中心地理论",
+      "definition": "克里斯塔勒提出",
+      "explanation": "**核心**：中心地按等级排列，服务范围呈正六边形分布\n\n**意义**：指导商业网点布局、城市规划",
+      "example": "理想条件下，中心地呈正六边形分布。",
+      "formula": null
+    }
   ],
   "textbook_refs": [],
-  "related_points": [],
+  "related_points": [
+    "urbanization",
+    "urban-structure"
+  ],
   "common_mistakes": [
-    "混淆城市等级和城市数量",
-    "忽略城市间的相互联系"
+    "❌ 等级越高，数量越多。\n✅ 等级越高，数量越少（金字塔规律）。",
+    "❌ 服务范围互不重叠。\n✅ 高等级包含低等级，形成嵌套关系。"
   ]
 }

@@ -1,19 +1,39 @@
 {
   "id": "natural-hazards",
   "name": "自然灾害",
-  "name_en": "natural-hazards",
   "category": "natural",
   "exam_frequency": "high",
-  "description": "自然灾害是指给人类生存带来危害或损害人类生活环境的自然现象。主要自然灾害包括气象灾害（台风、寒潮、干旱、洪涝）、地质灾害（地震、滑坡、泥石流）、海洋灾害（风暴潮、海啸）、生物灾害（病虫害）等。自然灾害具有突发性、周期性、群发性等特点。",
+  "description": "**自然灾害**：自然界异常变化造成的生命财产损失。主要类型：气象灾害、地质灾害、水文灾害、生物灾害。",
   "key_concepts": [
-    "自然灾害类型",
-    "自然灾害特点",
-    "防灾减灾措施"
+    {
+      "title": "气象灾害",
+      "definition": "大气异常造成的灾害",
+      "explanation": "**类型**：\n1. 台风：狂风、暴雨、风暴潮\n2. 暴雨洪涝\n3. 干旱\n4. 寒潮：降温、大风、雨雪\n\n**分布**：东部季风区最严重",
+      "example": "长江中下游夏季洪涝频繁。",
+      "formula": null
+    },
+    {
+      "title": "地质灾害",
+      "definition": "地质作用引起的灾害",
+      "explanation": "**类型**：\n1. 地震\n2. 滑坡、泥石流\n3. 火山\n\n**分布**：山区、板块交界处",
+      "example": "汶川地震、舟曲泥石流。",
+      "formula": null
+    },
+    {
+      "title": "防灾减灾",
+      "definition": "灾害防御措施",
+      "explanation": "**措施**：\n1. 监测预报\n2. 工程措施（堤坝、防护林）\n3. 非工程措施（预案、保险）\n4. 自救互救",
+      "example": "三峡工程防洪效益。",
+      "formula": null
+    }
   ],
   "textbook_refs": [],
-  "related_points": [],
+  "related_points": [
+    "weather-systems",
+    "geological-processes"
+  ],
   "common_mistakes": [
-    "混淆自然灾害和人为灾害",
-    "忽略自然灾害的关联性"
+    "❌ 自然灾害只发生在山区。\n✅ 平原也有洪涝、干旱等灾害。",
+    "❌ 自然灾害无法防御。\n✅ 通过监测预报、工程措施可以减轻灾害损失。"
   ]
 }

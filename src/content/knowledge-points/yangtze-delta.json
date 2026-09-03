@@ -1,19 +1,39 @@
 {
   "id": "yangtze-delta",
   "name": "长三角一体化",
-  "name_en": "yangtze-delta",
   "category": "regional",
   "exam_frequency": "high",
-  "description": "长三角一体化是指上海、江苏、浙江、安徽三省一市加强合作，建设世界级城市群的战略。长三角是中国经济发展最活跃、开放程度最高、创新能力最强的区域之一。长三角一体化要实现基础设施互联互通、产业协同发展、生态环境共保联治、公共服务便利共享。",
+  "description": "**长三角一体化**：上海、江苏、浙江、安徽区域一体化发展。",
   "key_concepts": [
-    "长三角区域范围",
-    "长三角一体化内容",
-    "长三角发展优势"
+    {
+      "title": "一体化背景",
+      "definition": "区域优势",
+      "explanation": "**优势**：\n1. 地理位置优越\n2. 经济基础雄厚\n3. 科技水平高\n4. 交通便利",
+      "example": "长三角是中国经济最发达地区之一。",
+      "formula": null
+    },
+    {
+      "title": "一体化目标",
+      "definition": "高质量发展",
+      "explanation": "**目标**：\n1. 世界级城市群\n2. 高质量发展\n3. 一体化发展",
+      "example": "打造世界级城市群。",
+      "formula": null
+    },
+    {
+      "title": "一体化措施",
+      "definition": "具体举措",
+      "explanation": "**措施**：\n1. 基础设施互联互通\n2. 产业协同创新\n3. 生态环境共保联治\n4. 公共服务共建共享",
+      "example": "长三角生态绿色一体化发展示范区。",
+      "formula": null
+    }
   ],
   "textbook_refs": [],
-  "related_points": [],
+  "related_points": [
+    "regional-development",
+    "beijing-tianjin-hebei"
+  ],
   "common_mistakes": [
-    "忽略安徽在长三角中的地位",
-    "混淆长三角和长江经济带"
+    "❌ 一体化就是行政合并。\n✅ 是功能互补、协调发展。",
+    "❌ 一体化只关注经济。\n✅ 是经济、社会、生态全面一体化。"
   ]
 }

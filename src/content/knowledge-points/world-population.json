@@ -1,19 +1,39 @@
 {
   "id": "world-population",
   "name": "世界人口",
-  "name_en": "world-population",
   "category": "world_china",
   "exam_frequency": "medium",
-  "description": "世界人口问题包括人口增长过快和人口老龄化。人口增长过快带来资源短缺、环境恶化、就业困难等问题；人口老龄化带来劳动力短缺、社会负担加重等问题。解决人口问题要控制人口数量、提高人口素质，实现人口与经济、社会、资源、环境的协调发展。",
+  "description": "**世界人口**：世界人口分布、增长、问题。",
   "key_concepts": [
-    "世界人口增长",
-    "世界人口问题",
-    "人口政策"
+    {
+      "title": "人口分布",
+      "definition": "世界人口分布",
+      "explanation": "**分布**：集中在北半球中低纬度沿海平原\n**四大稠密区**：东亚、南亚、西欧、北美东部",
+      "example": "亚洲人口最多。",
+      "formula": null
+    },
+    {
+      "title": "人口增长",
+      "definition": "世界人口增长",
+      "explanation": "**增长**：\n1. 发达国家增长慢\n2. 发展中国家增长快\n3. 全球人口超过80亿",
+      "example": "非洲人口增长最快。",
+      "formula": null
+    },
+    {
+      "title": "人口问题",
+      "definition": "世界人口问题",
+      "explanation": "**问题**：\n1. 发达国家：老龄化\n2. 发展中国家：增长过快",
+      "example": "日本老龄化严重。",
+      "formula": null
+    }
   ],
   "textbook_refs": [],
-  "related_points": [],
+  "related_points": [
+    "world-geography",
+    "population-distribution"
+  ],
   "common_mistakes": [
-    "混淆人口增长和人口自然增长",
-    "忽略人口问题的区域性"
+    "❌ 人口越多越好。\n✅ 人口要与资源环境相协调。",
+    "❌ 所有国家都面临老龄化。\n✅ 主要是发达国家。"
   ]
 }

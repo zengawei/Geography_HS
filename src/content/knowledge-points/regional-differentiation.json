@@ -1,19 +1,39 @@
 {
   "id": "regional-differentiation",
   "name": "区域差异",
-  "name_en": "regional-differentiation",
   "category": "regional",
-  "exam_frequency": "high",
-  "description": "区域差异是指不同区域之间在自然、经济、社会等方面的差别。区域差异表现为东中西部差异、南北差异、城乡差异等。区域差异是客观存在的，但可以通过政策调控缩小差距。区域协调发展要发挥各地区优势，实现优势互补、共同发展。",
+  "exam_frequency": "medium",
+  "description": "**区域差异**：不同区域之间自然、人文特征的差异。",
   "key_concepts": [
-    "区域差异表现",
-    "区域差异原因",
-    "区域协调发展"
+    {
+      "title": "区域差异表现",
+      "definition": "自然和人文差异",
+      "explanation": "**自然差异**：气候、地形、资源\n**人文差异**：经济水平、产业结构、城市化",
+      "example": "我国东中西部差异。",
+      "formula": null
+    },
+    {
+      "title": "区域差异原因",
+      "definition": "自然和人文因素",
+      "explanation": "**自然原因**：位置、资源禀赋\n**人文原因**：历史基础、政策、开放程度",
+      "example": "东部沿海位置优越、政策优惠，发展快。",
+      "formula": null
+    },
+    {
+      "title": "缩小区域差异",
+      "definition": "区域协调发展",
+      "explanation": "**措施**：\n1. 区域合作\n2. 产业转移\n3. 资源调配\n4. 政策扶持",
+      "example": "西部大开发、东北振兴。",
+      "formula": null
+    }
   ],
   "textbook_refs": [],
-  "related_points": [],
+  "related_points": [
+    "regional-characteristics",
+    "industrial-transfer"
+  ],
   "common_mistakes": [
-    "忽略区域差异的客观性",
-    "混淆区域差异和区域对立"
+    "❌ 区域差异只会扩大。\n✅ 通过政策干预可以缩小差异。",
+    "❌ 区域差异都是不利的。\n✅ 适度差异促进竞争，过大差异影响稳定。"
   ]
 }

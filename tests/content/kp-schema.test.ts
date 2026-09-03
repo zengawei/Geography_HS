@@ -1,7 +1,6 @@
 import { describe, test, expect } from 'vitest';
 import { readdirSync, readFileSync } from 'fs';
 import { join } from 'path';
-import { parse } from 'yaml';
 import { z } from 'zod';
 
 const ROOT = join(__dirname, '..', '..');
@@ -15,7 +14,16 @@ const kpSchema = z.object({
   category: z.enum(['natural', 'human', 'regional', 'world_china', 'tools']),
   exam_frequency: z.enum(['high', 'medium', 'low']),
   description: z.string().min(1),
-  key_concepts: z.array(z.string()),
+  key_concepts: z.array(z.union([
+    z.string(),
+    z.object({
+      title: z.string(),
+      definition: z.string().optional(),
+      explanation: z.string().optional(),
+      example: z.string().optional(),
+      formula: z.string().nullable().optional(),
+    })
+  ])),
   textbook_refs: z.array(z.object({
     textbook: textbookEnum,
     chapter: z.number().int(),
@@ -26,13 +34,13 @@ const kpSchema = z.object({
 });
 
 describe('Knowledge point schema validation', () => {
-  const files = readdirSync(KP_DIR).filter(f => f.endsWith('.yaml') || f.endsWith('.yml'));
+  const files = readdirSync(KP_DIR).filter(f => f.endsWith('.json'));
   const allData = files.map(f => ({
     file: f,
-    data: parse(readFileSync(join(KP_DIR, f), 'utf-8')),
+    data: JSON.parse(readFileSync(join(KP_DIR, f), 'utf-8')),
   }));
 
-  test('all KP files have valid frontmatter', () => {
+  test('all KP files have valid schema', () => {
     for (const { file, data } of allData) {
       const result = kpSchema.safeParse(data);
       expect(result.success, `${file}: ${result.success ? '' : result.error.message}`).toBe(true);
@@ -41,7 +49,7 @@ describe('Knowledge point schema validation', () => {
 
   test('KP id matches filename', () => {
     for (const { file, data } of allData) {
-      const expectedId = file.replace(/\.(yaml|yml)$/, '');
+      const expectedId = file.replace(/\.json$/, '');
       expect(data.id).toBe(expectedId);
     }
   });

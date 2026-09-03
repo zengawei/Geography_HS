@@ -1,19 +1,39 @@
 {
   "id": "groundwater",
   "name": "地下水",
-  "name_en": "groundwater",
   "category": "natural",
-  "exam_frequency": "medium",
-  "description": "地下水是储存在地下岩石空隙中的水。按埋藏条件分为潜水和承压水。潜水位于第一个稳定隔水层之上，有自由水面；承压水位于两个隔水层之间，承受一定压力。地下水补给来源主要是大气降水和地表水。过度开采地下水会导致地面沉降、海水入侵等问题。",
+  "exam_frequency": "low",
+  "description": "**地下水**：埋藏在地表以下岩石空隙中的水。分为潜水和承压水。",
   "key_concepts": [
-    "地下水类型",
-    "地下水补给",
-    "地下水问题"
+    {
+      "title": "潜水",
+      "definition": "埋藏在第一个稳定隔水层之上的地下水",
+      "explanation": "**特征**：\n1. 有自由水面\n2. 补给来源：大气降水、地表水\n3. 排泄方式：蒸发、出露为泉\n4. 易受污染",
+      "example": "水井一般开采潜水。",
+      "formula": null
+    },
+    {
+      "title": "承压水",
+      "definition": "埋藏在两个隔水层之间的地下水",
+      "explanation": "**特征**：\n1. 承受一定压力\n2. 补给区与分布区不一致\n3. 不易受污染\n4. 水质较好",
+      "example": "自流井开采的是承压水。",
+      "formula": null
+    },
+    {
+      "title": "地下水与人类",
+      "definition": "地下水的利用和保护",
+      "explanation": "**利用**：供水、灌溉\n\n**问题**：\n1. 过度开采→地面沉降\n2. 沿海地区→海水入侵\n3. 污染→水质恶化\n\n**保护**：合理开采、防治污染、人工回灌",
+      "example": "华北平原过度开采地下水导致地面沉降。",
+      "formula": null
+    }
   ],
   "textbook_refs": [],
-  "related_points": [],
+  "related_points": [
+    "water-cycle",
+    "river-characteristics"
+  ],
   "common_mistakes": [
-    "混淆潜水和承压水",
-    "忽略地下水与地表水的相互补给"
+    "❌ 地下水取之不尽。\n✅ 地下水更新慢，过度开采会导致资源枯竭。",
+    "❌ 潜水比承压水水质好。\n✅ 承压水有隔水层保护，水质一般比潜水好。"
   ]
 }
