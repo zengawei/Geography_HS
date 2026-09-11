@@ -1,0 +1,55 @@
+/* Markdown 内容通用样式 */
+.markdown-content :global(table) {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1rem 0;
+  font-size: 0.875rem;
+}
+.markdown-content :global(th) {
+  background-color: #f0fdf4;
+  border: 1px solid #d1d5db;
+  padding: 0.5rem 0.75rem;
+  text-align: left;
+  font-weight: 600;
+  color: #1f2937;
+}
+.markdown-content :global(td) {
+  border: 1px solid #d1d5db;
+  padding: 0.5rem 0.75rem;
+  color: #374151;
+}
+.markdown-content :global(tr:nth-child(even)) {
+  background-color: #f9fafb;
+}
+.markdown-content :global(ul),
+.markdown-content :global(ol) {
+  padding-left: 1.5rem;
+  margin: 0.5rem 0;
+}
+.markdown-content :global(li) {
+  margin: 0.25rem 0;
+}
+.markdown-content :global(strong) {
+  color: #dc2626;
+  font-weight: 600;
+}
+.markdown-content :global(blockquote) {
+  border-left: 4px solid #10b981;
+  padding-left: 1rem;
+  margin: 0.75rem 0;
+  color: #4b5563;
+  background-color: #f0fdf4;
+  padding: 0.75rem 1rem;
+  border-radius: 0.25rem;
+}
+.markdown-content :global(p) {
+  margin: 0.5rem 0;
+}
+.markdown-content :global(h1),
+.markdown-content :global(h2),
+.markdown-content :global(h3),
+.markdown-content :global(h4) {
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}

@@ -1,0 +1,151 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getCollection } from 'astro:content';
+
+const knowledgePoints = await getCollection('knowledge-points');
+
+// 按类别分组
+const byCategory = knowledgePoints.reduce((acc, kp) => {
+  const category = kp.data.category;
+  if (!acc[category]) acc[category] = [];
+  acc[category].push(kp);
+  return acc;
+}, {});
+
+const topics = [
+  {
+    key: 'natural',
+    name: '自然地理',
+    icon: '🌿',
+    color: 'bg-green-100 text-green-700 border-green-200',
+    description: '大气、水文、地貌、土壤、植被等自然要素',
+  },
+  {
+    key: 'human',
+    name: '人文地理',
+    icon: '👥',
+    color: 'bg-blue-100 text-blue-700 border-blue-200',
+    description: '人口、城市、农业、工业、交通等人文要素',
+  },
+  {
+    key: 'regional',
+    name: '区域发展',
+    icon: '🗺️',
+    color: 'bg-amber-100 text-amber-700 border-amber-200',
+    description: '区域特征、区域发展、区域联系',
+  },
+  {
+    key: 'world_china',
+    name: '世界与中国',
+    icon: '🌏',
+    color: 'bg-purple-100 text-purple-700 border-purple-200',
+    description: '世界地理、中国地理、全球问题',
+  },
+  {
+    key: 'tools',
+    name: '工具方法',
+    icon: '🧭',
+    color: 'bg-rose-100 text-rose-700 border-rose-200',
+    description: '地图、GIS、地理计算方法',
+  },
+];
+---
+
+<BaseLayout title="专题模块 — Geography_HS">
+  <h1 class="text-3xl font-bold text-gray-900 mb-2">专题模块</h1>
+  <p class="text-gray-600 mb-8">按主题纵向梳理地理知识，构建完整知识体系</p>
+
+  <div class="space-y-6">
+    {topics.map(topic => {
+      const kps = byCategory[topic.key] || [];
+      const highFreqCount = kps.filter(kp => kp.data.exam_frequency === 'high').length;
+
+      return (
+        <section class:list={['bg-white rounded-lg shadow border-2 p-6', topic.color]}>
+          <div class="flex items-start justify-between mb-4">
+            <div>
+              <h2 class="text-2xl font-bold text-gray-900 mb-2 flex items-center gap-2">
+                <span class="text-3xl">{topic.icon}</span>
+                {topic.name}
+              </h2>
+              <p class="text-gray-700 mb-3">{topic.description}</p>
+            </div>
+            <div class="text-right flex-shrink-0 ml-4">
+              <div class="text-3xl font-bold text-gray-900">{kps.length}</div>
+              <div class="text-sm text-gray-600">个知识点</div>
+              {highFreqCount > 0 && (
+                <div class="text-xs text-red-600 mt-1">
+                  🔥 {highFreqCount} 个高频
+                </div>
+              )}
+            </div>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3">
+            {kps.map((kp, idx) => (
+              <a
+                href={`${import.meta.env.BASE_URL}/knowledge/${kp.data.id}`}
+                class:list={[
+                  'block bg-white hover:bg-gray-50 rounded p-3 border border-gray-200 transition text-sm',
+                  idx >= 6 && 'hidden kp-extra'
+                ]}
+              >
+                <div class="font-semibold text-gray-900 mb-1">{kp.data.name}</div>
+                <div class="text-xs text-gray-600 line-clamp-1">{kp.data.description}</div>
+              </a>
+            ))}
+          </div>
+
+          {kps.length > 6 && (
+            <div class="mt-4 text-center">
+              <button
+                class="toggle-btn text-sm text-indigo-600 hover:text-indigo-800 cursor-pointer font-medium"
+                data-topic={topic.key}
+              >
+                展开显示全部 {kps.length} 个知识点 ▼
+              </button>
+            </div>
+          )}
+        </section>
+      );
+    })}
+  </div>
+
+  <section class="bg-indigo-50 border border-indigo-200 rounded-lg p-6 mt-8">
+    <h2 class="text-xl font-bold text-gray-900 mb-3">💡 学习建议</h2>
+    <ul class="space-y-2 text-gray-700">
+      <li>• <strong>系统学习</strong>：按专题顺序学习，建立完整知识框架</li>
+      <li>• <strong>横向联系</strong>：注意不同专题之间的关联性</li>
+      <li>• <strong>高频优先</strong>：优先掌握标记为"高频"的知识点</li>
+      <li>• <strong>真题结合</strong>：每个知识点都关联了历年高考真题</li>
+    </ul>
+  </section>
+</BaseLayout>
+
+<script is:inline>
+  // 展开/收起功能
+  document.addEventListener('DOMContentLoaded', () => {
+    const toggleButtons = document.querySelectorAll('.toggle-btn');
+
+    toggleButtons.forEach(button => {
+      button.addEventListener('click', () => {
+        const topicKey = button.getAttribute('data-topic');
+        const section = button.closest('section');
+        const extraItems = section.querySelectorAll('.kp-extra');
+        const isExpanded = button.classList.contains('expanded');
+
+        if (isExpanded) {
+          // 收起
+          extraItems.forEach(item => item.classList.add('hidden'));
+          button.textContent = `展开显示全部 ${extraItems.length + 6} 个知识点 ▼`;
+          button.classList.remove('expanded');
+        } else {
+          // 展开
+          extraItems.forEach(item => item.classList.remove('hidden'));
+          button.textContent = `收起 ▲`;
+          button.classList.add('expanded');
+        }
+      });
+    });
+  });
+</script>

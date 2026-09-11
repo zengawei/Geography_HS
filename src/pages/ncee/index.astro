@@ -2,37 +2,53 @@
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import { getCollection } from 'astro:content';
 
-const nceeQuestions = await getCollection('textbooks/ncee');
+const nceeEntries = await getCollection('textbooks/ncee');
 
-// 按年份和试卷分组
-const groupedByYear = {};
-for (const q of nceeQuestions) {
-  const year = q.data.year;
-  const paper = q.data.paper;
-  const paperCode = q.data.paper_code;
-  
-  if (!groupedByYear[year]) {
-    groupedByYear[year] = {};
+// 过滤掉废弃的题目
+const activeEntries = nceeEntries.filter(entry => !entry.data.is_deprecated);
+
+// 从 paper_code 推断考试类型
+function getExamType(paperCode: string): { label: string; color: string } {
+  if (paperCode.includes('new-gao-kao')) {
+    return { label: '新高考', color: 'bg-blue-100 text-blue-700' };
   }
-  if (!groupedByYear[year][paperCode]) {
-    groupedByYear[year][paperCode] = {
-      paper,
-      paperCode,
-      count: 0,
-      region: q.data.region
-    };
+  if (paperCode.includes('quanguo')) {
+    return { label: '全国卷', color: 'bg-green-100 text-green-700' };
   }
-  groupedByYear[year][paperCode].count++;
+  // 省级卷
+  return { label: '省级卷', color: 'bg-purple-100 text-purple-700' };
 }
 
-const years = Object.keys(groupedByYear).sort((a, b) => b - a);
-const totalQuestions = nceeQuestions.length;
-const totalPapers = Object.values(groupedByYear).reduce((sum, papers) => sum + Object.keys(papers).length, 0);
+// 按年份分组
+const byYear = activeEntries.reduce((acc, entry) => {
+  const year = entry.data.year;
+  if (!acc[year]) acc[year] = new Map();
+
+  const paperCode = entry.data.paper_code;
+  if (!acc[year].has(paperCode)) {
+    acc[year].set(paperCode, {
+      paper: entry.data.paper,
+      paper_code: paperCode,
+      examType: getExamType(paperCode),
+      questions: [],
+    });
+  }
+  acc[year].get(paperCode).questions.push(entry);
+  return acc;
+}, {});
+
+// 按年份排序（降序）
+const years = Object.keys(byYear).sort((a, b) => Number(b) - Number(a));
+
+// 统计数据
+const totalQuestions = activeEntries.length;
+const totalPapers = Object.values(byYear).reduce((sum, papers) => sum + papers.size, 0);
 ---
 
-<BaseLayout title="高考真题">
-  <h1 class="text-3xl font-bold mb-6">📋 高考地理真题</h1>
-  
+<BaseLayout title="高考地理真题 — Geography_HS">
+  <h1 class="text-3xl font-bold text-gray-900 mb-2">高考地理真题</h1>
+  <p class="text-gray-600 mb-6">2012–2026，共 {totalQuestions} 道题目</p>
+
   <div class="grid grid-cols-3 gap-4 mb-8">
     <div class="bg-green-50 rounded-lg p-4 text-center">
       <div class="text-3xl font-bold text-green-700">{totalQuestions}</div>
@@ -49,26 +65,35 @@ const totalPapers = Object.values(groupedByYear).reduce((sum, papers) => sum + O
   </div>
 
   <div class="space-y-8">
-    {years.map(year => (
-      <section class="bg-white rounded-lg border border-gray-200 p-6">
-        <h2 class="text-2xl font-semibold mb-4 flex items-center">
-          <span class="bg-green-100 text-green-800 px-3 py-1 rounded mr-3">{year}年</span>
-          <span class="text-gray-500 text-lg">共 {Object.values(groupedByYear[year]).reduce((sum, p) => sum + p.count, 0)} 题</span>
-        </h2>
-        
-        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-3">
-          {Object.values(groupedByYear[year]).map(paper => (
-            <a 
-              href={`/Geography_HS/ncee/${paper.paperCode}/`}
-              class="block p-4 border border-gray-200 rounded hover:border-green-400 hover:shadow-sm transition"
-            >
-              <div class="font-medium text-gray-800">{paper.paper}</div>
-              <div class="text-sm text-gray-500 mt-1">{paper.count} 道题目</div>
-            </a>
-          ))}
-        </div>
-      </section>
-    ))}
+    {years.map(year => {
+      const papers = Array.from(byYear[year].values());
+      return (
+        <section class="bg-white rounded-lg shadow border border-gray-100 p-6">
+          <h2 class="text-2xl font-bold text-gray-900 mb-4 flex items-center gap-2">
+            <span class="text-3xl">📅</span>
+            {year} 年
+            <span class="text-sm font-normal text-gray-500">({papers.length} 套试卷)</span>
+          </h2>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+            {papers.map(paper => (
+              <a
+                href={`${import.meta.env.BASE_URL}/ncee/${paper.paper_code}`}
+                class="block bg-gray-50 hover:bg-gray-100 rounded-lg p-4 border border-gray-200 transition"
+              >
+                <div class="font-semibold text-gray-900 mb-2">{paper.paper}</div>
+                <div class="flex items-center justify-between text-sm">
+                  <span class="text-gray-600">{paper.questions.length} 道题</span>
+                  <span class:list={['px-2 py-1 rounded text-xs font-medium', paper.examType.color]}>
+                    {paper.examType.label}
+                  </span>
+                </div>
+              </a>
+            ))}
+          </div>
+        </section>
+      );
+    })}
   </div>
 
   <div class="mt-8 p-4 bg-yellow-50 border border-yellow-200 rounded-lg">

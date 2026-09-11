@@ -5,51 +5,58 @@ import { getCollection } from 'astro:content';
 const knowledgePoints = await getCollection('knowledge-points');
 
 // 按category分组
-const categories = {
-  natural: { name: '自然地理', color: 'green', points: [] },
-  human: { name: '人文地理', color: 'blue', points: [] },
-  regional: { name: '区域发展', color: 'amber', points: [] },
-  world_china: { name: '世界与中国', color: 'purple', points: [] },
-  tools: { name: '工具方法', color: 'rose', points: [] }
-};
+const byCategory = knowledgePoints.reduce((acc, kp) => {
+  const category = kp.data.category;
+  if (!acc[category]) acc[category] = [];
+  acc[category].push(kp);
+  return acc;
+}, {});
 
-for (const kp of knowledgePoints) {
-  const cat = kp.data.category;
-  if (categories[cat]) {
-    categories[cat].points.push(kp);
-  }
-}
-
-const colorMap = {
-  green: { bg: 'bg-green-50', text: 'text-green-700', border: 'border-green-200' },
-  blue: { bg: 'bg-blue-50', text: 'text-blue-700', border: 'border-blue-200' },
-  amber: { bg: 'bg-amber-50', text: 'text-amber-700', border: 'border-amber-200' },
-  purple: { bg: 'bg-purple-50', text: 'text-purple-700', border: 'border-purple-200' },
-  rose: { bg: 'bg-rose-50', text: 'text-rose-700', border: 'border-rose-200' }
+const categoryInfo = {
+  natural: { name: '自然地理', color: 'bg-green-100 text-green-700', icon: '🌿' },
+  human: { name: '人文地理', color: 'bg-blue-100 text-blue-700', icon: '👥' },
+  regional: { name: '区域发展', color: 'bg-amber-100 text-amber-700', icon: '🗺️' },
+  world_china: { name: '世界与中国', color: 'bg-purple-100 text-purple-700', icon: '🌏' },
+  tools: { name: '工具方法', color: 'bg-rose-100 text-rose-700', icon: '🧭' },
 };
 ---
 
-<BaseLayout title="知识点总览">
-  <h1 class="text-3xl font-bold mb-6">📖 知识点总览</h1>
-  <p class="text-gray-600 mb-8">共 {knowledgePoints.length} 个核心知识点，按 5 大分类组织</p>
+<BaseLayout title="知识点总览 — Geography_HS">
+  <h1 class="text-3xl font-bold text-gray-900 mb-2">知识点总览</h1>
+  <p class="text-gray-600 mb-8">共 {knowledgePoints.length} 个知识点，按五大类别组织</p>
 
   <div class="space-y-8">
-    {Object.entries(categories).map(([key, cat]) => {
-      const colors = colorMap[cat.color];
+    {Object.entries(categoryInfo).map(([key, info]) => {
+      const kps = byCategory[key] || [];
       return (
-        <section class={`rounded-lg border ${colors.border} p-6`}>
-          <h2 class={`text-xl font-semibold mb-4 ${colors.text}`}>
-            {cat.name}（{cat.points.length} 个）
+        <section class="bg-white rounded-lg shadow border border-gray-100 p-6">
+          <h2 class="text-2xl font-bold text-gray-900 mb-4 flex items-center gap-2">
+            <span class="text-3xl">{info.icon}</span>
+            {info.name}
+            <span class:list={['text-sm font-medium px-3 py-1 rounded-full ml-2', info.color]}>
+              {kps.length} 个
+            </span>
           </h2>
-          
-          <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-3">
-            {cat.points.map(kp => (
-              <a 
-                href={`/Geography_HS/knowledge/${kp.id}/`}
-                class={`block p-3 bg-white rounded border ${colors.border} hover:shadow-sm transition`}
+
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+            {kps.map(kp => (
+              <a
+                href={`${import.meta.env.BASE_URL}/knowledge/${kp.data.id}`}
+                class="block bg-gray-50 hover:bg-gray-100 rounded-lg p-4 border border-gray-200 transition"
               >
-                <div class="font-medium text-gray-800">{kp.data.name}</div>
-                <div class="text-xs text-gray-500 mt-1">{kp.data.name_en}</div>
+                <div class="font-semibold text-gray-900 mb-2">{kp.data.name}</div>
+                <div class="flex items-center justify-between text-sm">
+                  <span class="text-gray-600 line-clamp-2">{kp.data.description.slice(0, 60)}...</span>
+                  <span class:list={[
+                    'px-2 py-1 rounded text-xs font-medium ml-2 flex-shrink-0',
+                    kp.data.exam_frequency === 'high' ? 'bg-red-100 text-red-700' :
+                    kp.data.exam_frequency === 'medium' ? 'bg-yellow-100 text-yellow-700' :
+                    'bg-gray-100 text-gray-700'
+                  ]}>
+                    {kp.data.exam_frequency === 'high' ? '高频' :
+                     kp.data.exam_frequency === 'medium' ? '中频' : '低频'}
+                  </span>
+                </div>
               </a>
             ))}
           </div>
