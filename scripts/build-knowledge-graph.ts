@@ -1,6 +1,5 @@
 import { readdirSync, readFileSync, writeFileSync, mkdirSync } from 'fs';
 import { join } from 'path';
-import { parse } from 'yaml';
 
 const ROOT = join(import.meta.dirname, '..');
 const KP_DIR = join(ROOT, 'src', 'content', 'knowledge-points');
@@ -12,18 +11,18 @@ interface KPNode {
   category: string;
   exam_frequency: string;
   description: string;
-  key_concepts: string[];
+  key_concepts: unknown[];
   related_points: string[];
   ncee_count: number;
 }
 
 function loadKnowledgePoints(): KPNode[] {
-  const files = readdirSync(KP_DIR).filter(f => f.endsWith('.yaml') || f.endsWith('.yml'));
+  const files = readdirSync(KP_DIR).filter(f => f.endsWith('.json'));
   const nodes: KPNode[] = [];
 
   for (const file of files) {
     const content = readFileSync(join(KP_DIR, file), 'utf-8');
-    const data = parse(content);
+    const data = JSON.parse(content);
     nodes.push({
       id: data.id,
       name: data.name,

@@ -1,7 +1,6 @@
 import { readdirSync, readFileSync, statSync, existsSync } from 'fs';
 import { join } from 'path';
 import matter from 'gray-matter';
-import { parse } from 'yaml';
 import { z } from 'zod';
 
 const ROOT = join(import.meta.dirname, '..');
@@ -46,15 +45,26 @@ function ok(msg: string) { console.log(`✅ ${msg}`); }
 
 // 1. Validate knowledge points
 console.log('\n--- Knowledge Points ---');
-const kpFiles = readdirSync(KP_DIR).filter(f => f.endsWith('.yaml') || f.endsWith('.yml'));
+const kpFiles = readdirSync(KP_DIR).filter(f => f.endsWith('.json'));
 const kpIds = new Set<string>();
+// 必须与 src/content.config.ts 的 knowledgePointSchema 保持一致；
+// 该文件依赖 astro:content 虚拟模块，无法被独立 tsx 脚本导入，故此处复制。
 const kpSchema = z.object({
   id: z.string(),
   name: z.string().min(1),
   category: z.enum(['natural', 'human', 'regional', 'world_china', 'tools']),
   exam_frequency: z.enum(['high', 'medium', 'low']),
   description: z.string().min(1),
-  key_concepts: z.array(z.string()),
+  key_concepts: z.array(z.union([
+    z.string(),
+    z.object({
+      title: z.string(),
+      definition: z.string().optional(),
+      explanation: z.string().optional(),
+      example: z.string().optional(),
+      formula: z.string().nullable().optional(),
+    })
+  ])),
   textbook_refs: z.array(z.object({
     textbook: textbookEnum,
     chapter: z.number().int(),
@@ -66,11 +76,14 @@ const kpSchema = z.object({
 
 for (const file of kpFiles) {
   const content = readFileSync(join(KP_DIR, file), 'utf-8');
-  const data = parse(content);
+  const data = JSON.parse(content);
   const result = kpSchema.safeParse(data);
   if (!result.success) {
     error(`KP ${file}: ${result.error.message}`);
   } else {
+    if (data.id !== file.replace(/\.json$/, '')) {
+      error(`KP ${file}: id "${data.id}" does not match filename`);
+    }
     kpIds.add(data.id);
   }
 }
