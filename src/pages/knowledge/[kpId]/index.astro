@@ -1,11 +1,11 @@
 ---
 import BaseLayout from '../../../layouts/BaseLayout.astro';
+import Badge from '../../../components/Badge.astro';
 import { getCollection } from 'astro:content';
 import { marked } from 'marked';
 
 export async function getStaticPaths() {
   const knowledgePoints = await getCollection('knowledge-points');
-
   return knowledgePoints.map(kp => ({
     params: { kpId: kp.id },
     props: { kp }
@@ -21,146 +21,177 @@ const relatedQuestions = nceeEntries.filter(entry =>
   !entry.data.is_deprecated &&
   entry.data.knowledge_points.includes(data.id)
 );
-
-// 按年份排序（降序）
 relatedQuestions.sort((a, b) => b.data.year - a.data.year);
 
 // 分类映射
-const categoryInfo = {
-  natural: { name: '自然地理', color: 'bg-green-100 text-green-700', icon: '🌿' },
-  human: { name: '人文地理', color: 'bg-blue-100 text-blue-700', icon: '👥' },
-  regional: { name: '区域发展', color: 'bg-amber-100 text-amber-700', icon: '🗺️' },
-  world_china: { name: '世界与中国', color: 'bg-purple-100 text-purple-700', icon: '🌏' },
-  tools: { name: '工具方法', color: 'bg-rose-100 text-rose-700', icon: '🧭' },
+const categoryInfo: Record<string, { name: string; icon: string; badgeVariant: string }> = {
+  natural:      { name: '自然地理',   icon: '🌿', badgeVariant: 'category-natural' },
+  human:        { name: '人文地理',   icon: '👥', badgeVariant: 'category-human' },
+  regional:     { name: '区域发展',   icon: '🗺️', badgeVariant: 'category-regional' },
+  world_china:  { name: '世界与中国', icon: '🌏', badgeVariant: 'category-world_china' },
+  tools:        { name: '工具方法',   icon: '🧭', badgeVariant: 'category-tools' },
 };
-
 const category = categoryInfo[data.category];
 
+const freqVariant: Record<string, string> = {
+  high: 'freq-high', medium: 'freq-medium', low: 'freq-low',
+};
+const freqLabel: Record<string, string> = {
+  high: '🔥 高频考点', medium: '📊 中频考点', low: '低频考点',
+};
+
 // Markdown 渲染配置
-marked.setOptions({
-  breaks: true,
-  gfm: true,
-});
+marked.setOptions({ breaks: true, gfm: true });
+
+/**
+ * 将 marked 输出的 <blockquote> 按 emoji 前缀分类为 callout div
+ * ✅📌✨ → tip（绿） | 💡 → note（蓝） | ⚠️ → warning（橙） | 📝 → template（紫）
+ */
+function processCallouts(html: string): string {
+  return html.replace(/<blockquote>\s*([\s\S]*?)<\/blockquote>/g, (match, inner: string) => {
+    const text = inner.replace(/<[^>]+>/g, '').trim();
+    let type = 'note';
+    if (/^[✅📌✨]/.test(text))       type = 'tip';
+    else if (/^💡/.test(text))         type = 'note';
+    else if (/^⚠️?/.test(text))        type = 'warning';
+    else if (/^[📝📋]/.test(text))     type = 'template';
+    else return match; // 无 emoji 前缀 → 保留普通 blockquote
+
+    const cls = type === 'tip' ? 'callout callout-tip'
+            : type === 'warning' ? 'callout callout-warning'
+            : type === 'template' ? 'callout callout-template'
+            : 'callout callout-note';
+
+    return `<div class="${cls}">${inner}</div>`;
+  });
+}
+
+function md(text: string): string {
+  return processCallouts(marked.parse(text) as string);
+}
 ---
 
 <BaseLayout title={`${data.name} — Geography_HS`}>
+
+  <!-- ====== 面包屑 + 标题区（对齐：统一左边界） ====== -->
   <div class="mb-6">
-    <a href={`${import.meta.env.BASE_URL}/knowledge`} class="text-indigo-600 hover:text-indigo-800 text-sm">← 返回知识点总览</a>
+    <a href={`${import.meta.env.BASE_URL}/knowledge`}
+       class="text-indigo-600 hover:text-indigo-800 text-sm font-medium">
+      ← 返回知识点总览
+    </a>
   </div>
 
-  <header class="bg-white rounded-lg shadow border border-gray-100 p-6 mb-8">
-    <div class="flex items-start justify-between mb-4">
-      <div>
-        <h1 class="text-3xl font-bold text-gray-900 mb-2">{data.name}</h1>
-        <div class="flex items-center gap-3">
-          <span class:list={['px-3 py-1 rounded-full text-sm font-medium', category.color]}>
-            {category.icon} {category.name}
-          </span>
-          <span class:list={[
-            'px-3 py-1 rounded-full text-sm font-medium',
-            data.exam_frequency === 'high' ? 'bg-red-100 text-red-700' :
-            data.exam_frequency === 'medium' ? 'bg-yellow-100 text-yellow-700' :
-            'bg-gray-100 text-gray-700'
-          ]}>
-            {data.exam_frequency === 'high' ? '🔥 高频考点' :
-             data.exam_frequency === 'medium' ? '中频考点' : '低频考点'}
-          </span>
-        </div>
-      </div>
+  <!-- ====== 页面头部（对比：大标题 vs 正文） ====== -->
+  <header class="bg-white rounded-xl shadow-sm border border-gray-200 p-6 mb-10">
+    <h1 class="text-3xl font-extrabold text-gray-900 mb-3 tracking-tight">{data.name}</h1>
+    <div class="flex flex-wrap items-center gap-2 mb-5">
+      <Badge variant={category.badgeVariant as any}>{category.icon} {category.name}</Badge>
+      <Badge variant={(freqVariant[data.exam_frequency] ?? 'freq-low') as any}>
+        {freqLabel[data.exam_frequency] ?? '低频考点'}
+      </Badge>
     </div>
-
-    <div class="text-gray-700 mb-4 markdown-content" set:html={marked.parse(data.description)} />
-
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
-      <div class="md:col-span-2">
-        <h3 class="font-semibold text-gray-900 mb-3">核心概念</h3>
-        <div class="space-y-4">
-          {data.key_concepts.map((concept: any) => {
-            const isDetailed = typeof concept === 'object';
-            const title = isDetailed ? concept.title : concept;
-            const definition = isDetailed ? concept.definition : null;
-            const explanation = isDetailed ? concept.explanation : null;
-            const example = isDetailed ? concept.example : null;
-            const formula = isDetailed ? concept.formula : null;
-
-            return (
-              <div class="bg-gray-50 rounded-lg p-4 border border-gray-200">
-                <div class="font-semibold text-gray-900 mb-2 flex items-center gap-2">
-                  <span class="text-lg">📌</span>
-                  {title}
-                </div>
-
-                {definition && (
-                  <div class="mb-2">
-                    <div class="text-sm text-gray-700 markdown-content" set:html={marked.parse(definition)} />
-                  </div>
-                )}
-
-                {explanation && (
-                  <div class="mb-2">
-                    <span class="text-sm font-medium text-gray-700">详解：</span>
-                    <div class="text-sm text-gray-700 leading-relaxed markdown-content" set:html={marked.parse(explanation)} />
-                  </div>
-                )}
-
-                {example && (
-                  <div class="mb-2 bg-indigo-50 rounded p-3 border border-indigo-200">
-                    <span class="text-sm font-medium text-indigo-700">📝 举例：</span>
-                    <div class="text-sm text-indigo-900 mt-1 markdown-content" set:html={marked.parse(example)} />
-                  </div>
-                )}
-
-                {formula && (
-                  <div class="bg-yellow-50 rounded p-3 border border-yellow-200">
-                    <span class="text-sm font-medium text-yellow-700">📐 公式：</span>
-                    <p class="text-sm text-yellow-900 font-mono mt-1">{formula}</p>
-                  </div>
-                )}
-              </div>
-            );
-          })}
-        </div>
-      </div>
-    </div>
+    <!-- 总述定义（亲密性：紧跟标题） -->
+    <div class="text-gray-700 leading-relaxed markdown-content" set:html={md(data.description)} />
   </header>
 
-  {data.common_mistakes && data.common_mistakes.length > 0 && (
-    <section class="bg-yellow-50 border border-yellow-200 rounded-lg p-6 mb-8">
-      <h2 class="text-xl font-bold text-gray-900 mb-3">⚠️ 常见误区</h2>
-      <ul class="space-y-2">
-        {data.common_mistakes.map(mistake => (
-          <li class="text-gray-800 text-sm markdown-content" set:html={marked.parse(mistake)} />
-        ))}
-      </ul>
-    </section>
-  )}
+  <!-- ====== 核心概念（亲密性：组内紧凑，概念间宽松） ====== -->
+  <section class="mb-12">
+    <h2 class="text-2xl font-bold text-gray-900 mb-6">核心概念</h2>
+    <div class="space-y-6">
+      {data.key_concepts.map((concept: any) => {
+        const isDetailed = typeof concept === 'object';
+        const title = isDetailed ? concept.title : concept;
+        const definition = isDetailed ? concept.definition : null;
+        const explanation = isDetailed ? concept.explanation : null;
+        const example = isDetailed ? concept.example : null;
+        const formula = isDetailed ? concept.formula : null;
 
-  <section class="bg-white rounded-lg shadow border border-gray-100 p-6 mb-8">
-    <h2 class="text-xl font-bold text-gray-900 mb-4">📚 教材关联</h2>
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3">
-      {data.textbook_refs.map(ref => (
-        <div class="bg-gray-50 rounded p-3 text-sm">
-          <div class="font-semibold text-gray-900">
-            {ref.textbook === 'required-1' ? '必修第一册' :
-             ref.textbook === 'required-2' ? '必修第二册' :
-             ref.textbook === 'selective-1' ? '选择性必修1' :
-             ref.textbook === 'selective-2' ? '选择性必修2' : '选择性必修3'}
+        return (
+          <div class="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden">
+            <!-- 概念标题：左边框强调（重复 + 对比） -->
+            <div class="border-l-4 border-indigo-500 bg-indigo-50/50 px-5 py-3">
+              <h3 class="font-bold text-gray-900 text-lg">{title}</h3>
+            </div>
+
+            <div class="p-5 space-y-4">
+              {definition && (
+                <div>
+                  <p class="text-gray-600 text-sm leading-relaxed markdown-content" set:html={md(definition)} />
+                </div>
+              )}
+
+              {explanation && (
+                <div>
+                  <h4 class="text-sm font-semibold text-gray-500 uppercase tracking-wider mb-2">详解</h4>
+                  <div class="text-gray-700 leading-relaxed markdown-content" set:html={md(explanation)} />
+                </div>
+              )}
+
+              {example && (
+                <div class="bg-indigo-50 rounded-lg p-4 border border-indigo-100">
+                  <h4 class="text-sm font-semibold text-indigo-700 mb-1">📝 举例</h4>
+                  <div class="text-sm text-indigo-900 leading-relaxed markdown-content" set:html={md(example)} />
+                </div>
+              )}
+
+              {formula && (
+                <div class="bg-amber-50 rounded-lg p-4 border border-amber-100">
+                  <h4 class="text-sm font-semibold text-amber-700 mb-1">📐 公式</h4>
+                  <p class="text-sm text-amber-900 font-mono">{formula}</p>
+                </div>
+              )}
+            </div>
           </div>
-          <div class="text-gray-600">第 {ref.chapter} 章{ref.section ? ` 第 ${ref.section} 节` : ''}</div>
-        </div>
-      ))}
+        );
+      })}
     </div>
   </section>
 
-  {data.related_points.length > 0 && (
-    <section class="bg-white rounded-lg shadow border border-gray-100 p-6 mb-8">
-      <h2 class="text-xl font-bold text-gray-900 mb-4">🔗 相关知识点</h2>
+  <!-- ====== 常见误区（对比：橙色背景，和原理正文拉开距离） ====== -->
+  {data.common_mistakes && data.common_mistakes.length > 0 && (
+    <section class="mb-12">
+      <h2 class="text-2xl font-bold text-gray-900 mb-4">⚠️ 常见误区</h2>
+      <div class="bg-amber-50 border border-amber-200 rounded-xl p-6 space-y-4">
+        {data.common_mistakes.map(mistake => (
+          <div class="text-gray-800 text-sm leading-relaxed markdown-content" set:html={md(mistake)} />
+        ))}
+      </div>
+    </section>
+  )}
+
+  <!-- ====== 教材关联 ====== -->
+  {data.textbook_refs && data.textbook_refs.length > 0 && (
+    <section class="mb-10">
+      <h2 class="text-2xl font-bold text-gray-900 mb-4">📚 教材关联</h2>
+      <div class="bg-white rounded-xl shadow-sm border border-gray-200 p-5">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3">
+          {data.textbook_refs.map((ref: any) => (
+            <div class="bg-gray-50 rounded-lg p-3 text-sm border border-gray-100">
+              <div class="font-semibold text-gray-900">
+                {ref.textbook === 'required-1' ? '必修第一册' :
+                 ref.textbook === 'required-2' ? '必修第二册' :
+                 ref.textbook === 'selective-1' ? '选择性必修1' :
+                 ref.textbook === 'selective-2' ? '选择性必修2' : '选择性必修3'}
+              </div>
+              <div class="text-gray-600 mt-0.5">
+                第 {ref.chapter} 章{ref.section ? ` 第 ${ref.section} 节` : ''}
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  )}
+
+  <!-- ====== 相关知识点 ====== -->
+  {data.related_points && data.related_points.length > 0 && (
+    <section class="mb-10">
+      <h2 class="text-2xl font-bold text-gray-900 mb-4">🔗 相关知识点</h2>
       <div class="flex flex-wrap gap-2">
-        {data.related_points.map(relatedId => (
-          <a
-            href={`${import.meta.env.BASE_URL}/knowledge/${relatedId}`}
-            class="px-3 py-1 bg-indigo-50 text-indigo-700 rounded-full text-sm hover:bg-indigo-100 transition"
-          >
+        {data.related_points.map((relatedId: string) => (
+          <a href={`${import.meta.env.BASE_URL}/knowledge/${relatedId}`}
+             class="px-4 py-1.5 bg-indigo-50 text-indigo-700 rounded-full text-sm font-medium
+                    hover:bg-indigo-100 transition border border-indigo-100">
             {relatedId}
           </a>
         ))}
@@ -168,47 +199,41 @@ marked.setOptions({
     </section>
   )}
 
-  <section class="bg-white rounded-lg shadow border border-gray-100 p-6">
-    <h2 class="text-xl font-bold text-gray-900 mb-4">
+  <!-- ====== 相关真题 ====== -->
+  <section class="mb-8">
+    <h2 class="text-2xl font-bold text-gray-900 mb-2">
       📝 相关真题
-      <span class="text-sm font-normal text-gray-500 ml-2">({relatedQuestions.length} 道)</span>
+      <span class="text-base font-normal text-gray-500 ml-1">({relatedQuestions.length} 道)</span>
     </h2>
 
     {relatedQuestions.length === 0 ? (
-      <p class="text-gray-500">暂无相关真题</p>
+      <p class="text-gray-500 py-4">暂无相关真题</p>
     ) : (
-      <div class="space-y-3">
+      <div class="space-y-2">
         {relatedQuestions.map((entry, idx) => {
           const q = entry.data;
           return (
-            <a
-              href={`${import.meta.env.BASE_URL}/ncee/${q.paper_code}/${String(q.question_number).padStart(2, '0')}`}
-              class:list={[
-                'block bg-gray-50 hover:bg-gray-100 rounded-lg p-4 border border-gray-200 transition',
-                idx >= 20 && 'hidden question-extra'
-              ]}
-            >
+            <a href={`${import.meta.env.BASE_URL}/ncee/${q.paper_code}/${String(q.question_number).padStart(2, '0')}`}
+               class:list={[
+                 'block bg-white hover:bg-gray-50 rounded-lg p-4 border border-gray-200 transition',
+                 idx >= 20 && 'hidden question-extra'
+               ]}>
               <div class="flex items-center justify-between">
                 <div>
                   <div class="font-semibold text-gray-900">{q.paper}</div>
-                  <div class="text-sm text-gray-600">
+                  <div class="text-sm text-gray-500 mt-0.5">
                     第 {q.question_number} 题 ·
                     {q.question_type === 'choice' ? '选择题' :
                      q.question_type === 'comprehensive' ? '综合题' :
                      q.question_type === 'elective' ? '选做题' : '填空题'}
                   </div>
                 </div>
-                <div class="text-right">
-                  <div class="text-sm text-gray-500">{q.year} 年</div>
-                  <span class:list={[
-                    'px-2 py-1 rounded text-xs font-medium',
-                    q.difficulty === 'basic' ? 'bg-green-100 text-green-700' :
-                    q.difficulty === 'medium' ? 'bg-yellow-100 text-yellow-700' :
-                    'bg-red-100 text-red-700'
-                  ]}>
+                <div class="text-right flex items-center gap-3">
+                  <span class="text-sm text-gray-500">{q.year} 年</span>
+                  <Badge variant={(`diff-${q.difficulty}`) as any}>
                     {q.difficulty === 'basic' ? '基础' :
                      q.difficulty === 'medium' ? '中等' : '困难'}
-                  </span>
+                  </Badge>
                 </div>
               </div>
             </a>
@@ -216,10 +241,8 @@ marked.setOptions({
         })}
 
         {relatedQuestions.length > 20 && (
-          <div class="text-center pt-2">
-            <button
-              class="toggle-questions-btn text-sm text-indigo-600 hover:text-indigo-800 cursor-pointer font-medium"
-            >
+          <div class="text-center pt-3">
+            <button class="toggle-questions-btn text-sm text-indigo-600 hover:text-indigo-800 cursor-pointer font-medium">
               展开显示全部 {relatedQuestions.length} 道真题 ▼
             </button>
           </div>
@@ -227,32 +250,21 @@ marked.setOptions({
       </div>
     )}
   </section>
+
 </BaseLayout>
 
 <script is:inline>
-  // 相关真题展开/收起功能
   document.addEventListener('DOMContentLoaded', () => {
-    const toggleButton = document.querySelector('.toggle-questions-btn');
-
-    if (toggleButton) {
-      toggleButton.addEventListener('click', () => {
-        const section = toggleButton.closest('section');
-        const extraItems = section.querySelectorAll('.question-extra');
-        const isExpanded = toggleButton.classList.contains('expanded');
-        const totalCount = extraItems.length + 20;
-
-        if (isExpanded) {
-          // 收起
-          extraItems.forEach(item => item.classList.add('hidden'));
-          toggleButton.textContent = `展开显示全部 ${totalCount} 道真题 ▼`;
-          toggleButton.classList.remove('expanded');
-        } else {
-          // 展开
-          extraItems.forEach(item => item.classList.remove('hidden'));
-          toggleButton.textContent = `收起 ▲`;
-          toggleButton.classList.add('expanded');
-        }
-      });
-    }
+    const btn = document.querySelector('.toggle-questions-btn');
+    if (!btn) return;
+    btn.addEventListener('click', () => {
+      const section = btn.closest('section');
+      const extras = section.querySelectorAll('.question-extra');
+      const expanded = btn.classList.contains('expanded');
+      const total = extras.length + 20;
+      extras.forEach(el => el.classList.toggle('hidden', !expanded ? false : true));
+      btn.textContent = expanded ? `展开显示全部 ${total} 道真题 ▼` : '收起 ▲';
+      btn.classList.toggle('expanded', !expanded);
+    });
   });
 </script>
