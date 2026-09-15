@@ -40,9 +40,9 @@
   @apply my-0.5;
 }
 
-/* --- 表格：独立视觉单元（亲密性：前后大留白） --- */
+/* --- 表格：独立视觉单元，移动端横向滚动 --- */
 .markdown-content :global(table) {
-  @apply w-full border-collapse my-5 text-sm border border-border rounded-card overflow-hidden;
+  @apply block overflow-x-auto my-5 text-sm border border-border rounded-card;
 }
 .markdown-content :global(thead) {
   @apply bg-green-50;
