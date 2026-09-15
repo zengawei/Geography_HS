@@ -40,10 +40,10 @@ function processCallouts(html: string): string {
   return html.replace(/<blockquote>\s*([\s\S]*?)<\/blockquote>/g, (match, inner: string) => {
     const text = inner.replace(/<[^>]+>/g, '').trim();
     let type = 'note';
-    if (/^[✅📌✨]/.test(text))       type = 'tip';
-    else if (/^💡/.test(text))         type = 'note';
-    else if (/^⚠️?/.test(text))        type = 'warning';
-    else if (/^[📝📋]/.test(text))     type = 'template';
+    if (/^[✅📌✨]/u.test(text))       type = 'tip';
+    else if (/^💡/u.test(text))         type = 'note';
+    else if (/^⚠️?/u.test(text))        type = 'warning';
+    else if (/^[📝📋]/u.test(text))     type = 'template';
     else return match;
 
     const cls = type === 'tip' ? 'callout callout-tip'
