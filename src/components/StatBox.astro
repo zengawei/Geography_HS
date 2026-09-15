@@ -1,0 +1,26 @@
+---
+interface Props {
+  value: string | number;
+  label: string;
+  color: 'green' | 'blue' | 'amber' | 'purple' | 'rose' | 'red' | 'indigo' | 'emerald';
+}
+
+const { value, label, color } = Astro.props;
+
+const colorMap: Record<string, { bg: string; text: string }> = {
+  green:   { bg: 'bg-green-50',   text: 'text-green-700' },
+  blue:    { bg: 'bg-blue-50',    text: 'text-blue-700' },
+  amber:   { bg: 'bg-amber-50',   text: 'text-amber-700' },
+  purple:  { bg: 'bg-purple-50',  text: 'text-purple-700' },
+  rose:    { bg: 'bg-rose-50',    text: 'text-rose-700' },
+  red:     { bg: 'bg-red-50',     text: 'text-red-700' },
+  indigo:  { bg: 'bg-indigo-50',  text: 'text-indigo-700' },
+  emerald: { bg: 'bg-emerald-50', text: 'text-emerald-700' },
+};
+const c = colorMap[color] ?? colorMap.blue;
+---
+
+<div class:list={['rounded-card-lg p-4 text-center', c.bg]}>
+  <div class:list={['text-3xl font-bold', c.text]}>{value}</div>
+  <div class="text-sm text-content-muted">{label}</div>
+</div>

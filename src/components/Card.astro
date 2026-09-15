@@ -1,0 +1,14 @@
+---
+interface Props {
+  class?: string;
+  padding?: 'sm' | 'md' | 'lg';
+}
+
+const { class: className = '', padding = 'lg' } = Astro.props;
+
+const paddingMap = { sm: 'p-4', md: 'p-5', lg: 'p-6' };
+---
+
+<div class:list={['bg-surface-card rounded-card shadow-card border border-border-card', paddingMap[padding], className]}>
+  <slot />
+</div>

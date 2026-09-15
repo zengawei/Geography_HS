@@ -1,10 +1,11 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import Card from '../components/Card.astro';
+import StatBox from '../components/StatBox.astro';
 import { getCollection } from 'astro:content';
 
 const base = import.meta.env.BASE_URL;
 
-// 动态计算数据
 const knowledgePoints = await getCollection('knowledge-points');
 const nceeEntries = await getCollection('textbooks/ncee');
 const activeEntries = nceeEntries.filter(entry => !entry.data.is_deprecated);
@@ -13,193 +14,152 @@ const totalQuestions = activeEntries.length;
 const totalKnowledgePoints = knowledgePoints.length;
 const years = [...new Set(activeEntries.map(e => e.data.year))].length;
 const totalPapers = new Set(activeEntries.map(e => e.data.paper_code)).size;
+
+const features = [
+  { color: 'border-blue-500',  title: '双维度知识组织', desc: '按时间线（2012-2026 年高考真题）和主题线（74 个知识点）两个维度组织内容，支持多种学习路径，满足不同学习需求。' },
+  { color: 'border-green-500', title: '知识点深度解析', desc: '每个知识点包含核心概念辨析、详细阐述、举例说明、公式推导、常见误区，帮助学生深度理解地理概念，掌握高考考点。' },
+  { color: 'border-purple-500',title: '真题关联学习',   desc: '每道真题都关联相关知识点，每个知识点都展示相关真题，建立知识与题目的联系，实现学以致用。' },
+  { color: 'border-amber-500', title: '专题模块学习',   desc: '按自然地理、人文地理、区域发展、世界与中国、工具方法 5 大专题组织知识点，支持展开/收起功能，便于系统性复习。' },
+];
+
+const techStack = [
+  { name: 'Astro 5.x',       desc: '静态站点生成器' },
+  { name: 'Tailwind CSS',    desc: '实用优先的 CSS 框架' },
+  { name: 'TypeScript',      desc: '类型安全的 JavaScript' },
+  { name: 'Zod',             desc: 'Schema 验证库' },
+  { name: 'Vitest',          desc: '单元测试框架' },
+  { name: 'GitHub Pages',    desc: '静态站点托管' },
+];
+
+const architecture = [
+  { tag: '内容即数据', desc: '使用 YAML/Markdown 存储内容，通过 Zod schema 验证，实现内容与展示分离' },
+  { tag: '双维度组织', desc: '时间线（年份/试卷）+ 主题线（知识点），通过关联字段建立联系' },
+  { tag: '静态生成',   desc: '构建时生成所有静态 HTML 页面，加载速度快，部署简单' },
+  { tag: '自动化验证', desc: '测试用例确保数据一致性和页面正确性' },
+];
 ---
 
 <BaseLayout title="关于项目 — Geography_HS">
   <div class="max-w-4xl mx-auto">
-    <h1 class="text-4xl font-bold text-gray-900 mb-6">关于 Geography_HS</h1>
+    <h1 class="text-4xl font-bold text-content-title mb-6">关于 Geography_HS</h1>
 
-    <section class="bg-white rounded-lg shadow border border-gray-100 p-6 mb-6">
-      <h2 class="text-2xl font-bold text-gray-900 mb-4 flex items-center gap-2">
-        <span class="text-3xl">📚</span>
-        项目简介
+    <!-- 项目简介 -->
+    <Card class="mb-6">
+      <h2 class="text-2xl font-bold text-content-title mb-4 flex items-center gap-2">
+        <span class="text-3xl">📚</span> 项目简介
       </h2>
-      <p class="text-gray-700 leading-relaxed mb-4">
+      <p class="text-content leading-relaxed mb-4">
         Geography_HS 是一个面向高中生的地理知识库项目，旨在帮助学生更高效地学习地理、备考高考。
         项目整合了 2012-2026 年的高考地理真题，建立了完整的知识点体系，提供了多维度的学习路径。
       </p>
       <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mt-6">
-        <div class="bg-blue-50 rounded-lg p-4 text-center">
-          <div class="text-3xl font-bold text-blue-600">{totalQuestions}</div>
-          <div class="text-sm text-gray-600">道真题</div>
-        </div>
-        <div class="bg-green-50 rounded-lg p-4 text-center">
-          <div class="text-3xl font-bold text-green-600">{totalKnowledgePoints}</div>
-          <div class="text-sm text-gray-600">个知识点</div>
-        </div>
-        <div class="bg-purple-50 rounded-lg p-4 text-center">
-          <div class="text-3xl font-bold text-purple-600">{years}</div>
-          <div class="text-sm text-gray-600">年高考真题</div>
-        </div>
-        <div class="bg-amber-50 rounded-lg p-4 text-center">
-          <div class="text-3xl font-bold text-amber-600">{totalPapers}</div>
-          <div class="text-sm text-gray-600">套试卷</div>
-        </div>
+        <StatBox value={totalQuestions}       label="道真题"     color="blue" />
+        <StatBox value={totalKnowledgePoints} label="个知识点"   color="green" />
+        <StatBox value={years}                label="年高考真题" color="purple" />
+        <StatBox value={totalPapers}          label="套试卷"     color="amber" />
       </div>
-    </section>
+    </Card>
 
-    <section class="bg-white rounded-lg shadow border border-gray-100 p-6 mb-6">
-      <h2 class="text-2xl font-bold text-gray-900 mb-4 flex items-center gap-2">
-        <span class="text-3xl">🎯</span>
-        核心功能
+    <!-- 核心功能 -->
+    <Card class="mb-6">
+      <h2 class="text-2xl font-bold text-content-title mb-4 flex items-center gap-2">
+        <span class="text-3xl">🎯</span> 核心功能
       </h2>
       <div class="space-y-4">
-        <div class="border-l-4 border-blue-500 pl-4">
-          <h3 class="font-bold text-gray-900 mb-2">双维度知识组织</h3>
-          <p class="text-gray-700 text-sm">
-            按时间线（2012-2026 年高考真题）和主题线（74 个知识点）两个维度组织内容，
-            支持多种学习路径，满足不同学习需求。
-          </p>
-        </div>
-        <div class="border-l-4 border-green-500 pl-4">
-          <h3 class="font-bold text-gray-900 mb-2">知识点深度解析</h3>
-          <p class="text-gray-700 text-sm">
-            每个知识点包含核心概念辨析、详细阐述、举例说明、公式推导、常见误区，
-            帮助学生深度理解地理概念，掌握高考考点。
-          </p>
-        </div>
-        <div class="border-l-4 border-purple-500 pl-4">
-          <h3 class="font-bold text-gray-900 mb-2">真题关联学习</h3>
-          <p class="text-gray-700 text-sm">
-            每道真题都关联相关知识点，每个知识点都展示相关真题，
-            建立知识与题目的联系，实现学以致用。
-          </p>
-        </div>
-        <div class="border-l-4 border-amber-500 pl-4">
-          <h3 class="font-bold text-gray-900 mb-2">专题模块学习</h3>
-          <p class="text-gray-700 text-sm">
-            按自然地理、人文地理、区域发展、世界与中国、工具方法 5 大专题组织知识点，
-            支持展开/收起功能，便于系统性复习。
-          </p>
-        </div>
+        {features.map(f => (
+          <div class:list={['border-l-4 pl-4', f.color]}>
+            <h3 class="font-bold text-content-title mb-2">{f.title}</h3>
+            <p class="text-content text-sm">{f.desc}</p>
+          </div>
+        ))}
       </div>
-    </section>
+    </Card>
 
-    <section class="bg-white rounded-lg shadow border border-gray-100 p-6 mb-6">
-      <h2 class="text-2xl font-bold text-gray-900 mb-4 flex items-center gap-2">
-        <span class="text-3xl">💻</span>
-        技术栈
+    <!-- 技术栈 -->
+    <Card class="mb-6">
+      <h2 class="text-2xl font-bold text-content-title mb-4 flex items-center gap-2">
+        <span class="text-3xl">💻</span> 技术栈
       </h2>
       <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
-        <div class="bg-gray-50 rounded p-3">
-          <div class="font-semibold text-gray-900">Astro 5.x</div>
-          <div class="text-xs text-gray-600">静态站点生成器</div>
-        </div>
-        <div class="bg-gray-50 rounded p-3">
-          <div class="font-semibold text-gray-900">Tailwind CSS</div>
-          <div class="text-xs text-gray-600">实用优先的 CSS 框架</div>
-        </div>
-        <div class="bg-gray-50 rounded p-3">
-          <div class="font-semibold text-gray-900">TypeScript</div>
-          <div class="text-xs text-gray-600">类型安全的 JavaScript</div>
-        </div>
-        <div class="bg-gray-50 rounded p-3">
-          <div class="font-semibold text-gray-900">Zod</div>
-          <div class="text-xs text-gray-600">Schema 验证库</div>
-        </div>
-        <div class="bg-gray-50 rounded p-3">
-          <div class="font-semibold text-gray-900">Vitest</div>
-          <div class="text-xs text-gray-600">单元测试框架</div>
-        </div>
-        <div class="bg-gray-50 rounded p-3">
-          <div class="font-semibold text-gray-900">GitHub Pages</div>
-          <div class="text-xs text-gray-600">静态站点托管</div>
-        </div>
+        {techStack.map(t => (
+          <div class="bg-surface rounded-card-sm p-3">
+            <div class="font-semibold text-content-title">{t.name}</div>
+            <div class="text-xs text-content-muted">{t.desc}</div>
+          </div>
+        ))}
       </div>
-    </section>
+    </Card>
 
-    <section class="bg-white rounded-lg shadow border border-gray-100 p-6 mb-6">
-      <h2 class="text-2xl font-bold text-gray-900 mb-4 flex items-center gap-2">
-        <span class="text-3xl">🏗️</span>
-        项目架构
+    <!-- 项目架构 -->
+    <Card class="mb-6">
+      <h2 class="text-2xl font-bold text-content-title mb-4 flex items-center gap-2">
+        <span class="text-3xl">🏗️</span> 项目架构
       </h2>
       <div class="space-y-3 text-sm">
-        <div class="flex items-start gap-3">
-          <span class="font-mono bg-gray-100 px-2 py-1 rounded text-xs flex-shrink-0">内容即数据</span>
-          <span class="text-gray-700">使用 YAML/Markdown 存储内容，通过 Zod schema 验证，实现内容与展示分离</span>
-        </div>
-        <div class="flex items-start gap-3">
-          <span class="font-mono bg-gray-100 px-2 py-1 rounded text-xs flex-shrink-0">双维度组织</span>
-          <span class="text-gray-700">时间线（年份/试卷）+ 主题线（知识点），通过关联字段建立联系</span>
-        </div>
-        <div class="flex items-start gap-3">
-          <span class="font-mono bg-gray-100 px-2 py-1 rounded text-xs flex-shrink-0">静态生成</span>
-          <span class="text-gray-700">构建时生成所有静态 HTML 页面，加载速度快，部署简单</span>
-        </div>
-        <div class="flex items-start gap-3">
-          <span class="font-mono bg-gray-100 px-2 py-1 rounded text-xs flex-shrink-0">自动化验证</span>
-          <span class="text-gray-700">测试用例确保数据一致性和页面正确性</span>
-        </div>
+        {architecture.map(a => (
+          <div class="flex items-start gap-3">
+            <span class="font-mono bg-surface-hover px-2 py-1 rounded-input text-xs flex-shrink-0 text-content-heading">{a.tag}</span>
+            <span class="text-content">{a.desc}</span>
+          </div>
+        ))}
       </div>
-    </section>
+    </Card>
 
-    <section class="bg-white rounded-lg shadow border border-gray-100 p-6 mb-6">
-      <h2 class="text-2xl font-bold text-gray-900 mb-4 flex items-center gap-2">
-        <span class="text-3xl">📖</span>
-        使用指南
+    <!-- 使用指南 -->
+    <Card class="mb-6">
+      <h2 class="text-2xl font-bold text-content-title mb-4 flex items-center gap-2">
+        <span class="text-3xl">📖</span> 使用指南
       </h2>
       <div class="space-y-4">
         <div>
-          <h3 class="font-bold text-gray-900 mb-2">🎓 适合人群</h3>
-          <ul class="list-disc list-inside text-gray-700 text-sm space-y-1 ml-4">
+          <h3 class="font-bold text-content-title mb-2">🎓 适合人群</h3>
+          <ul class="list-disc list-inside text-content text-sm space-y-1 ml-4">
             <li>高中生：系统复习地理知识，备考高考</li>
             <li>地理教师：查找真题，了解考点分布</li>
             <li>自学者：学习高中地理知识</li>
           </ul>
         </div>
         <div>
-          <h3 class="font-bold text-gray-900 mb-2">🚀 推荐学习路径</h3>
-          <ol class="list-decimal list-inside text-gray-700 text-sm space-y-1 ml-4">
-            <li>浏览<a href={`${base}/topics`} class="text-indigo-600 hover:underline">专题模块</a>，了解知识体系框架</li>
-            <li>选择感兴趣的<a href={`${base}/knowledge`} class="text-indigo-600 hover:underline">知识点</a>，深入学习概念解析</li>
+          <h3 class="font-bold text-content-title mb-2">🚀 推荐学习路径</h3>
+          <ol class="list-decimal list-inside text-content text-sm space-y-1 ml-4">
+            <li>浏览<a href={`${base}/topics`} class="text-brand-text hover:underline">专题模块</a>，了解知识体系框架</li>
+            <li>选择感兴趣的<a href={`${base}/knowledge`} class="text-brand-text hover:underline">知识点</a>，深入学习概念解析</li>
             <li>查看关联真题，理解知识点在高考中的考查方式</li>
-            <li>按年份浏览<a href={`${base}/ncee`} class="text-indigo-600 hover:underline">真题</a>，进行综合练习</li>
+            <li>按年份浏览<a href={`${base}/ncee`} class="text-brand-text hover:underline">真题</a>，进行综合练习</li>
           </ol>
         </div>
       </div>
-    </section>
+    </Card>
 
-    <section class="bg-white rounded-lg shadow border border-gray-100 p-6 mb-6">
-      <h2 class="text-2xl font-bold text-gray-900 mb-4 flex items-center gap-2">
-        <span class="text-3xl">⚠️</span>
-        重要说明
+    <!-- 重要说明 -->
+    <Card class="mb-6">
+      <h2 class="text-2xl font-bold text-content-title mb-4 flex items-center gap-2">
+        <span class="text-3xl">⚠️</span> 重要说明
       </h2>
-      <div class="bg-yellow-50 border border-yellow-200 rounded p-4">
-        <p class="text-gray-800 text-sm leading-relaxed">
+      <div class="bg-callout-warning-bg border border-callout-warning-border rounded-card-sm p-4">
+        <p class="text-callout-warning-text text-sm leading-relaxed">
           <strong>内容来源：</strong>本项目的所有真题内容均基于 AI 训练数据生成，每道题都标记了 ⚠️ 待人工核验警告。
           建议在使用时对照原始高考试卷进行核验，以确保内容的准确性。
         </p>
       </div>
-    </section>
+    </Card>
 
-    <section class="bg-white rounded-lg shadow border border-gray-100 p-6">
-      <h2 class="text-2xl font-bold text-gray-900 mb-4 flex items-center gap-2">
-        <span class="text-3xl">🔗</span>
-        相关链接
+    <!-- 相关链接 -->
+    <Card>
+      <h2 class="text-2xl font-bold text-content-title mb-4 flex items-center gap-2">
+        <span class="text-3xl">🔗</span> 相关链接
       </h2>
       <div class="space-y-2">
-        <a href="https://github.com/zengawei/Geography_HS" class="flex items-center gap-2 text-indigo-600 hover:text-indigo-800" target="_blank" rel="noopener">
-          <span>📦</span>
-          <span>GitHub 仓库</span>
+        <a href="https://github.com/zengawei/Geography_HS" class="flex items-center gap-2 text-brand-text hover:text-brand-hover" target="_blank" rel="noopener">
+          <span>📦</span><span>GitHub 仓库</span>
         </a>
-        <a href={`${base}/`} class="flex items-center gap-2 text-indigo-600 hover:text-indigo-800">
-          <span>🏠</span>
-          <span>返回首页</span>
+        <a href={`${base}/`} class="flex items-center gap-2 text-brand-text hover:text-brand-hover">
+          <span>🏠</span><span>返回首页</span>
         </a>
       </div>
-    </section>
+    </Card>
 
-    <div class="mt-8 text-center text-sm text-gray-500">
+    <div class="mt-8 text-center text-sm text-content-muted">
       <p>Geography_HS — 高中地理知识库</p>
       <p class="mt-1">让地理学习更高效</p>
     </div>

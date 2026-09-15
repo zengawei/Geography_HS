@@ -1,0 +1,21 @@
+---
+interface Props {
+  icon?: string;
+  title: string;
+  count?: string | number;
+  subtitle?: string;
+}
+
+const { icon, title, count, subtitle } = Astro.props;
+---
+
+<div class="mb-4">
+  <h2 class="text-2xl font-bold text-content-title flex items-center gap-2">
+    {icon && <span class="text-3xl">{icon}</span>}
+    {title}
+    {count !== undefined && (
+      <span class="text-sm font-normal text-content-muted">({count})</span>
+    )}
+  </h2>
+  {subtitle && <p class="text-content-muted mt-1">{subtitle}</p>}
+</div>

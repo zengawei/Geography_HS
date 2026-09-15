@@ -25,10 +25,10 @@ const currentPath = Astro.url.pathname;
     <meta name="description" content="高中地理知识库 — 覆盖人教版 2019 全册 + 2012-2026 高考地理真题" />
     <title>{title} | Geography_HS</title>
   </head>
-  <body class="min-h-screen flex flex-col bg-gray-50 text-gray-900">
-    <header class="bg-white shadow">
+  <body class="min-h-screen flex flex-col bg-surface text-content">
+    <header class="bg-surface-card shadow-sm">
       <div class="max-w-5xl mx-auto px-4 py-4 flex items-center justify-between">
-        <a href={`${base}/`} class="text-xl font-bold text-indigo-700 hover:text-indigo-900 transition">
+        <a href={`${base}/`} class="text-xl font-bold text-brand hover:text-brand-hover transition">
           Geography_HS — 高中地理知识库
         </a>
         <nav class="flex gap-6">
@@ -38,8 +38,8 @@ const currentPath = Astro.url.pathname;
               class:list={[
                 'text-sm font-medium transition',
                 currentPath === href || (href !== '/' && currentPath.startsWith(href))
-                  ? 'text-indigo-700 border-b-2 border-indigo-700'
-                  : 'text-gray-600 hover:text-indigo-600',
+                  ? 'text-brand border-b-2 border-brand'
+                  : 'text-content-muted hover:text-brand-text',
               ]}
             >
               {label}
@@ -53,8 +53,8 @@ const currentPath = Astro.url.pathname;
       <slot />
     </main>
 
-    <footer class="bg-white border-t mt-auto">
-      <div class="max-w-5xl mx-auto px-4 py-6 text-center text-sm text-gray-500">
+    <footer class="bg-surface-card border-t border-border mt-auto">
+      <div class="max-w-5xl mx-auto px-4 py-6 text-center text-sm text-content-muted">
         &copy; {new Date().getFullYear()} Geography_HS — 高中地理知识库 &middot; MIT License
       </div>
     </footer>

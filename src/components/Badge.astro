@@ -1,22 +1,26 @@
 ---
 interface Props {
-  variant: 'category-natural' | 'category-human' | 'category-regional' | 'category-world_china' | 'category-tools' | 'freq-high' | 'freq-medium' | 'freq-low' | 'diff-basic' | 'diff-medium' | 'diff-hard';
+  variant: 'category-natural' | 'category-human' | 'category-regional' | 'category-world_china' | 'category-tools' | 'freq-high' | 'freq-medium' | 'freq-low' | 'diff-basic' | 'diff-medium' | 'diff-hard' | 'exam-new' | 'exam-national' | 'exam-provincial' | 'score';
 }
 
 const { variant } = Astro.props;
 
 const styles: Record<string, string> = {
-  'category-natural':    'bg-green-100 text-green-700',
-  'category-human':      'bg-blue-100 text-blue-700',
-  'category-regional':   'bg-amber-100 text-amber-700',
-  'category-world_china':'bg-purple-100 text-purple-700',
-  'category-tools':      'bg-rose-100 text-rose-700',
-  'freq-high':           'bg-red-100 text-red-700',
-  'freq-medium':         'bg-yellow-100 text-yellow-700',
-  'freq-low':            'bg-gray-100 text-gray-600',
-  'diff-basic':          'bg-green-100 text-green-700',
-  'diff-medium':         'bg-yellow-100 text-yellow-700',
-  'diff-hard':           'bg-red-100 text-red-700',
+  'category-natural':     'bg-green-100 text-green-700',
+  'category-human':       'bg-blue-100 text-blue-700',
+  'category-regional':    'bg-amber-100 text-amber-700',
+  'category-world_china': 'bg-purple-100 text-purple-700',
+  'category-tools':       'bg-rose-100 text-rose-700',
+  'freq-high':            'bg-red-100 text-red-700',
+  'freq-medium':          'bg-yellow-100 text-yellow-700',
+  'freq-low':             'bg-gray-100 text-content-muted',
+  'diff-basic':           'bg-green-100 text-green-700',
+  'diff-medium':          'bg-amber-100 text-amber-700',
+  'diff-hard':            'bg-red-100 text-red-700',
+  'exam-new':             'bg-blue-100 text-blue-700',
+  'exam-national':        'bg-green-100 text-green-700',
+  'exam-provincial':      'bg-purple-100 text-purple-700',
+  'score':                'bg-blue-100 text-blue-700',
 };
 ---
 
